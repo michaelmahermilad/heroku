@@ -8,7 +8,7 @@ function IconCards() {
   return (
     <>
         <div  style={{ }}>
-          <h3 style={{width:'12rem',textAlign:'center', margin:'auto',color:'var(--main)',fontSize:'1.4em'}}>Researchs Fields</h3>
+          <h3 style={{width:'12rem',textAlign:'center', margin:'auto',color:'var(--main)',fontSize:'1.15rem'}}>Researchs Fields</h3>
           <Container>
               {ArrayofSections.map((i,index)=>{
                   return (

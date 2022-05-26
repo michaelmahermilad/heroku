@@ -33,7 +33,7 @@ export const Swipper = () => {
            
           textAlign: "center",
           color: "var(--main)",
-          fontSize: "1.7em",
+          fontSize: "var(--fonttitle)",
           fontWeight: "700",
         }}
       >

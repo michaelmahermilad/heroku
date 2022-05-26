@@ -12,6 +12,7 @@ scroll-behavior: smooth;
   --main: rgba(148, 47, 47);
   --main2:rgba(237, 184, 184) ;
   --chatwidth:90%;
+  --fonttitle:1.15rem;
 }
 body{
      min-height: 100vh;
