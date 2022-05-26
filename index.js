@@ -6,7 +6,7 @@ const path = require("path");
 const { addUser, removeUser, getUser } = require("./user");
 
 const app = express();
-
+require('dotenv').config()
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
@@ -28,5 +28,5 @@ io.on("connect", (socket) => {
 });
 app.use(express.static(path.resolve(__dirname, "./client/build")));
 
-httpServer.listen(5000);
+httpServer.listen(process.env.PORT || 5000);
 
