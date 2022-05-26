@@ -8,7 +8,7 @@ function Avatar(props) {
         className="transition-3"
         style={{ ...styles.avatarHello, ...{ opacity: hovered ? "1" : "0" } }}
       >
-        Medical Projects Support
+        Michael
       </div>
       <div
         onClick={() => props.onClick && props.onClick()}

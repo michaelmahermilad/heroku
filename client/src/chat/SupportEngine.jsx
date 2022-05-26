@@ -26,8 +26,8 @@ function SupportEngine() {
         style={{
           position: "fixed",
           zIndex: "100",
-          bottom: "20px",
-          right: "20px",
+          bottom: "10px",
+          right: "10px",
         }}
       />
     </div>

@@ -43,7 +43,8 @@ function EmailForm() {
           ...{
             zIndex: loading ? "1" : "1",
             opacity: loading ? "1" : "1",
-            top: "60%",
+            top: "85%",
+            height:'20%',
             left: "calc(50% - 40px)",
           },
         }}
@@ -59,7 +60,7 @@ function EmailForm() {
         <Avatar
           style={{ position: "absolute", left: "calc(80% - 25px)", top: "5%" }}
         />
-        <div style={styles.topText}>
+        <div className="LIVESUPPORT" style={styles.topText}>
           <br />
           Live Support
         </div>
@@ -67,7 +68,7 @@ function EmailForm() {
           onSubmit={handleSUB}
           style={{ position: "relative", width: "100%", top: "19%" }}
         >
-          <input
+          <input className="emailformchat"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             style={styles.emailInput}
@@ -100,6 +101,7 @@ function EmailForm() {
                   left: "calc(50% - 4rem",
                   color: email ? "brown" : "brown",
                   backgroundColor: email ? "var(--main2)" : "",
+                
                 },
                 ...(hover ? styles.hover : null),
               }}

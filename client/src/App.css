@@ -310,3 +310,15 @@ color:brown;
     border-radius: 12px;
     outline: none;
   }
+
+@media  (max-width:500px){
+  .LIVESUPPORT{
+display:none;
+margin-bottom: 1rem;
+  }
+  .emailformchat{
+    height:25px;
+    margin-top:2rem
+  }
+}
+  
