@@ -40,28 +40,26 @@ const controlNavbar = () => {
         </Link>
       </div>
       <Links>
-        <Linkat>
-          <a href="">Heart care</a>
+        <Linkat to="/" >
+          <p>Heart Care</p>
         </Linkat>
-        <Linkat>
-          <a href=""> Neuro system</a>
-        </Linkat>{" "}
-        <Linkat className="header_middle">
-          {" "}
-          <a>&nbsp;&nbsp;&nbsp;&nbsp;Studies </a>
-          <ArrowDropDownIcon style={{ display: "inline" }} />
+        <Linkat  to="/"  >
+          <p>Neuro system</p>
+        </Linkat>
+        
+      <Drop>  <p> &nbsp;&nbsp;&nbsp;&nbsp;Studies</p><ArrowDropDownIcon style={{ display: "inline" }} />
           <div className="div1">
-            <h4 className="item">Lung Diseases</h4>
-            <h4 className="item">Kidney conditions</h4>
-            <h4 className="item">Mental Illness</h4>
-          </div>
-        </Linkat>
+       <Link to="/"  style={{textDecoration:'none'}}>    <h4 className="item">Lung Diseases</h4></Link> 
+       <Link to="/" style={{textDecoration:'none'}}   >     <h4 className="item">Kidney conditions</h4></Link> 
+       <Link to="/"   style={{textDecoration:'none'}} >  <h4 className="item">Mental Illness</h4></Link> 
+         </div>  
+       </Drop>
       </Links>
       <Btns>
         <Link style={{textDecoration:'none'}} to="/signup">
           <Button
             background={"rgba(241, 179, 165 ,.9)"}
-            textcolor={"brown"}
+            textcolor={"var(--main)"}
             width={"5rem"}
             height={"1.8rem"}
 
@@ -124,43 +122,76 @@ const Button = styled.button`
     margin: auto;
     
 `;
-const Linkat = styled.div`
+const Linkat = styled(Link)`
   min-height: 100%;
   display: flex;
-
+  text-decoration:none;
+  color:var(--main);
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   position: relative;
-  .div1 {
-    position: absolute;
-    display: none;
-  }
+
   :hover {
-    .div1 {
-      display: flex;
-    }
+   
     background-color: rgba(241, 179, 165, 0.6);
+    p{
+     
+        font-weight: 600;
+        color: var(--main);
+ 
+    }
   }
-  a {
+ p {
     text-decoration: none;
-
-    color: grey;
+     
     font-weight: 600;
-
     letter-spacing: 1px;
     font-size: 1em;
-    :hover {
-      font-weight: 600;
-      color: brown;
-    }
+   
   }
 `;
+const Drop=styled.div`
+position:relative;
+display:flex;
+ align-items:center;
+ color:var(--main);
+ font-weight:700;
+
+ 
+.div1{
+
+ 
+opacity:0;
+position:absolute;
+display:none;
+ 
+}
+:hover{
+  .div1{
+    display:flex;
+    transition: opacity .7s linear;
+    opacity:1;
+    top:110%;
+
+    
+    background-color:white;
+    padding:1rem;
+    border-bottom-left-radius:25px;
+    .item{
+      width:8.6rem;
+      color:var(--main);
+      padding:.4rem;
+      border-radius:25px;
+    }
+  }
+}
+
+`
 const Links = styled.div`
   display: grid;
   grid-template-columns: 33.3% 33.3% 33.3%;
   min-height: 100%;
-
   text-align: center;
   align-items: center;
   @media (max-width: 900px) {

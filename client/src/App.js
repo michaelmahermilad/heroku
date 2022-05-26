@@ -66,7 +66,7 @@ function App(props) {
             <h2 ref={(_subtitle) => (subtitle = _subtitle)}></h2>
 
             <img style={{width:'100%'}} src={modal}/>
-            <button  style={{width:'5rem',height:'2rem',marginLeft:'3rem', backgroundColor:'brown'}}onClick={closeModal}>Not now</button>
+            <button  style={{width:'5rem',height:'2rem',marginLeft:'3rem', backgroundColor:'var(--main)'}}onClick={closeModal}>Not now</button>
         
           </Modal>
 

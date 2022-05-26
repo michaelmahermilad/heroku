@@ -136,7 +136,7 @@ function Footer() {
             <button
               style={{
                 color: "white",
-                backgroundColor: "brown",
+                backgroundColor: "var(--main)",
                 border: "none",
                 outline: "none",
                 width: "90%",
@@ -211,7 +211,7 @@ h4{
             display:block;
           
           line-height:1.5rem;
-  color: brown;
+  color: var(--main);
         text-decoration: none;
     font-weight: 600;
     font-size:12px; 
@@ -238,6 +238,6 @@ h4{
 const Container = styled.div`
   width: 88%;
   margin: auto;
-  border-top: 3px solid brown;
+  border-top: 3px solid var(--main);
   padding-top: 3rem;
 `;

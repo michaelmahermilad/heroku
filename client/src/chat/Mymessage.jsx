@@ -32,7 +32,7 @@ function Mymessage({email,message,h}) {
               <p
                 style={{
                   textAlign:'center',
-                  color: "brown",
+                  color: "var(--main)",
                    padding:'4px',
                    borderRadius:'5px',
                   opacity: ".8",

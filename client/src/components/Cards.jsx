@@ -22,7 +22,7 @@ function Cards() {
         </div>
         <div className="tags">Whatever your research ambitions, we have the breadth and depth to make th  ...</div>
         <div className="info">
-         <div style={{display:'flex',alignItems:'center'}}> <CalendarMonthIcon style={{color:'brown',fontSize:'19px',marginRight:'5px'}} /><p>  17/2/1994 2000 4pm  </p>
+         <div style={{display:'flex',alignItems:'center'}}> <CalendarMonthIcon style={{color:'var(--main)',fontSize:'19px',marginRight:'5px'}} /><p>  17/2/1994 2000 4pm  </p>
         </div>  <ReadMoreIcon/>
         </div>
       </div>
@@ -39,7 +39,7 @@ function Cards() {
         </div>
         <div className="tags">While studying at Duquesne, you’ll enjoy a low (13:1) student-to-faculty ratio, and in sm ...</div>
         <div className="info">
-         <div style={{display:'flex',alignItems:'center'}}> <CalendarMonthIcon style={{color:'brown',fontSize:'19px',marginRight:'5px'}} /><p>  17/2/1994 2000 4pm  </p>
+         <div style={{display:'flex',alignItems:'center'}}> <CalendarMonthIcon style={{color:'var(--main)',fontSize:'19px',marginRight:'5px'}} /><p>  17/2/1994 2000 4pm  </p>
         </div>  <ReadMoreIcon/>
         </div>
       </div>
@@ -59,7 +59,7 @@ function Cards() {
 
 </div>
 <div className="info">
-         <div style={{display:'flex',alignItems:'center'}}> <CalendarMonthIcon style={{color:'brown',fontSize:'19px',marginRight:'5px'}} /><p>  17/2/1994 2000 4pm  </p>
+         <div style={{display:'flex',alignItems:'center'}}> <CalendarMonthIcon style={{color:'var(--main)',fontSize:'19px',marginRight:'5px'}} /><p>  17/2/1994 2000 4pm  </p>
         </div>  <ReadMoreIcon/>
         </div> </div>
     </div>

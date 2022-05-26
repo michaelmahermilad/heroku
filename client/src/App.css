@@ -44,7 +44,7 @@ body{
 }
 .div1 .item:hover{
 background-color: var(--main2);
-color:brown;
+color:var(--main);
  }
 
  .h{
@@ -97,7 +97,12 @@ color:brown;
 
 
  
+.iconafter>*{
 
+  font-size: 1.2rem;
+  margin-right: .5rem;
+  color:rgb(142, 48, 48)
+}
 
 .Articles-banner{
   display: flex;

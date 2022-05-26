@@ -32,7 +32,7 @@ export const Swipper = () => {
           margin: "auto",
            
           textAlign: "center",
-          color: "brown",
+          color: "var(--main)",
           fontSize: "1.7em",
           fontWeight: "700",
         }}

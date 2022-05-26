@@ -30,7 +30,7 @@ function MyBanner(props) {
           <img  id="r"    src={Main} />
           <Button
             background={"var(--main2)"}
-            textcolor={"brown"}
+            textcolor={"var(--main)"}
             width={"17rem"}
             height={"2.5rem"}
             style={{ marginTop: "2rem" }}
@@ -83,7 +83,7 @@ img{
     font-weight: 800;
     letter-spacing: 1px;
     padding-bottom: 2rem;
-    color: brown;
+    color: var(--main);
     font-size: 1.6em;
     @media (max-width:900px){
       width:90%;

@@ -41,7 +41,7 @@ function OtherMessage({email,message}) {
               <p
                 style={{
                   textAlign:'center',
-                  color: "brown",
+                  color: "var(--main)",
                    padding:'4px',
                    borderRadius:'5px',
                   opacity: ".8",
@@ -65,7 +65,7 @@ function OtherMessage({email,message}) {
             style={{
                 maxWidth: "80%",
                 width:'fit-content',
-              backgroundColor: "brown",
+              backgroundColor: "var(--main)",
               marginRight: "1rem",
                height: "auto",
               borderRadius: "15px",

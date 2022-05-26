@@ -93,7 +93,8 @@ emailjs.sendForm('service_vzr714e', 'template_ece8zxe', form.current, 'tJLXI8yBe
                     <textarea name="message" required></textarea>
                     <br />
                     <ReCAPTCHA
-                    
+                  style={{ transform:'scale(0.77)',
+                    transformOrigin:'0 0'}}
         ref={recaptchaRef}
         sitekey="6Lc1rB4gAAAAACBr4kfoFv5SUeejuUG6M-7RrbBk"
         onChange={sendEmail}
@@ -101,7 +102,7 @@ emailjs.sendForm('service_vzr714e', 'template_ece8zxe', form.current, 'tJLXI8yBe
                     <button>SUBMIT</button>
                     
                     <div className="row" style={{marginTop:'1rem',marginLeft:'7rem'}}>
-                     {!emailError && result? (<h1 style={{color:'brown',fontWeight:'700'}}> Done !</h1>):null}
+                     {!emailError && result? (<h1 style={{color:'var(--main)',fontWeight:'700'}}> Done !</h1>):null}
                      </div>
                   </div>
                 </form>

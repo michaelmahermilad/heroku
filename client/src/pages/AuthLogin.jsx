@@ -34,7 +34,7 @@ const A = styled(Typography)(({theme}) => ({
     paddingBottom:'14px',
     paddingTop:'0px',
     fontWeight:'800',
-    color:'brown',
+    color:'var(--main)',
      
   }));
   const Field = styled(TextField)(({theme}) => ({
@@ -52,7 +52,7 @@ const A = styled(Typography)(({theme}) => ({
         borderColor: 'grey', // - Set the Input border when parent has :hover
     },
     '&.Mui-focused fieldset': { // - Set the Input border when parent is focused 
-        borderColor: 'brown',
+        borderColor: 'var(--main)',
     },
 
 
@@ -127,21 +127,21 @@ useEffect(()=>{
    
        <form   onSubmit={handleSubmit(onSubmit)} >
 
-        <Field InputLabelProps={{style : {color : 'brown',"&:focus":{color:'red'}} }}
+        <Field InputLabelProps={{style : {color : 'var(--main)',"&:focus":{color:'red'}} }}
         fullWidth
        
         {...register('email', { required: true })}
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
-              <AccountCircle  sx={{color:'brown'}}/>
+              <AccountCircle  sx={{color:'var(--main)'}}/>
             </InputAdornment>
           ),
         }}
         label='Email'
-        helperText={errors.email && <span style={{color:' brown',paddingTop:'0px'}}>{errors.email?.message}</span>}
+        helperText={errors.email && <span style={{color:' var(--main)',paddingTop:'0px'}}>{errors.email?.message}</span>}
       />
-          <Field sx={{color:'brown'}} InputLabelProps={{style : {fontSize:'.9rem', color : 'brown'} }} 
+          <Field sx={{color:'var(--main)'}} InputLabelProps={{style : {fontSize:'.9rem', color : 'var(--main)'} }} 
         fullWidth
         {...register('password', { required: true,minLength:8 })}
 
@@ -158,17 +158,17 @@ useEffect(()=>{
                   onClick={handleClickShowPassword}
                   onMouseDown={handleMouseDownPassword}
                 >
-                  {values.showPassword ? <VisibilityOff sx={{color:'red'}}/> : <Visibility sx={{color:'brown'}}/>} 
+                  {values.showPassword ? <VisibilityOff sx={{color:'red'}}/> : <Visibility sx={{color:'var(--main)'}}/>} 
                 </IconButton>
               </InputAdornment>
               ),
             }}
 
-            helperText={errors.password && <span style={{color:' brown',paddingTop:'0px'}}>{errors.password?.message}</span>}
+            helperText={errors.password && <span style={{color:' var(--main)',paddingTop:'0px'}}>{errors.password?.message}</span>}
 
         
       />
-            <Button type="submit" sx={{color:'brown',borderRadius:'25px',width:'70%',mx:'15%',backgroundColor:'rgba(241, 179, 165 ,.99)'}}  onClick={handleSubmit}>Submit</Button>
+            <Button type="submit" sx={{color:'var(--main)',borderRadius:'25px',width:'70%',mx:'15%',backgroundColor:'rgba(241, 179, 165 ,.99)'}}  onClick={handleSubmit}>Submit</Button>
  </form>
   
    

@@ -57,18 +57,18 @@ function EmailForm() {
           width: "100%",
         }}
       >
-        <Avatar className="  avatar"
+        <Avatar  
           style={{ position: "absolute", left: "calc(80% - 25px)", top: "5%" }}
         />
         <div className="LIVESUPPORT" style={styles.topText}>
           <br />
           Live Support
         </div>
-        <form
+        <form   
           onSubmit={handleSUB}
           style={{ position: "relative", width: "100%", top: "19%" }}
         >
-          <input className="emailformchat"
+          <input className="emailformchat" 
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             style={styles.emailInput}
@@ -99,7 +99,7 @@ function EmailForm() {
                   padding: ".5rem",
                   borderRadius: "25px",
                   left: "calc(50% - 4rem",
-                  color: email ? "brown" : "brown",
+                  color: email ? "var(--main)" : "var(--main)",
                   backgroundColor: email ? "var(--main2)" : "",
                 
                 },

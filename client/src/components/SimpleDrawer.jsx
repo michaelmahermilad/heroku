@@ -8,12 +8,15 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MailIcon from "@mui/icons-material/Mail";
 import ListIcon from "@mui/icons-material/List";
+import { faBook,faLungsVirus,faHeartbeat,faBuildingLock } from "@fortawesome/free-solid-svg-icons";
+
 import { Collapse, IconButton } from "@mui/material";
 import logo from "../images/logo.svg";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ArrowDropDown } from "@mui/icons-material";
 import { ArrayofSections } from "../WebsiteSections.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Logo = styled.img`
   margin-top: 1rem;
@@ -78,25 +81,32 @@ export default function SimpleDrawer() {
         {ArrayofSections.map((i, index) => (
           <>
             <ListItem disablePadding key={i.text}>
-              <ListItemButton>
+              <ListItemButton style={{ height: "4rem",color:'brown',fontSize:'1.3rem' }}>
+             <p className="iconafter">  {i.icon}</p>
                 <ListItemText
                   primaryTypographyProps={{
-                    color: "black",
+                    color: "var(--main)",
+
+                    marginLeft: ".4rem",
+
                     fontSize: ".9rem",
-                    marginLeft: "2rem",
+
                     fontWeight: "600",
                   }}
                   primary={i.text}
                 />
               </ListItemButton>
             </ListItem>{" "}
-            <Divider />
           </>
         ))}
         <ListItemButton onClick={handleClick}>
+          <FontAwesomeIcon
+            style={{ fontSize: "1.2rem", color: "var(--main)" }}
+            icon={faBook}
+          />
           <ListItemText
             primaryTypographyProps={{
-              color: "black",
+              color: "var(--main)",
               fontSize: ".9rem",
               marginLeft: "2rem",
               fontWeight: "600",
@@ -105,22 +115,35 @@ export default function SimpleDrawer() {
           />
           <ArrowDropDown sx={{ color: "var(--main)" }} />
         </ListItemButton>
+
         <Collapse in={open1} timeout="4sec" unmountOnExit>
           <List component="div" disablePadding>
             <ListItemButton sx={{ pl: 4, width: 200 }}>
+              <FontAwesomeIcon
+                style={{ fontSize: "1.2rem", color: "var(--main)" }}
+                icon={faBook}
+              />
               <ListItemText
                 primaryTypographyProps={{
                   fontSize: ".9em",
                   marginLeft: "1.4rem",
+                  color: "var(--main)",
+                  fontWeight: "700",
                 }}
                 primary="Surgeries domain"
               />
             </ListItemButton>
             <ListItemButton sx={{ pl: 4, width: 200 }}>
+              <FontAwesomeIcon
+                style={{ fontSize: "1.2rem", color: "var(--main)" }}
+                icon={faBook}
+              />
               <ListItemText
                 primaryTypographyProps={{
                   fontSize: ".9em",
                   marginLeft: "1.4rem",
+                  color: "var(--main)",
+                  fontWeight: "700",
                 }}
                 primary="Intesive care"
               />
@@ -133,13 +156,13 @@ export default function SimpleDrawer() {
           <>
             <ListItem
               disablePadding
-              style={{ textAlign: "center", color: "brown" }}
+              style={{ textAlign: "center", color: "var(--main)" }}
               key={i.text}
             >
               <ListItemButton>
                 <ListItemText
                   primaryTypographyProps={{
-                    color: "brown",
+                    color: "var(--main)",
                     fontSize: ".9rem",
                     marginLeft: "1.6rem",
                     fontWeight: "600",

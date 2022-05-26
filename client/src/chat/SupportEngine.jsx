@@ -22,7 +22,7 @@ function SupportEngine() {
       <SupportWindow visble={visble} />
 
       <Avatar
-       className="avatar"
+       
         onClick={() => setVisble(true)}
         style={{
           position: "fixed",

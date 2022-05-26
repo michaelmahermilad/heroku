@@ -25,7 +25,7 @@ maxHeight:'2.2rem',
     // Border
     padding: "8px",
     width:'auto',
-    color: "brown",
+    color: "var(--main)",
     borderRadius: "25px",
     // Color
     backgroundColor: "var(--main2)",
@@ -46,7 +46,7 @@ maxHeight:'2.2rem',
     background:
     "linear-gradient(187deg, rgba(255,255,255,0.94965060216299493) 0%, rgba(121,9,9,0.9092779313555415) 83%)",    // Border
     borderRadius: "12px",
-    border: `7px solid brown`,
+    border: `7px solid var(--main)`,
     overflow: "hidden",
     // Shadow
     boxShadow: "0px 0px 16px 6px rgba(0, 0, 0, 0.33)",
@@ -66,7 +66,7 @@ maxHeight:'2.2rem',
     overflow: "hidden",
     width: "100%",
     height: "300px",
-    backgroundColor: "brown",
+    backgroundColor: "var(--main)",
     borderRadius: "28px",
     transform: "skewY(-12deg)",
   },

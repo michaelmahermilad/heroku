@@ -83,7 +83,7 @@ if(data===textandmessage){
             <div style={{height:'6.9rem'}}    ref={messagesEndRef}/>
 
       <form  ref={messagesEndRef}  onSubmit={Handlesubmiting}>
-        <input style={{ position:"absolute",bottom:'0',left:'0rem',right:'0',border:'0',borderTop:'4px solid brown',outline:'0', width: "100%",height: "2.6rem" }}   type="text" onChange={(e) => getdata(e, "message1")} />
+        <input style={{ position:"absolute",bottom:'0',left:'0rem',right:'0',border:'0',borderTop:'4px solid var(--main)',outline:'0', width: "100%",height: "2.6rem" }}   type="text" onChange={(e) => getdata(e, "message1")} />
         <button className="chathover"
           style={{ position:"absolute",bottom:'2.8rem',marginLeft:'calc(50% - 2rem)',borderRadius:'25px', textAlign:'center',zIndex:'10',outline:'0', width:'3rem' , height: "3rem" }}
           disabled={false}

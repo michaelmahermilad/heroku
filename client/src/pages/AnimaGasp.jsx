@@ -1,8 +1,7 @@
 import gsap from 'gsap';
 import React, { useEffect } from 'react'
-import Y from '../images/Y.png'
-import children from '../images/children.png'
-import { Block } from '@mui/icons-material';
+ import children from '../images/children.png'
+ import styled from 'styled-components'
 function AnimaGasp() {
     useEffect(()=>{
         var tl = gsap.timeline({
@@ -10,16 +9,26 @@ function AnimaGasp() {
             repeatDelay:5,
             
           });
-         tl.fromTo("#logo2",   {opacity:.1,scale:.8 },{duration:3, y:10, opacity:1,   scale:1});         
+         tl.fromTo("#logo2",   {opacity:.6,scale:1 },{duration:5,   opacity:1,   scale:1.1});         
 
 
     },[])
   return (
     <div style={{marginTop:'4rem',position:'relative',padding:0,height:'10rem',marginBottom:'4rem'}}>
- <img style={{position:'absolute' ,height:'100%',width:'50%',right:'25%',left:'25%'  }} id="logo2" src={children}/> 
+ <Image   id="logo2" src={children}/> 
         
         </div>
   )
 }
 
 export default AnimaGasp
+
+const Image=styled.img`
+
+width:50%;
+margin-left:25%;
+@media (max-width:700px){
+  width:80%;
+  margin-left:10%;
+}
+`

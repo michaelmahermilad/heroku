@@ -60,9 +60,13 @@ function Home({ openModal }) {
 export default Home;
 const Divider = styled.div`
   height: 5rem;
+  @media(max-width:600px){
+    height:3.7rem;
+
+  }
 `;
 const Quote = styled.div`
-  color: brown;
+  color: var(--main);
   font-size: 1.4rem;
   font-weight: 700;
   width: 50%;

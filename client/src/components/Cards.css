@@ -116,7 +116,7 @@ position:relative;
  
 }
 .info  svg{
-  color:brown;
+  color:var(--main);
 }
 .info p{
     color:rgb(43, 3, 3);
@@ -131,4 +131,12 @@ font-weight: 600;
     margin:auto;
      line-height:1.2rem;
     color:rgb(95, 12, 12);
+}
+@media (max-width:700px){
+.tags{
+  font-size:11px;
+}
+
+
+
 }

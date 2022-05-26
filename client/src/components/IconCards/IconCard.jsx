@@ -27,7 +27,7 @@ export const Card = styled.div`
     font-size: 4rem;
   }
   p {
-    color: brown;
+    color: var(--main);
     font-weight: 600;
     font-size: 0.9rem;
   }

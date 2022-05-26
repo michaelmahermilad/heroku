@@ -17,7 +17,7 @@ function Avatar(props) {
         onMouseLeave={() => setHovered(false)}
         style={{
           ...styles.chatWithMeButton,
-          ...{ border: hovered ? "1px solid brown" : "2px solid brown" },
+          ...{ border: hovered ? "1px solid var(--main)" : "2px solid var(--main)" },
         }}
       />
     </div>
