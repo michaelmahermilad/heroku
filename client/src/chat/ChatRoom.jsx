@@ -23,7 +23,7 @@ function ChatRoom({ email }) {
   useEffect(() => {
   }, [messages]);
   useEffect(() => {
-    const ENDPOINT = "localhost:5000";
+    const ENDPOINT = "medicalprojectnet.herokuapp.com";
     socket = io(ENDPOINT);
     socket.emit("join", email.trim().split(' ')[0]);
   }, [email]);

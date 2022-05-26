@@ -16,7 +16,7 @@ const io = new Server(httpServer, {
     optionsSuccessStatus: 204,
   },
 });
-
+app.use(express.static("public"))
 app.use(cors());
 
 io.on("connect", (socket) => {
@@ -29,3 +29,4 @@ io.on("connect", (socket) => {
 app.use(express.static(path.resolve(__dirname, "./client/build")));
 
 httpServer.listen(5000);
+
