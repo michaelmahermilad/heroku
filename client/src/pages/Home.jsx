@@ -10,6 +10,7 @@ import banner2 from "../images/banner2.svg";
 import Footer from "../components/Footer";
 import AnimaGasp from "./AnimaGasp";
 import SupportEngine from "../chat/SupportEngine";
+import Sendmail from "../components/Sendmail";
  
 function Home({ openModal }) {
   return (
@@ -46,7 +47,11 @@ function Home({ openModal }) {
       <AnimaGasp />
       <Articles />
       <Divider />
+      <Sendmail/>   <Divider />
       <Footer />
+   
+
+
       <SupportEngine />
     </div>
   );

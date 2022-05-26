@@ -1,5 +1,5 @@
 import React from "react";
-import article1 from "../images/article1.webp";
+import chaticon from "../images/chaticon.webp";
 import ReactTimeAgo from 'react-time-ago'
 
 function OtherMessage({email,message}) {
@@ -54,7 +54,7 @@ function OtherMessage({email,message}) {
               </p>
               <img
                 style={{ width: "30px", height: "30px", borderRadius: "15px" }}
-                src={article1}
+                src={chaticon}
               />
 
             </div>

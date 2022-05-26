@@ -80,7 +80,7 @@ if(data===textandmessage){
        
           else return
       })}
-            <div style={{height:'6.9rem'}} ref={messagesEndRef}/>
+            <div style={{height:'6.9rem'}}    ref={messagesEndRef}/>
 
       <form  ref={messagesEndRef}  onSubmit={Handlesubmiting}>
         <input style={{ position:"absolute",bottom:'0',left:'0rem',right:'0',border:'0',borderTop:'4px solid brown',outline:'0', width: "100%",height: "2.6rem" }}   type="text" onChange={(e) => getdata(e, "message1")} />
@@ -89,7 +89,7 @@ if(data===textandmessage){
           disabled={false}
           type="submit"
         >
-          <BlurOnIcon sx={{color:'var(--main2)',fontSize:'2rem'}}/>
+          <BlurOnIcon    sx={{color:'var(--main2)',fontSize:'2rem'}}/>
         </button>
       </form>
     </div>

@@ -10,6 +10,7 @@ import Modal from "react-modal";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import modal from '../src/images/modal.svg'
 import SupportAdmin from "./chat/SupportAdmin";
+import Sendmail from './components/Sendmail/index'
  const theme = createTheme();
 const customStyles = {
   content: {
@@ -74,6 +75,7 @@ function App(props) {
             <Route path="/login" element={<AuthLogin />} />
             <Route path="/signup" element={<Auth />} />
             <Route path='/main' element={<SupportAdmin/>}/>
+            <Route path='/email' element={<Sendmail/>}/>
           </Routes>
         </div>
       </ThemeProvider>
