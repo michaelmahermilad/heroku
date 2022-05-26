@@ -36,8 +36,8 @@ function EmailForm() {
         }}
       ></div>
 
-      <Bars
-        className="transition-5"
+      <Bars  
+        className="transition-5 avatar"
         style={{
           ...styles.loadingIcon,
           ...{
@@ -57,7 +57,7 @@ function EmailForm() {
           width: "100%",
         }}
       >
-        <Avatar
+        <Avatar className="  avatar"
           style={{ position: "absolute", left: "calc(80% - 25px)", top: "5%" }}
         />
         <div className="LIVESUPPORT" style={styles.topText}>
@@ -84,7 +84,7 @@ function EmailForm() {
               onMouseLeave={() => {
                 setHover(false);
               }}
-              type="submit"
+              type="submit"   className="avatar"
               disabled={email ? false : true}
               style={{
                 ...{

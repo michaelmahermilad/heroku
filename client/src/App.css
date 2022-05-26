@@ -311,14 +311,16 @@ color:brown;
     outline: none;
   }
 
-@media  (max-width:500px){
-  .LIVESUPPORT{
-display:none;
-margin-bottom: 1rem;
-  }
-  .emailformchat{
-    height:25px;
-    margin-top:2rem
-  }
-}
+
+  @media  (max-height:250px){
+    .LIVESUPPORT{
   
+  display: none;
+    }
+    .emailformchat{
+   margin-bottom: 0rem;
+    }
+    .avatar{
+      display:none;
+    }
+  }
