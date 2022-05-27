@@ -114,7 +114,7 @@ const Button = styled.button`
   outline: none;
   margin-right: 1rem;
   border-radius: 4px;
-  font-size: 1.1em;
+  font-size:1rem;
   font-weight: 700;
   cursor: pointer;
   :hover {
