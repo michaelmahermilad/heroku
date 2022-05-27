@@ -7,13 +7,13 @@ function Articles() {
       <div  style={{ marginInline:'4%'}}>
     <div className='Articles-banner'>
         <Heading  style={{  fontWeight: '600',
- color: 'var(--main)',
- letterSpacing: '.8px'    }} >
-         Latests Articles
+    color: 'var(--main)',
+           letterSpacing: '.8px'    }} >
+         Latests Articlesss
         </Heading>
-        <h4 >
+        <h5 >
          All Articles
-        </h4>
+        </h5>
     </div>
 <Cards  />
     </div>

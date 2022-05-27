@@ -96,8 +96,7 @@ function EmailForm() {
                   border: "none",
                   outline: "none",
                   fontWeight: "600",
-                  padding: ".5rem",
-                  borderRadius: "25px",
+                   borderRadius: "25px",
                   left: "calc(50% - 4rem",
                   color: email ? "var(--main)" : "var(--main)",
                   backgroundColor: email ? "var(--main2)" : "",
@@ -106,8 +105,8 @@ function EmailForm() {
                 ...(hover ? styles.hover : null),
               }}
             >
-              {" "}
-              Start Live Chat{" "}
+              
+              Start Live Chat 
             </button>
           )}
         </form>

@@ -112,40 +112,43 @@ function Footer() {
             </li>
           </Flex>
 
-          <Flex>
+          <FlexSocial>
             <h4>Social media</h4>
-            <div style={{ display: "flex", gap: "12px" }}>
+            <div  style={{ display: "flex", gap: "12px" }}>
               <FontAwesomeIcon
-                style={{ fontSize: "1.5rem", color: "#4968ad" }}
+                style={{ fontSize: "1.5rem",cursor:'pointer' ,color: "#4968ad" }}
                 icon={faFacebook}
               />
               <FontAwesomeIcon
-                style={{ fontSize: "1.5rem", color: "#0a66c2" }}
+                style={{ fontSize: "1.5rem",cursor:'pointer', color: "#0a66c2" }}
                 icon={faLinkedin}
               />
               <FontAwesomeIcon
-                style={{ fontSize: "1.5rem", color: " #1da1f2" }}
+                style={{ fontSize: "1.5rem",cursor:'pointer' , color: " #1da1f2" }}
                 icon={faTwitter}
               />
               <FontAwesomeIcon
-                style={{ fontSize: "1.5rem", color: "red" }}
+                style={{ fontSize: "1.5rem", color: "red" ,cursor:'pointer' ,}}
                 icon={faYoutube}
               />
             </div>
             <p>Get email offers and the latest news from our team.</p>
-            <button
+            <a
+            href='/signup'
               style={{
                 color: "white",
                 backgroundColor: "var(--main)",
                 border: "none",
                 outline: "none",
                 width: "90%",
-                padding: "5px",
+                padding: "5px",cursor:'pointer' ,
+          textAlign:'center',
+          textDecoration:'none',
               }}
             >
               Sign up
-            </button>
-          </Flex>
+            </a>
+          </FlexSocial>
         </FooterMain>
       </Container>{" "}
       <div
@@ -176,7 +179,11 @@ const FooterMain = styled.div`
   @media (max-width: 700px) {
     flex-direction: column;
     align-items: center;
+   
+
+
   }
+
 `;
 const Flex = styled.ul`
 flex:1;
@@ -197,16 +204,7 @@ h4{
     font-size: .9rem;
     font-weight:700;
   }
-:last-child{
-  display:flex;
-  flex-direction:column;
-  gap:2rem;
-  @media(max-width:700px){
-    align-items:center;
-     margin-bottom:2rem;  
-    
-  }
-}
+
     li {
           a{
             display:block;
@@ -242,3 +240,20 @@ const Container = styled.div`
   border-top: 3px solid var(--main);
   padding-top: 3rem;
 `;
+const FlexSocial=styled.div`
+display:flex;
+flex-direction:column;
+>*{
+  margin-bottom:2rem;
+}
+:last-child{
+  margin-bottom:1rem;
+}
+
+ 
+
+@media (max-width:700px){
+
+ align-items:center;
+}
+`

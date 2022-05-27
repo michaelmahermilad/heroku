@@ -70,7 +70,7 @@
   width: 100%;
 
   padding-top: .8rem;
-  padding-inline: 0.7rem;
+  margin-inline: 0.7rem;
   padding-bottom: .8rem;
 
 }
@@ -130,7 +130,7 @@ color:rgb(53, 15, 20)
   bottom: 0;
   left: 0px;
   right: 0;
-  padding-inline: 0.7rem;
+  margin-inline: 0.7rem;
   border-top: 0.1px solid rgba(241, 179, 165, 0.9);
  
 
@@ -146,11 +146,11 @@ color:rgb(53, 15, 20)
   margin-left: 0;
   font-weight: 600;
 }
-.tags {
-  padding-inline: 0.7rem;
+.tags { margin: auto;
+  margin-inline: 0.7rem;
   font-size: .9rem;
    font-weight: 600;
-  margin: auto;
+ 
   line-height: 1rem;
   color: var(--main);
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
