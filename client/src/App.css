@@ -4,15 +4,15 @@
   padding: 0;
   font-family: 'Montserrat', sans-serif;
 font-family: 'Roboto',  Sans-serif   ;
-font-size: .9rem;
+ 
 scroll-behavior: smooth;
 }
 :root {
   --main: #800000	;
   --main2:rgb(250, 187, 187) ;
   --chatwidth:90%;
-  --fonttitle:1.15rem;
-  --fonttitlesmall:.9rem;
+  --fonttitle:1.2rem;
+  --fonttitlesmall:1rem;
 }
 body{
      min-height: 100vh;
@@ -112,7 +112,7 @@ color:var(--main);
   margin-bottom: 2rem;
 }
 
-.Articles-banner h4{
+.Articles-banner h5{
  
     border-radius: 20px;
 
@@ -122,7 +122,7 @@ color:var(--main);
   .Articles-banner{
     justify-content: start;
   }
-  .Articles-banner h4{
+  .Articles-banner h5{
     display:none;
 
   }

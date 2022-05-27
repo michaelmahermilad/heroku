@@ -6,10 +6,10 @@ function Articles() {
   return (<>
       <div  style={{ marginInline:'4%'}}>
     <div className='Articles-banner'>
-        <Heading  style={{  fontWeight: '600',
+        <Heading  style={{  fontWeight: '700',
     color: 'var(--main)',
            letterSpacing: '.8px'    }} >
-         Latests Articlesss
+         Latests Articles
         </Heading>
         <h5 >
          All Articles
