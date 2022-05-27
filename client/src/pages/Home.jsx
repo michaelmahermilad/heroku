@@ -42,7 +42,7 @@ function Home({ openModal }) {
 
 export default Home;
 const Divider = styled.div`
-  height: 3rem;
+  height: 1rem;
   @media(max-width:600px){
     height:2rem;
 

@@ -7,8 +7,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useMediaQuery } from "react-responsive";
-import pic1 from "../images/pic1.png";
-import pic2 from "../images/pic2.png";
+import e from "../images/e.jpg";
+import w from "../images/w.png";
 import pic3 from "../images/pic3.png";
 import pic4 from "../images/pic4.png";
  
@@ -28,7 +28,7 @@ export const Swipper = () => {
           backgroundColor: "var(--main2)",
           borderRadius: "25px",
           padding: ".6rem",
-          width: "18rem",
+          width: "fit-content",
           margin: "auto",
           textAlign: "center",
           color: "var(--main)",
@@ -44,14 +44,14 @@ export const Swipper = () => {
           width: "87%",
           margin: "auto",
          marginTop:'2rem',
-   
-          paddingBottom: "2rem",
+   height:'15rem',
+          paddingBottom: "1rem",
         }}
         className='swipper'
         centeredSlides={true} 
         centeredSlidesBounds={true}
-        spaceBetween={10}
-        slidesPerView={issmall ? 1 : issmall2 ? 3 :5}
+        spaceBetween={2}
+        slidesPerView={issmall ? 1 : issmall2 ? 2 :5}
         autoplay={{
           delay: 2400,
           disableOnInteraction: false,
@@ -62,37 +62,10 @@ export const Swipper = () => {
         }}
         modules={[Autoplay, Pagination, Navigation]}
       >
-
-<SwiperSlide
-          style={{
-             
-           
-          
-         }}
-        >
-          {({ isActive }) => (
-            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "" }}>
-            <img
-                src={pic1}
-                style={{ display: "block"}}
-              />
-            </Card>
-          )}
-        </SwiperSlide>
-
-        <SwiperSlide
         
-       
-        >
-          {({ isActive }) => (
-            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "" }}>
-            <img
-                src={pic2}
-                style={{ display: "block"}}
-              />
-            </Card>
-          )}
-        </SwiperSlide>
+
+ 
+ 
         <SwiperSlide
            
         >
@@ -105,19 +78,23 @@ export const Swipper = () => {
             </Card>
           )}
         </SwiperSlide>
-      
+
+
+
+
         <SwiperSlide
            
         >
           {({ isActive }) => (
             <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "" }}>
             <img
-                src={pic4}
+                src={w}
                 style={{ display: "block"}}
               />
             </Card>
           )}
         </SwiperSlide>
+     
    
         
         <SwiperSlide
@@ -154,7 +131,18 @@ export const Swipper = () => {
 
 
 
-
+        <SwiperSlide
+           
+        >
+          {({ isActive }) => (
+            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "" }}>
+            <img
+                src={e}
+                style={{ display: "block"}}
+              />
+            </Card>
+          )}
+        </SwiperSlide>
 
 
 
@@ -174,7 +162,7 @@ const Card = styled.div`
    height:15rem;
   overflow:hidden
   @media (max-width:700px){
-    height:7rem;
+    height:;
   }
 `;
  export const Heading=styled.h4`

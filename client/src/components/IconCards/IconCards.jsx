@@ -8,8 +8,8 @@ import { Heading } from '../Swipper.jsx'
 function IconCards() {
   return (
     <>
-        <div  style={{ }}>
-          <Heading style={{width:'12rem',textAlign:'center', margin:'auto',color:'var(--main)' }}>Researchs Fields</Heading>
+        <div   >
+          <Heading style={{width:'100%',textAlign:'center', margin:'auto',color:'var(--main)' }}>Researchs Fields</Heading>
           <Container>
               {ArrayofSections.map((i,index)=>{
                   return (
