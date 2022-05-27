@@ -8,10 +8,11 @@ font-size: .9rem;
 scroll-behavior: smooth;
 }
 :root {
-  --main: rgb(94, 22, 22);
+  --main: #800000	;
   --main2:rgb(250, 187, 187) ;
   --chatwidth:90%;
   --fonttitle:1.15rem;
+  --fonttitlesmall:.9rem;
 }
 body{
      min-height: 100vh;
@@ -110,19 +111,10 @@ color:var(--main);
   justify-content: space-between;
   margin-bottom: 2rem;
 }
-.Articles-banner h2{
- font-weight: 600;
- font-size:var(--fonttitle);
- color: var(--main);
- letter-spacing: .8px;
 
-}
 .Articles-banner h4{
-  font-weight: 600;
-  font-size:small;
-  background-color: var(--main2);
-  padding: 5px 15px;
-  border-radius: 20px;
+ 
+    border-radius: 20px;
 
  
  }

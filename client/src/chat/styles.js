@@ -1,3 +1,4 @@
+import iconchat from '../images/iconchat.jpg'
 export const styles = {
   chatWithMeButton: {
     cursor: "pointer",
@@ -5,7 +6,7 @@ export const styles = {
     // Border
     borderRadius: "40%",
     // Background
-    backgroundImage: `url(https://chat-engine-assets.s3.amazonaws.com/tutorials/my-face-min.png)`,
+    backgroundImage: `url(${iconchat})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundSize: "84px",

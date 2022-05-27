@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from 'emailjs-com'
 import validator from 'validator';
 import ReCAPTCHA from "react-google-recaptcha";
+import { Heading } from "../Swipper";
 
 function Sendmail() {
   const recaptchaRef=useRef();
@@ -49,7 +50,7 @@ emailjs.sendForm('service_vzr714e', 'template_ece8zxe', form.current, 'tJLXI8yBe
               <div className="form">
               <form className="Aform" ref={form} onSubmit={sendEmail}>
                   <div className="formWord">
-                    <h2>Contact us</h2>
+                    <Heading style={{color:'var(--main)',marginBottom:'2rem',backgroundColor:'var(--main2)', padding:'1.4rem',borderRadius:'25px',width:'fit-content'}}>Send Feedback</Heading>
                     <span>Full Name</span>
                     <br />
                     <input

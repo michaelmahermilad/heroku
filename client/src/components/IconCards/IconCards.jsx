@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ArrayofSections } from '../../WebsiteSections.js'
+import { Heading } from '../Swipper.jsx'
  
  import IconCard from './IconCard'
 
@@ -8,7 +9,7 @@ function IconCards() {
   return (
     <>
         <div  style={{ }}>
-          <h3 style={{width:'12rem',textAlign:'center', margin:'auto',color:'var(--main)',fontSize:'1.15rem'}}>Researchs Fields</h3>
+          <Heading style={{width:'12rem',textAlign:'center', margin:'auto',color:'var(--main)' }}>Researchs Fields</Heading>
           <Container>
               {ArrayofSections.map((i,index)=>{
                   return (

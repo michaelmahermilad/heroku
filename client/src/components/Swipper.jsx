@@ -23,7 +23,7 @@ export const Swipper = () => {
 
   return (
     <>
-      <h4
+      <Heading
         style={{
           backgroundColor: "var(--main2)",
           borderRadius: "25px",
@@ -32,12 +32,13 @@ export const Swipper = () => {
           margin: "auto",
           textAlign: "center",
           color: "var(--main)",
-          fontSize: "var(--fonttitle)",
+         
           fontWeight: "700",
+          
         }}
       >
        Their Smile Matters 
-      </h4>
+      </Heading>
       <Swiper
         style={{
           width: "87%",
@@ -191,3 +192,10 @@ const Card = styled.div`
    height:15rem;
   overflow:hidden
 `;
+ export const Heading=styled.h4`
+font-size:var(--fonttitle);
+@medai (max-width:600px){
+  font-size:var(--fonttitlesmall);
+}
+
+`

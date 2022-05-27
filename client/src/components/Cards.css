@@ -10,7 +10,7 @@
   border: 0.02px solid rgb(209, 152, 152);
   border-radius: 10px;
   background-color: white;
-  height: 25rem;
+  height: 23rem;
   position: relative;
   max-width: 95vw;
 
@@ -36,8 +36,8 @@
   .outline {
     overflow: hidden;
 
-    border: 0.09px solid rgb(125, 84, 55);
-    border-radius: 6px;
+    border:1px solid rgb(125, 84, 55);
+    border-radius: 10px;
     background-color: white;
     height: 25rem;
     position: relative;
@@ -63,42 +63,61 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  border-bottom: 2px solid var(--main);
+
 }
 .title {
   width: 100%;
-  height: 4.3rem;
-  padding-top: 1rem;
+
+  padding-top: .8rem;
   padding-inline: 0.7rem;
-  letter-spacing: 0.3px;
-  line-height: 1.2rem;
-  font-weight: 700;
-  color: rgb(56, 7, 7);
-  font-size: 19px;
+  padding-bottom: .8rem;
+
 }
 .title :hover {
   cursor: pointer;
   color: var(--main);
+  text-decoration: underline;
 }
 .image1 p {
   position: absolute;
-  background-color: rgb(125, 84, 55);
+  background-color: var(--main);
+  
   bottom: 0;
-  height: 1.9rem;
-  width: auto;
-  backdrop-filter: blur(2px);
+   
+  width: fit-content;
+  backdrop-filter: blur(7px);
   font-weight: 600;
   font-size: 0.85rem;
-  border-top: 0.1px solid rgb(162, 45, 45, 0.9);
-  border-right: 0.1px solid rgb(162, 45, 45, 0.9);
+  border-top: 0.1px solid var(--main);
+  border-right: 0.1px solid var(--main);
   border-top-right-radius: 6px;
-  padding: 6px 0.7rem;
+ padding: .3rem;
 
   z-index: 3;
-  color: rgb(254, 207, 207);
+  color: rgb(255, 255, 255);
+}
+.title p{
+font-weight: 600;
+font-size: .94rem;
+color:rgb(53, 15, 20)
+}
+@media (max-width:700px){
+  .title p{
+    font-weight: 600;
+    font-size: .87rem;
+    
+  }
+
+
 }
 .image1 p:hover {
-  background-color: rgb(162, 45, 45, 0.9);
-  color: rgb(255, 249, 249);
+  background-color: rgb(255, 255, 255);
+  color: var(--main);
+  cursor: pointer;
+  border-top: 2px solid var(--main);
+  border-right: 2px solid var(--main);
+  border-bottom: 2px solid var(--main);
 }
 .info {
   display: flex;
@@ -113,7 +132,7 @@
   right: 0;
   padding-inline: 0.7rem;
   border-top: 0.1px solid rgba(241, 179, 165, 0.9);
-  border-inline: 0.7rem;
+ 
 
   justify-content: space-between;
 }
@@ -122,20 +141,22 @@
 }
 .info p {
   color: var(--main);
-  font-size: 10px;
+  font-size: .69rem;
   padding-top: 3px;
   margin-left: 0;
+  font-weight: 600;
 }
 .tags {
   padding-inline: 0.7rem;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: .83rem;
+   font-weight: 600;
   margin: auto;
-  line-height: 1.2rem;
+  line-height: 1rem;
   color: var(--main);
+  font-family: cursive;
 }
 @media (max-width: 700px) {
   .tags {
-    font-size: 11px;
+    font-size: .8rem;
   }
 }

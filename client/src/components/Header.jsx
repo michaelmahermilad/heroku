@@ -1,74 +1,85 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import logo from "../images/logo.svg";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import LoginIcon from '@mui/icons-material/Login';
+import LoginIcon from "@mui/icons-material/Login";
 export default function Header() {
-const [show, setShow] = useState(true);
-const [lastScrollY, setLastScrollY] = useState(0);
-const controlNavbar = () => {
-  if (typeof window !== 'undefined') { 
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const controlNavbar = () => {
+    if (typeof window !== "undefined") {
       if (window.scrollY > lastScrollY) {
-       // if scroll down hide the navbar
-        setShow(false); 
-      } else { // if scroll up show the navbar
-        setShow(true);  
+        // if scroll down hide the navbar
+        setShow(false);
+      } else {
+        // if scroll up show the navbar
+        setShow(true);
       }
 
       // remember current page location to use in the next move
-      setLastScrollY(window.scrollY); 
+      setLastScrollY(window.scrollY);
     }
   };
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', controlNavbar);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
 
       // cleanup function
       return () => {
-        window.removeEventListener('scroll', controlNavbar);
+        window.removeEventListener("scroll", controlNavbar);
       };
     }
   }, [lastScrollY]);
 
   return (
-    <Main  show={show} >
+    <Main show={show}>
       <div>
         <Link to="/">
           <Logo src={logo} alt="michael" />
         </Link>
       </div>
       <Links>
-        <Linkat to="/" >
+        <Linkat to="/">
           <p>Heart Care</p>
         </Linkat>
-        <Linkat  to="/"  >
+        <Linkat to="/">
           <p>Neuro system</p>
         </Linkat>
-        
-      <Drop>  <p> &nbsp;&nbsp;&nbsp;&nbsp;Studies</p><ArrowDropDownIcon style={{ display: "inline" }} />
+
+        <Drop>
+          {" "}
+          <p> &nbsp;&nbsp;&nbsp;&nbsp;Studies</p>
+          <ArrowDropDownIcon style={{ display: "inline" }} />
           <div className="div1">
-       <Link to="/"  style={{textDecoration:'none'}}>    <h4 className="item">Lung Diseases</h4></Link> 
-       <Link to="/" style={{textDecoration:'none'}}   >     <h4 className="item">Kidney conditions</h4></Link> 
-       <Link to="/"   style={{textDecoration:'none'}} >  <h4 className="item">Mental Illness</h4></Link> 
-         </div>  
-       </Drop>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              {" "}
+              <h4 className="item">Lung Diseases</h4>
+            </Link>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              {" "}
+              <h4 className="item">Kidney conditions</h4>
+            </Link>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              {" "}
+              <h4 className="item">Mental Illness</h4>
+            </Link>
+          </div>
+        </Drop>
       </Links>
       <Btns>
-        <Link style={{textDecoration:'none'}} to="/signup">
+        <Link style={{ textDecoration: "none" }} to="/signup">
           <Button
             background={"white"}
             textcolor={"var(--main)"}
             width={"4rem"}
             height={"1.9rem"}
-
           >
             Sign up
           </Button>
-        </Link>{" "}
-        <Link style={{textDecoration:'none'}}to="login">
-          {" "}
+        </Link>
+        <Link style={{ textDecoration: "none" }} to="/login">
           <Button
             background={"var(--main2)"}
             textcolor={"var(--main)"}
@@ -78,19 +89,12 @@ const controlNavbar = () => {
             Log in
           </Button>
         </Link>
-
       </Btns>
-     <BtnCustom   style={{ backgroundColor:'var(--main2)',padding:'.2rem',paddingInline:'.4rem', borderRadius:'23px', position:'absolute',top:'.6rem',right:'5rem',gap:'.3rem',alignItems:'center',color:'var(--main)'}} ><p>Join Us</p><LoginIcon />
-    </BtnCustom></Main>
+  
+    </Main>
   );
 }
-const BtnCustom=styled.div`
-display:none;
-@media (max-width: 900px) {
-display:flex;
-}
-
-`
+ 
 const Logo = styled.img`
   height: 36px;
   margin-left: 2rem;
@@ -105,93 +109,80 @@ const Button = styled.button`
   color: ${(props) => props.textcolor};
   width: ${(props) => props.width};
   height: ${(props) => props.height};
-  
- a{text-decoration:none;}
+
   border: none;
   outline: none;
   margin-right: 1rem;
   border-radius: 4px;
   font-size: 1.1em;
-  font-weight:700;
+  font-weight: 700;
   cursor: pointer;
   :hover {
-   
-    border:2px solid brown;
-    background-color:white;
-    color:brown;
-    transition: all .3s linear;
+    border: 2px solid var(--main);
+    background-color: white;
+    color: var(--main);
+    transition: all 0.1s linear;
   }
-  
-    display: block;
-    margin: auto;
-    
+
+  display: block;
+  margin: auto;
 `;
 const Linkat = styled(Link)`
   min-height: 100%;
   display: flex;
-  text-decoration:none;
-  color:var(--main);
+  text-decoration: none;
+  color: var(--main);
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   position: relative;
 
   :hover {
-   
     background-color: rgba(241, 179, 165, 0.6);
-    p{
-     
-        font-weight: 600;
-        color: var(--main);
- 
+    p {
+      font-weight: 600;
+      color: var(--main);
     }
   }
- p {
+  p {
     text-decoration: none;
-     
+
     font-weight: 600;
     letter-spacing: 1px;
     font-size: 1em;
-   
   }
 `;
-const Drop=styled.div`
-position:relative;
-display:flex;
- align-items:center;
- color:var(--main);
- font-weight:700;
+const Drop = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--main);
+  font-weight: 700;
 
- 
-.div1{
+  .div1 {
+    opacity: 0;
+    position: absolute;
+    display: none;
+  }
+  :hover {
+    .div1 {
+      display: flex;
+      transition: opacity 0.7s linear;
+      opacity: 1;
+      top: 110%;
 
- 
-opacity:0;
-position:absolute;
-display:none;
- 
-}
-:hover{
-  .div1{
-    display:flex;
-    transition: opacity .7s linear;
-    opacity:1;
-    top:110%;
-
-    
-    background-color:white;
-    padding:1rem;
-    border-bottom-left-radius:25px;
-    .item{
-      width:8.6rem;
-      color:var(--main);
-      padding:.4rem;
-      border-radius:25px;
+      background-color: white;
+      padding: 1rem;
+      border-bottom-left-radius: 25px;
+      .item {
+        width: 8.6rem;
+        color: var(--main);
+        padding: 0.4rem;
+        border-radius: 25px;
+      }
     }
   }
-}
-
-`
+`;
 const Links = styled.div`
   display: grid;
   grid-template-columns: 33.3% 33.3% 33.3%;
@@ -213,18 +204,17 @@ const Main = styled.div`
   align-items: center;
   box-shadow: 0.3px 1px 9px grey;
   position: fixed;
-  top:${(props)=>props.show? '0px' : '-3.5rem'};
+  top: ${(props) => (props.show ? "0px" : "-3.5rem")};
   transition: 0.2s linear;
   z-index: 30;
   background-color: white;
   width: 100%;
   @media (max-width: 900px) {
     grid-template-columns: initial;
-    
   }
-  @media(min-width:900px){
-    .u{
-      display:none;
+  @media (min-width: 900px) {
+    .u {
+      display: none;
     }
   }
 `;
