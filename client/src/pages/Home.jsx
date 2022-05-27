@@ -19,18 +19,33 @@ function Home({ openModal }) {
       <Divider />
       <Divider />
       <Divider />
+      <Divider />
+
   <IconCards />
   <Divider />
+  <Divider />
+  <Divider />
+
       <Divider />
       <SimpleDrawer />
+      <Divider />
       <Swipper />
       <Divider />
+
       <Divider />
-      <Articles />       <Divider /><AnimaGasp />     <Divider />
+      <Divider />
+      <Divider />
+      <Articles />         <Divider />
+      <Divider />
+     <AnimaGasp />      
      
       <Sendmail/> 
       <Divider />
       <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
+
       <Footer />
    
 

@@ -9,12 +9,12 @@ function AnimaGasp() {
             repeatDelay:5,
             
           });
-         tl.fromTo("#logo2",   {opacity:.6,scale:1 },{duration:5,   opacity:1,   scale:1.1});         
+         tl.fromTo("#logo2",   {opacity:.8,scale:1 },{duration:5,   opacity:1,   scale:1.1});         
 
 
     },[])
   return (
-    <div style={{marginTop:'4rem',position:'relative',padding:0,height:'10rem',marginBottom:'4rem'}}>
+    <div style={{marginTop:'2rem',position:'relative',padding:0,height:'6rem' }}>
  <Image   id="logo2" src={children}/> 
         
         </div>

@@ -110,10 +110,11 @@ color:var(--main);
 }
 
 .Articles-banner{
-  width: 100%;
+  width: 97%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .Articles-banner h5{
@@ -134,11 +135,7 @@ color:var(--main);
 
 
 
-@keyframes fly-cycle {
-  100% {
-    background-position: -900px 0;
-  }
-}
+ 
 
 
 

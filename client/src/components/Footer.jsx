@@ -213,7 +213,7 @@ h4{
   color: var(--main);
         text-decoration: none;
     font-weight: 600;
-    font-size:12px; 
+    font-size:1rem; 
      :hover { 
        border-radius:6px;
       text-decoration: underline;

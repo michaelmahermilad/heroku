@@ -162,7 +162,7 @@ const Card = styled.div`
    height:15rem;
   overflow:hidden
   @media (max-width:700px){
-    height:;
+    height:auto;
   }
 `;
  export const Heading=styled.h4`

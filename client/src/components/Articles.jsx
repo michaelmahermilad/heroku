@@ -4,7 +4,7 @@ import { Heading } from './Swipper'
 
 function Articles() {
   return (<>
-      <div  style={{ marginInline:'4%'}}>
+      <div  style={{ width:'95%',margin:'auto'}}>
     <div className='Articles-banner'>
         <Heading  style={{  fontWeight: '700',
     color: 'var(--main)',
