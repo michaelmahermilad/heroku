@@ -58,10 +58,10 @@ const controlNavbar = () => {
       <Btns>
         <Link style={{textDecoration:'none'}} to="/signup">
           <Button
-            background={"rgba(241, 179, 165 ,.9)"}
+            background={"white"}
             textcolor={"var(--main)"}
-            width={"5rem"}
-            height={"1.8rem"}
+            width={"4rem"}
+            height={"1.9rem"}
 
           >
             Sign up
@@ -70,10 +70,10 @@ const controlNavbar = () => {
         <Link style={{textDecoration:'none'}}to="login">
           {" "}
           <Button
-            background={"#CF6A54"}
-            textcolor={"black"}
-            width={"5rem"}
-            height={"1.8rem"}
+            background={"var(--main2)"}
+            textcolor={"var(--main)"}
+            width={"4rem"}
+            height={"1.9rem"}
           >
             Log in
           </Button>
@@ -115,7 +115,11 @@ const Button = styled.button`
   font-weight:700;
   cursor: pointer;
   :hover {
-    opacity: 0.8;
+   
+    border:2px solid brown;
+    background-color:white;
+    color:brown;
+    transition: all .3s linear;
   }
   
     display: block;

@@ -28,14 +28,13 @@ const schema = yup.object({
 }).required();
 const A = styled(Typography)(({theme}) => ({
   
-    textAlign: 'left',
-    letterSpacing:'3px',
-    padding:'7px',
-    paddingBottom:'14px',
-    paddingTop:'0px',
-    fontWeight:'800',
-    color:'var(--main)',
-     
+  textAlign: 'center',
+  padding:'7px',
+ paddingBottom:'2rem',
+ paddingTop:'0px',
+ fontWeight:'700',
+ color:'var(--main)',
+  
   }));
   const Field = styled(TextField)(({theme}) => ({
     marginBottom:'2.4rem',

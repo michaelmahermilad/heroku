@@ -31,12 +31,11 @@ const schema = yup.object({
 }).required();
 const A = styled(Typography)(({theme}) => ({
   
-    textAlign: 'left',
-    letterSpacing:'3px',
-    padding:'7px',
-    paddingBottom:'14px',
+    textAlign: 'center',
+     padding:'7px',
+    paddingBottom:'2rem',
     paddingTop:'0px',
-    fontWeight:'800',
+    fontWeight:'700',
     color:'var(--main)',
      
   }));
@@ -128,7 +127,7 @@ useEffect(()=>{
   return (
     <BOX><img src={m} style={{ width:'8rem' ,margin:"auto",padding:'0',}}/>
       <A variant="h6" component="h2"  >
-        {auth == "/login" ? "Sign in" : "Register"}
+        {auth == "/login" ? "Sign in" : "Register" }
       </A>
      
   {auth == "/signup" ? ( <>

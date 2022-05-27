@@ -30,7 +30,6 @@ export const Swipper = () => {
           padding: ".6rem",
           width: "18rem",
           margin: "auto",
-           
           textAlign: "center",
           color: "var(--main)",
           fontSize: "var(--fonttitle)",
@@ -51,7 +50,7 @@ export const Swipper = () => {
         centeredSlides={true} 
         centeredSlidesBounds={true}
         spaceBetween={10}
-        slidesPerView={issmall ? 1 : issmall2 ? 2 : 3}
+        slidesPerView={issmall ? 1 : issmall2 ? 3 :5}
         autoplay={{
           delay: 2400,
           disableOnInteraction: false,
@@ -65,13 +64,13 @@ export const Swipper = () => {
 
 <SwiperSlide
           style={{
-             
-            
+            height:'6rem'
            
-          }}
+          
+         }}
         >
           {({ isActive }) => (
-            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : ""}}>
+            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "",  height:'8rem'}}>
             <img
                 src={pic1}
                 style={{ display: "block"}}
@@ -81,15 +80,15 @@ export const Swipper = () => {
         </SwiperSlide>
 
         <SwiperSlide
-      
-          style={{
-             
-            
-           
-          }}
+         style={{
+          height:'6rem'
+         
+        
+       }}
+       
         >
           {({ isActive }) => (
-            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : ""}}>
+            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "",  height:'8rem'}}>
             <img
                 src={pic2}
                 style={{ display: "block"}}
@@ -98,14 +97,14 @@ export const Swipper = () => {
           )}
         </SwiperSlide>
         <SwiperSlide
-          style={{
+            style={{
+              height:'6rem'
              
             
-           
-          }}
+           }}
         >
           {({ isActive }) => (
-            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : ""}}>
+            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "",  height:'8rem'}}>
             <img
                 src={pic3}
                 style={{ display: "block"}}
@@ -115,14 +114,14 @@ export const Swipper = () => {
         </SwiperSlide>
       
         <SwiperSlide
-          style={{
+            style={{
+              height:'6rem'
              
             
-           
-          }}
+           }}
         >
           {({ isActive }) => (
-            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : ""}}>
+            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "",  height:'8rem'}}>
             <img
                 src={pic4}
                 style={{ display: "block"}}
@@ -132,14 +131,14 @@ export const Swipper = () => {
         </SwiperSlide>
    
         <SwiperSlide
-          style={{
-             
-            
+           style={{
+            height:'6rem'
            
-          }}
+          
+         }}
         >
           {({ isActive }) => (
-            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : ""}}>
+            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "",  height:'8rem'}}>
             <img
                 src={pic6}
                 style={{ display: "block"}}
@@ -148,14 +147,14 @@ export const Swipper = () => {
           )}
         </SwiperSlide>
         <SwiperSlide
-          style={{
-             
-            
+           style={{
+            height:'6rem'
            
-          }}
+          
+         }}
         >
           {({ isActive }) => (
-            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : ""}}>
+            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "",  height:'8rem'}}>
             <img
                 src={pic7}
                 style={{ display: "block"}}

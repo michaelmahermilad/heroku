@@ -54,7 +54,7 @@
     -webkit-transition: 0.5s linear;
     -o-transition: 0.5s linear;
     transition: 0.5s linear;
-    color: rgb(68, 3, 3);
+    color: var(--main);
   }
   .formWord {
     width: 40%;
@@ -76,7 +76,7 @@
     padding-left: 3%;
     background: #fff3f3;
     -webkit-box-shadow: 0px 0px 48px 0px rgb(218, 218, 218);
-    box-shadow: 0px 0px 48px 0px rgb(88, 37, 37);
+    box-shadow: 0px 0px 48px 0px var(--main);
   }
   .formWord textarea {
     width: 100%;
@@ -86,7 +86,7 @@
     height: 100px;
     background: #fff3f3;
     -webkit-box-shadow: 0px 0px 48px 0px rgb(218, 218, 218);
-    box-shadow: 0px 0px 48px 0px rgb(88, 37, 37);
+    box-shadow: 0px 0px 48px 0px var(--main);
     padding-left: 3%;
   }
   .formWord span{

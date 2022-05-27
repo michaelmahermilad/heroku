@@ -81,7 +81,7 @@ export default function SimpleDrawer() {
         {ArrayofSections.map((i, index) => (
           <>
             <ListItem disablePadding key={i.text}>
-              <ListItemButton style={{ height: "4rem",color:'brown',fontSize:'1.3rem' }}>
+              <ListItemButton style={{ height: "4rem",color:'var(--main)',fontSize:'1.3rem' }}>
              <p className="iconafter">  {i.icon}</p>
                 <ListItemText
                   primaryTypographyProps={{

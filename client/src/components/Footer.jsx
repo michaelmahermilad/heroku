@@ -120,15 +120,15 @@ function Footer() {
                 icon={faFacebook}
               />
               <FontAwesomeIcon
-                style={{ fontSize: "1.5rem", color: "grey" }}
+                style={{ fontSize: "1.5rem", color: "#0a66c2" }}
                 icon={faLinkedin}
               />
               <FontAwesomeIcon
-                style={{ fontSize: "1.5rem", color: "#49a1eb" }}
+                style={{ fontSize: "1.5rem", color: " #1da1f2" }}
                 icon={faTwitter}
               />
               <FontAwesomeIcon
-                style={{ fontSize: "1.5rem", color: "#eb3223" }}
+                style={{ fontSize: "1.5rem", color: "red" }}
                 icon={faYoutube}
               />
             </div>
@@ -183,7 +183,7 @@ flex:1;
 display:flex;
 justify-content:start;
 flex-direction: column;
-gap:1rem;
+gap:2rem;
 list-style:none;
 position: relative;
   ul{
@@ -194,12 +194,13 @@ h4{
   margin-bottom:1rem;
 }
   p {
-    font-size: 12px;
+    font-size: .9rem;
+    font-weight:700;
   }
 :last-child{
   display:flex;
   flex-direction:column;
-  gap:1rem;
+  gap:2rem;
   @media(max-width:700px){
     align-items:center;
      margin-bottom:2rem;  
@@ -236,7 +237,7 @@ h4{
   
 `;
 const Container = styled.div`
-  width: 88%;
+  width: 90%;
   margin: auto;
   border-top: 3px solid var(--main);
   padding-top: 3rem;
