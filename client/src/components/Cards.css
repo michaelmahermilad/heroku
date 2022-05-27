@@ -148,12 +148,12 @@ color:rgb(53, 15, 20)
 }
 .tags {
   padding-inline: 0.7rem;
-  font-size: .83rem;
+  font-size: .9rem;
    font-weight: 600;
   margin: auto;
   line-height: 1rem;
   color: var(--main);
-  font-family: cursive;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 @media (max-width: 700px) {
   .tags {
