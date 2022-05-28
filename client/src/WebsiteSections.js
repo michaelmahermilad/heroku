@@ -1,13 +1,14 @@
  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
  
 import { faVirusCovid,faBuildingColumns,faHeartbeat,faBrain,faLungsVirus,faHeadSideMask,faEye} from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom";
 
 export const ArrayofSections = [
   { text: "Corona news", icon: <FontAwesomeIcon className="icons" icon={ faVirusCovid} />},
   {
     text: "Hearts care",
     icon: ( 
-      <FontAwesomeIcon className="icons" icon={ faHeartbeat} />
+     <Link> <FontAwesomeIcon className="icons" icon={ faHeartbeat} /></Link>
     ),
   },
   {
