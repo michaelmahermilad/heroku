@@ -23,11 +23,11 @@ function MyBanner(props) {
         <BannerLeft><h2 className="banneer-title">
             Medical Data for Students and Researchers.
           </h2>
-          <img style={{ display: "block", }} src={a} />
+          <img alt="" style={{ display: "block", }} src={a} />
           
         </BannerLeft>
         <BannerRight>
-          <img  id="r"    src={Main} />
+          <img alt=""  id="r"    src={Main} />
           <Button
             background={"var(--main2)"}
             textcolor={"var(--main)"}

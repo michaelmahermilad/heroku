@@ -13,11 +13,10 @@ import {
   styled,
   TextField,
   Typography,
-  useMediaQuery,
+ 
 } from "@mui/material";
- import { minWidth, width } from "@mui/system";
-import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+ import React, { useEffect, useState } from "react";
+import { useLocation,  } from "react-router-dom";
 import m from '../images/m.png'
 const schema = yup.object({
   email: yup.string().email().required(),
@@ -125,7 +124,7 @@ useEffect(()=>{
   const onSubmit = data => {  console.log(data); };
   
   return (
-    <BOX><img src={m} style={{ width:'8rem' ,margin:"auto",padding:'0',}}/>
+    <BOX><img alt="" src={m} style={{ width:'8rem' ,margin:"auto",padding:'0',}}/>
       <A variant="h6" component="h2"  >
         {auth == "/login" ? "Sign in" : "Register" }
       </A>

@@ -118,7 +118,7 @@ useEffect(()=>{
   const onSubmit = data => {  console.log(data); };
   
   return (
-    <BOX><img src={m} style={{ width:'7rem' ,margin:"auto",padding:'0',}}/>
+    <BOX><img alt="" src={m} style={{ width:'7rem' ,margin:"auto",padding:'0',}}/>
       <A variant="h6" component="h2"  >
      Log in
       </A>

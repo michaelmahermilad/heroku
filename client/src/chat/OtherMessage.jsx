@@ -52,7 +52,7 @@ function OtherMessage({email,message}) {
               >
                 {email}
               </p>
-              <img
+              <img alt=""
                 style={{ width: "30px", height: "30px", borderRadius: "15px" }}
                 src={chaticon}
               />

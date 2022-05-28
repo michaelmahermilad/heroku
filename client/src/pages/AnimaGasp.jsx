@@ -3,6 +3,8 @@ import React, { useEffect } from 'react'
  import children from '../images/children.png'
  import styled from 'styled-components'
 function AnimaGasp() {
+ 
+
     useEffect(()=>{
         var tl = gsap.timeline({
             repeat: 100, 

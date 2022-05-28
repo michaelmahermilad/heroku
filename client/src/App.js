@@ -11,6 +11,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import modal from '../src/images/modal.svg'
 import SupportAdmin from "./chat/SupportAdmin";
 import Sendmail from './components/Sendmail/index'
+import ResearchField from "./pages/ResearchField";
+import Footer from "./components/Footer";
  const theme = createTheme();
 const customStyles = {
   content: {
@@ -65,7 +67,7 @@ function App(props) {
           >
             <h2 ref={(_subtitle) => (subtitle = _subtitle)}></h2>
 
-            <img style={{width:'100%'}} src={modal}/>
+            <img alt="" style={{width:'100%'}} src={modal}/>
             <button  style={{width:'5rem',height:'2rem',marginLeft:'3rem', backgroundColor:'var(--main)'}}onClick={closeModal}>Not now</button>
         
           </Modal>
@@ -76,7 +78,9 @@ function App(props) {
             <Route path="/signup" element={<Auth />} />
             <Route path='/main' element={<SupportAdmin/>}/>
             <Route path='/email' element={<Sendmail/>}/>
+            <Route path='/researchfield'element={<ResearchField/>}/>
           </Routes>
+          <Footer />
         </div>
       </ThemeProvider>
       ;

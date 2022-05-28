@@ -12,7 +12,7 @@ function Cards() {
     <div   className="grids">
       <div className="outline">
         <div className="image1">
-          <img src={o}/>
+          <img alt="" src={o}/>
           <div className="category">
             <p>Research</p>
           </div>
@@ -28,7 +28,7 @@ function Cards() {
    
       <div className="outline">
         <div className="image1">
-          <img src={l}/>
+          <img alt="" src={l}/>
           <div className="category">
             <p> Students</p>
           </div>
@@ -43,7 +43,7 @@ function Cards() {
       </div>
       <div className="outline">
         <div className="image1">
-          <img src={article1}/>
+          <img alt="" src={article1}/>
           <div className="category">
             <p> Corona Virus</p>
           </div>

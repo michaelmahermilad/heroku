@@ -161,7 +161,7 @@ marginBottom:'2rem',
           justifyContent: "space-around",
         }}
       >
-        <img src={logo} />
+        <img alt="" src={logo} />
       </div>
     </>
   );

@@ -71,7 +71,7 @@ export const Swipper = () => {
         >
           {({ isActive }) => (
             <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "" }}>
-            <img
+            <img alt=""
                 src={pic3}
                 style={{ display: "block"}}
               />
@@ -87,7 +87,7 @@ export const Swipper = () => {
         >
           {({ isActive }) => (
             <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "" }}>
-            <img
+            <img alt=""
                 src={w}
                 style={{ display: "block"}}
               />
@@ -103,7 +103,7 @@ export const Swipper = () => {
          
           {({ isActive }) => (
             <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "" }}>
-            <img
+            <img alt=""
                 src={pic6}
                 style={{ display: "block"}}
               />
@@ -115,7 +115,7 @@ export const Swipper = () => {
         >
           {({ isActive }) => (
             <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "" }}>
-            <img
+            <img alt=""
                 src={pic7}
                 style={{ display: "block"}}
               />
@@ -136,7 +136,7 @@ export const Swipper = () => {
         >
           {({ isActive }) => (
             <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "" }}>
-            <img
+            <img alt=""
                 src={e}
                 style={{ display: "block"}}
               />
