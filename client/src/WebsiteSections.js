@@ -8,7 +8,7 @@ export const ArrayofSections = [
   {
     text: "Hearts care",
     icon: ( 
-     <Link> <FontAwesomeIcon className="icons" icon={ faHeartbeat} /></Link>
+     <Link to="/researchfield"> <FontAwesomeIcon className="icons" icon={ faHeartbeat} /></Link>
     ),
   },
   {
