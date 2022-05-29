@@ -13,7 +13,8 @@ import SupportAdmin from "./chat/SupportAdmin";
 import Sendmail from './components/Sendmail/index'
 import ResearchField from "./pages/ResearchField";
 import Footer from "./components/Footer";
- const theme = createTheme();
+import Article from "./pages/Article/Article";
+  const theme = createTheme();
 const customStyles = {
   content: {
     top: "50%",
@@ -79,6 +80,7 @@ function App(props) {
             <Route path='/main' element={<SupportAdmin/>}/>
             <Route path='/email' element={<Sendmail/>}/>
             <Route path='/researchfield'element={<ResearchField/>}/>
+            <Route path='/article' element={<Article/>}/>
           </Routes>
           <Footer />
         </div>

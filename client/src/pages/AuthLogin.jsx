@@ -13,8 +13,7 @@ import {
   styled,
   TextField,
   Typography,
-  useMediaQuery,
-} from "@mui/material";
+ } from "@mui/material";
 
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";

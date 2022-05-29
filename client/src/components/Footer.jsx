@@ -12,7 +12,7 @@ import logo from "../images/logo.svg";
 import { useMediaQuery } from "react-responsive";
 
 function Footer() {
-  const issmall = useMediaQuery({ query: "(max-width: 700px)" });
+ {/*  const issmall = useMediaQuery({ query: "(max-width: 700px)" });
   const [block1, setBlock1] = useState(true);
   const [block2, setBlock2] = useState(true);
   const [block3, setBlock3] = useState(true);
@@ -20,134 +20,129 @@ function Footer() {
   const ref2 = useRef();
   const ref3 = useRef();
   useEffect(() => {
-    if (issmall) {
+   if (issmall) {
       setBlock1(false);
       setBlock2(false);
       setBlock3(false);
     }
     block1
-      ? (ref1.current.style.display = "block")
-      : (ref1.current.style.display = "none");
+      ? (ref1?.current.style.display = "block")
+      : (ref1?.current.style.display = "none");
     block2
-      ? (ref2.current.style.display = "block")
-      : (ref2.current.style.display = "none");
+      ? (ref2?.current.style.display = "block")
+      : (ref2?.current.style.display = "none");
     block3
-      ? (ref3.current.style.display = "block")
-      : (ref3.current.style.display = "none");
+      ? (ref3?.current.style.display = "block")
+      : (ref3?.current.style.display = "none");
   }, []);
   useEffect(() => {
     block1
-      ? (ref1.current.style.display = "block")
-      : (ref1.current.style.display = "none");
+      ? (ref1?.current.style.display = "block")
+      : (ref1?.current.style.display = "none");
     block2
-      ? (ref2.current.style.display = "block")
-      : (ref2.current.style.display = "none");
+      ? (ref2?.current.style.display = "block")
+      : (ref2?.current.style.display = "none");
     block3
-      ? (ref3.current.style.display = "block")
-      : (ref3.current.style.display = "none");
-  }, [!block1, !block2, !block3]);
+      ? (ref3?.current.style.display = "block")
+      : (ref3?.current.style.display = "none");
+  }, [!block1, !block2, !block3]);*/}
   return (
     <>
       <Container>
         <FooterMain>
           <Flex>
-            <li>
-              <h4 onClick={() => setBlock1(!block1)}>Discover</h4>
+        
+              <h4  >Discover</h4>
 
-              <ul ref={ref1}>
-                <li>
+              <div  >
+            
                   <a href="#">Researches</a>
-                </li>
-                <li>
+           
+           
                   <a href="#">Lectures</a>
-                </li>
-                <li>
+           
+            
                   <a href="#">Surgeries</a>
-                </li>
-                <li>
+             
+              
                   <a href="#">Training</a>
-                </li>
-              </ul>
-            </li>
+           
+              </div>
+        
           </Flex>
-
+{/*
           <Flex>
-            <li>
+        
               <h4 onClick={() => setBlock2(!block2)}>Fields</h4>
 
-              <ul ref={ref2}>
-                <li>
-                  <a href="#">Heart</a>
-                </li>
-                <li>
+              <div ref={ref2}>
+                    <a href="#">Heart</a>
+               
+               
                   <a href="#">Lungs</a>
-                </li>
-                <li>
+             
+              
                   <a href="#">Kidney</a>
-                </li>
-                <li>
+              
+              
                   <a href="#">Bones</a>
-                </li>
-                <li>
-                  <a href="#">Sight</a>
-                </li>
-              </ul>
-            </li>
+               
+              
+              
+              </div>
+         
           </Flex>
           <Flex>
-            <li>
+            
               <h4 onClick={() => setBlock3(!block3)}>About us </h4>
 
-              <ul ref={ref3}>
-                <li>
+              <div ref={ref3}>
+                 
                   <a href="#">Site map</a>
-                </li>
-                <li>
+                
+              
                   <a href="#">Location</a>
-                </li>
-                <li>
+             
                   <a href="#">FAQS</a>
-                </li>
-              </ul>
-            </li>
-          </Flex>
+          
+              </div>
+          
+          </Flex>*/}
 
           <FlexSocial>
             <h4>Social media</h4>
-            <div  style={{ display: "flex", gap: "12px" }}>
+            <div style={{ display: "flex", gap: "12px" }}>
               <FontAwesomeIcon
-                style={{ fontSize: "1.5rem",cursor:'pointer' ,color: "#4968ad" }}
+                style={{
+                  fontSize: "1.5rem",
+                  cursor: "pointer",
+                  color: "#4968ad",
+                }}
                 icon={faFacebook}
               />
               <FontAwesomeIcon
-                style={{ fontSize: "1.5rem",cursor:'pointer', color: "#0a66c2" }}
+                style={{
+                  fontSize: "1.5rem",
+                  cursor: "pointer",
+                  color: "#0a66c2",
+                }}
                 icon={faLinkedin}
               />
               <FontAwesomeIcon
-                style={{ fontSize: "1.5rem",cursor:'pointer' , color: " #1da1f2" }}
+                style={{
+                  fontSize: "1.5rem",
+                  cursor: "pointer",
+                  color: " #1da1f2",
+                }}
                 icon={faTwitter}
               />
               <FontAwesomeIcon
-                style={{ fontSize: "1.5rem", color: "red" ,cursor:'pointer' ,}}
+                style={{ fontSize: "1.5rem", color: "red", cursor: "pointer" }}
                 icon={faYoutube}
               />
             </div>
             <p>Get email offers and the latest news from our team.</p>
-            <a
-            href='/signup'
-              style={{
-                color: "white",
-                backgroundColor: "var(--main)",
-                border: "none",
-                outline: "none",
-                width: "90%",
-                padding: "5px",cursor:'pointer' ,
-          textAlign:'center',
-          textDecoration:'none',
-              }}
-            >
-              Sign up
-            </a>
+         
           </FlexSocial>
         </FooterMain>
       </Container>{" "}
@@ -155,105 +150,99 @@ function Footer() {
         style={{
           display: "flex",
           position: "relative",
-marginBottom:'2rem',
+         
           width: "100%",
 
           justifyContent: "space-around",
         }}
-      >
-        <img alt="" src={logo} />
+      > <img alt="" src={logo} />
+           <a
+              href="/signup"
+              style={{
+                color: "white",
+                backgroundColor: "var(--main)",
+                border: "none",
+                outline: "none",
+                width:'7rem',
+                textAlign:'center',
+                lineHeight:'2rem',
+                cursor: "pointer",
+                height:'2rem',
+                textDecoration: "none",
+              }}
+            >
+              Sign up
+            </a>
+       
       </div>
     </>
   );
 }
 
 export default Footer;
+
 const FooterMain = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  min-height: 16rem;
+ display:flex;
+ justify-content: space-around;
+ width:100%;
+  
+ flex-wrap:wrap;
 
-  gap: 1rem;
-  align-items: start;
-
-  @media (max-width: 700px) {
-    flex-direction: column;
-    align-items: center;
-   
-
-
-  }
 
 `;
 const Flex = styled.ul`
-flex:1;
-display:flex;
-justify-content:start;
-flex-direction: column;
-gap:2rem;
-list-style:none;
-position: relative;
-  ul{
-    list-style:none;
-    
+  flex :50%; 
+  width:fit-content;
+ margin:auto;
+   padding:0;
+  margin:0;
+  h4{
+    width:fit-content;
+    margin:auto;
   }
-h4{
-  margin-bottom:1rem;
-}
-  p {
-    font-size: .9rem;
-    font-weight:700;
+  div{
+   width:fit-content;
+ margin:auto;
+    a{
+      display:block;
+       margin:auto;
+      
+      font-weight:600;
+      font-size:1rem;
+      text-decoration:none;
+      color:brown;
+      :hover{
+        text-decoration:underline;
+      }
+    }
   }
-
-    li {
-          a{
-            display:block;
-          
-          line-height:1.5rem;
-  color: var(--main);
-        text-decoration: none;
-    font-weight: 600;
-    font-size:1rem; 
-     :hover { 
-       border-radius:6px;
-      text-decoration: underline;
-    }
-
-    @media (max-width:700px){
-      
-        display:block;
-        width:100%;
-        margin:auto;
-        text-align:center;
-      
-    }
-       } 
-   
-  
-  
-
-  
+  @media (max-width:800px){
+      flex:50%;
+  }
 `;
 const Container = styled.div`
-  width: 90%;
-  margin: auto;
-  border-top: 3px solid var(--main);
-  padding-top: 3rem;
-`;
-const FlexSocial=styled.div`
-display:flex;
-flex-direction:column;
->*{
-  margin-bottom:2rem;
-}
-:last-child{
-  margin-bottom:1rem;
-}
-
  
+  border-top:2px solid var(--main);
+  padding-top:2rem;
+`;
+const FlexSocial = styled.div`
+  display: flex;
+  flex:50%;
+  
+  justify-content:space-around;
+  align-items:center;
+  p{
+    text-align:center;
+  }
+  flex-direction: column;
+  > * {
+    margin-bottom: 2rem;
+  }
+  :last-child {
+    margin-bottom: 1rem;
+  }
 
-@media (max-width:700px){
-
- align-items:center;
-}
-`
+  @media (max-width: 700px) {
+    align-items: center;
+  }
+`;

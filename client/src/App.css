@@ -22,6 +22,9 @@
     --fonttitle:1.2rem;
   }
 }
+p {
+  margin-bottom: 0px;
+}
 body{
      min-height: 100vh;
 

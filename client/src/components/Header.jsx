@@ -50,7 +50,8 @@ export default function Header() {
 
         <Drop>
           {" "}
-          <p> &nbsp;&nbsp;&nbsp;&nbsp;Studies</p>
+          <p     style={{marginBottom: 0,
+ }}> &nbsp;&nbsp;&nbsp;&nbsp;Studies</p>
           <ArrowDropDownIcon style={{ display: "inline" }} />
           <div className="div1">
             <Link to="/" style={{ textDecoration: "none" }}>
@@ -141,11 +142,13 @@ const Linkat = styled(Link)`
     background-color: rgba(241, 179, 165, 0.6);
     p {
       font-weight: 600;
+
       color: var(--main);
     }
   }
   p {
     text-decoration: none;
+margin-bottom: 0;
 
     font-weight: 600;
     letter-spacing: 1px;
@@ -174,7 +177,8 @@ const Drop = styled.div`
       background-color: white;
       padding: 1rem;
       border-bottom-left-radius: 25px;
-      .item {
+      .item { margin-bottom: 0;
+
         width: 8.6rem;
         color: var(--main);
         padding: 0.4rem;
@@ -204,8 +208,8 @@ const Main = styled.div`
   align-items: center;
   box-shadow: 0.3px 1px 9px grey;
   position: fixed;
-  top: ${(props) => (props.show ? "0px" : "-3.5rem")};
-  transition: 0.2s linear;
+  top: ${(props) => (props.show ? "0px" : "-5rem")};
+  transition: 0.4s ease;
   z-index: 30;
   background-color: white;
   width: 100%;

@@ -6,6 +6,7 @@ import l from '../images/l.jfif'
 import o from '../images/o.jpg'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
+import { Link } from "react-router-dom";
 
 function Cards() {
   return (
@@ -33,9 +34,9 @@ function Cards() {
             <p> Students</p>
           </div>
         </div>
-        <div className="title">
+       <Link to='article'style={{textDecoration:'none'}}> <div className="title" >
           <p>Learn From the Best Learn From the Best  Learn From the Best </p>
-        </div>
+        </div></Link>
         <div className="info">
          <div style={{display:'flex',alignItems:'center'}}> <CalendarMonthIcon style={{color:'var(--main)',fontSize:'19px',marginRight:'5px'}} /><p>  17/2/1994 2000 4pm  </p>
         </div>  <ReadMoreIcon/>

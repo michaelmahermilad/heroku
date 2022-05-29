@@ -20,8 +20,13 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Capture from "../images/Capture.PNG";
  import Capture1 from "../images/Capture1.PNG";
+import Article from "../pages/Article/Article";
 function ResearchField() {
+ 
   useEffect(() => {
+   
+      window.scrollTo(0, 0);
+    
     var tl = gsap.timeline({
       repeat: 100,
       repeatDelay: 50,
@@ -44,6 +49,7 @@ function ResearchField() {
 
   return (
     <>
+    
       <div
 
       
