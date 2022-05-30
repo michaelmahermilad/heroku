@@ -190,9 +190,8 @@ style={{}}          src={ml2}
                   height: "auto",
                   position: "relative",
                   minHeight: "210px",
-                  border: "1px solid 	#B0B0B0	",
                   margin: "auto",
-                  borderRadius: "0",
+                  borderRadius: "0",  
                 }}
               >
                 <DivHover
@@ -200,7 +199,7 @@ style={{}}          src={ml2}
                     zIndex: "10",
                     width: "100%",
                     height: "100%",
-                    backgroundColor: "rgba(111,111,111,.4)",
+                    backgroundColor: "rgba(111,111,111,.4)",  
                   }}
                 >
                   <div
@@ -232,7 +231,8 @@ style={{}}          src={ml2}
                   className=" "  style={{
                     height: "84%",
                     paddingBottom: "0px",
-                    borderRadius: "0",
+                     padding:'0px',
+                    margin: "0px",
                   }}
                   variant="top"
                   src={article1}
@@ -254,13 +254,14 @@ style={{}}          src={ml2}
           <Col xs="12" sm="6" md="4">
             <Card
               className=" "  style={{
+
                 width: "90%",
                 height: "auto",
                 position: "relaive",
                 minHeight: "210px",
-                border: "1px solid 	#B0B0B0	",
-                margin: "auto",
-                borderRadius: "0",
+               padding:'0px',
+                margin: "0px",
+                 
               }}
             >
               <DivHover
@@ -273,6 +274,7 @@ style={{}}          src={ml2}
               >
                 <div
                   className=" "  style={{
+
                     width: "6rem",
                     height: "2.2rem",
                     backgroundColor: "brown",
@@ -330,10 +332,10 @@ const DivHover = styled.div`
   top: 0;
   right: 0;
   opacity: 0;
-  border: 2px solid var(--main);
+  border: 3px solid var(--main);
   
   cursor: pointer;
   :hover {
-    opacity: 0.8;
+    opacity:1;
   }
 `;
