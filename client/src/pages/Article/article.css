@@ -164,10 +164,10 @@ border-radius: 10px;
 
 @media (max-width:700px){
   .diva{
-    font-size: 14px;
+    font-size: 12px;
 
 }
 .diva h5{
-  transform: translateX(65%);
+  transform: translateX(50%);
 }
 }
