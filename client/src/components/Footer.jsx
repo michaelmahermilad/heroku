@@ -51,7 +51,7 @@ function Footer() {
      
         <FooterMain>
           <FlexSocial>
-            <h4 style={{ color:'brown',  fontSize: '17px',fontweight:'800'}}>Social media</h4>
+            <p style={{ color:'brown',  fontSize: '16px',fontweight:'800'}}>Social media</p>
             <div style={{ display: "flex", gap: "12px" }}>
               <FontAwesomeIcon
                 style={{
@@ -82,7 +82,7 @@ function Footer() {
                 icon={faYoutube}
               />
             </div>
-            <p>Get email offers and the latest news from our team.</p>
+            <p className="para">Get email offers and the latest news from our team.</p>
           </FlexSocial>
         </FooterMain>
     
@@ -115,7 +115,7 @@ const FlexSocial = styled.div`
 
   justify-content: space-around;
   align-items: center;
-  p {
+  .para {
     text-align: center;
     font-size: 16px;
     max-width:80%;
@@ -123,7 +123,7 @@ const FlexSocial = styled.div`
   }
 
   @media (max-width:700px){
-    p{
+    .para{
       font-size: 14px;
     }
   }

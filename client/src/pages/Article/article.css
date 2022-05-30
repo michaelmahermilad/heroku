@@ -29,28 +29,22 @@ display:none;
   background: var(--bg-color);
   font-family: var(--font-family);
   line-height: 1.8;
-  font-size: 20.5px;
+  font-size: 18px;
   padding-inline: 1rem;
   overflow-x: hidden;
 }
-@media (max-width:700px){
-  .diva{
-    font-size: 15px;
 
-}
-
-}
 
  
 .diva h5{
-   font-size:90%;
+   font-size:100%;
    transform: translateX(80%);
    font-family: var(--font-display);
    padding-bottom: 0rem;
 
 }
 h2{
-  font-size: 120%;
+  font-size: 110%;
   transform: translateX(-5px);
   font-family: var(--font-display);
   margin-bottom: 0;
@@ -58,12 +52,12 @@ h2{
  }
 
 a{
-  font-size:90%;
+  font-size:100%;
   color: var(--text-color);
 }
 
 p{
-  font-size:90%;
+  font-size:100%;
   margin-bottom: 2em;
 }
 
@@ -71,7 +65,7 @@ strong{
 
   display: inline-block;
   transform: translateX(-5px);
-  font-size: 200%;
+  font-size: 100%;
   line-height: 1;
   font-family: var(--font-display);
 }
@@ -167,3 +161,13 @@ border-radius: 10px;
 
 }
  
+
+@media (max-width:700px){
+  .diva{
+    font-size: 14px;
+
+}
+.diva h5{
+  transform: translateX(65%);
+}
+}
