@@ -33,7 +33,13 @@ display:none;
   padding-inline: 1rem;
   overflow-x: hidden;
 }
+@media (max-width:700px){
+  .diva{
+    font-size: 15.5px;
 
+}
+
+}
 
  
 .diva h5{
@@ -52,14 +58,17 @@ h2{
  }
 
 a{
+  font-size:100%;
   color: var(--text-color);
 }
 
 p{
+  font-size:100%;
   margin-bottom: 2em;
 }
 
 strong{
+
   display: inline-block;
   transform: translateX(-5px);
   font-size: 130%;
