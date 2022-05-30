@@ -58,12 +58,12 @@ h2{
  }
 
 a{
-  font-size:100%;
+  font-size:80%;
   color: var(--text-color);
 }
 
 p{
-  font-size:100%;
+  font-size:80%;
   margin-bottom: 2em;
 }
 

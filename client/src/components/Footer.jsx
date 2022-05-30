@@ -51,7 +51,7 @@ function Footer() {
      
         <FooterMain>
           <FlexSocial>
-            <h4 style={{ color:'brown',fontSize:'1.2rem',fontweight:'800'}}>Social media</h4>
+            <h4 style={{ color:'brown',  fontSize: '18.5px',fontweight:'800'}}>Social media</h4>
             <div style={{ display: "flex", gap: "12px" }}>
               <FontAwesomeIcon
                 style={{
@@ -87,7 +87,7 @@ function Footer() {
         </FooterMain>
     
       <div style={{ width:'100%',display:'flex',marginBottom:'3rem',justifyContent:'space-around'}}>
-        {" "}
+ 
         <div style={{flex:'50%'}}  >
         <img style={{display:'block',maxWidth:'9rem',margin:'auto'}}  alt=""  src={logo}  /></div>
         <div style={{flex:'50%'}}   ><a href="/signup" className="buttonfooter"  style={{display:'block',maxWidth:'9rem',margin:'auto' ,textAlign:'center',textDecoration:'none',borderRadius:'23px'}}  >
@@ -117,7 +117,7 @@ const FlexSocial = styled.div`
   align-items: center;
   p {
     text-align: center;
-    font-size: 1rem;
+    font-size: 18.5px;
     max-width:80%;
     margin:auto;
   }
