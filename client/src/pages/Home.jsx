@@ -41,13 +41,10 @@ function Home({ openModal }) {
      
       <Sendmail/> 
       <Divider />
-      <Divider />
-      <Divider />
-      <Divider />
-      <Divider />
+      
 
     
-   
+      <Footer />
 
 
       <SupportEngine />

@@ -82,7 +82,7 @@ function App(props) {
             <Route path='/researchfield'element={<ResearchField/>}/>
             <Route path='/article' element={<Article/>}/>
           </Routes>
-          <Footer />
+          
         </div>
       </ThemeProvider>
       ;

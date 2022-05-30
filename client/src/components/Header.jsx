@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import LoginIcon from "@mui/icons-material/Login";
+import SimpleDrawer from "./SimpleDrawer";
 export default function Header() {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -21,7 +22,12 @@ export default function Header() {
       setLastScrollY(window.scrollY);
     }
   };
+useEffect(()=>{
+  window.scrollTo(0, 0);
 
+
+
+},[])
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", controlNavbar);
@@ -33,7 +39,8 @@ export default function Header() {
     }
   }, [lastScrollY]);
 
-  return (
+  return (<>
+    <SimpleDrawer/>
     <Main show={show}>
       <div>
         <Link to="/">
@@ -66,6 +73,18 @@ export default function Header() {
               {" "}
               <h4 className="item">Mental Illness</h4>
             </Link>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              {" "}
+              <h4 className="item">Lung Diseases</h4>
+            </Link>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              {" "}
+              <h4 className="item">Lungs</h4>
+            </Link>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              {" "}
+              <h4 className="item">Mental Illness</h4>
+            </Link>
           </div>
         </Drop>
       </Links>
@@ -92,7 +111,7 @@ export default function Header() {
         </Link>
       </Btns>
   
-    </Main>
+    </Main></>
   );
 }
  
@@ -157,31 +176,43 @@ margin-bottom: 0;
 `;
 const Drop = styled.div`
   position: relative;
-  display: flex;
+  flex-direction:row;
+  display: flex; 
   align-items: center;
   color: var(--main);
   font-weight: 700;
 
-  .div1 {
+  .div1 {   
+
     opacity: 0;
     position: absolute;
     display: none;
+   
   }
-  :hover {
-    .div1 {
-      display: flex;
-      transition: opacity 0.7s linear;
+  :hover { 
+       
+    .div1 {display: flex; 
+    flex-direction:row;
+   
+     flex-wrap:wrap;
+     justify-content:space-around;
+      transition: opacity 0.8s linear;
       opacity: 1;
-      top: 110%;
-
+      top: 102%;
+      width:300%;
       background-color: white;
       padding: 1rem;
       border-bottom-left-radius: 25px;
-      .item { margin-bottom: 0;
-
-        width: 8.6rem;
+      border-bottom:2px solid pink;
+      .item { margin-top: .2rem;
+        flex:33.3%;
+        width:100%;
+        text-align:left;
+       box-shadow:1px 2px 10px pink;
+        
         color: var(--main);
-        padding: 0.4rem;
+        padding:  .5rem 0.6rem;
+        font-weight:700;
         border-radius: 25px;
       }
     }
@@ -208,8 +239,10 @@ const Main = styled.div`
   align-items: center;
   box-shadow: 0.3px 1px 9px grey;
   position: fixed;
-  top: ${(props) => (props.show ? "0px" : "-5rem")};
+  top: ${(props) => (props.show ? "0px" : "-3.2rem")};
   transition: 0.4s ease;
+  transition-delay: .1s;
+
   z-index: 30;
   background-color: white;
   width: 100%;

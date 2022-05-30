@@ -319,7 +319,20 @@ color:var(--main);
     border-radius: 12px;
     outline: none;
   }
-
+  .buttonfooter{
+    font-weight: 600;
+    background-color: #961414;
+     color:rgb(255, 255, 255);
+     padding:.2rem ;border:2px solid brown; 
+   }
+   
+  
+.buttonfooter:hover{
+ background-color: #f5aaaa;
+  color:rgb(130, 20, 20);
+  border:2px solid brown;    padding:.2rem ;
+ box-sizing: border-box;
+}
 
   @media  (max-height:250px){
     .LIVESUPPORT{

@@ -21,6 +21,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Capture from "../images/Capture.PNG";
  import Capture1 from "../images/Capture1.PNG";
 import Article from "../pages/Article/Article";
+import Footer from "../components/Footer";
 function ResearchField() {
  
   useEffect(() => {
@@ -319,7 +320,7 @@ style={{}}          src={ml2}
           </Col>
         </Row>
       </Container>
-    </>
+      <Footer />    </>
   );
 }
 
@@ -329,8 +330,8 @@ const DivHover = styled.div`
   top: 0;
   right: 0;
   opacity: 0;
-  border: 2px solid var(--main2);
-  box-shadow: 0.4px 2px 4px var(--main2);
+  border: 2px solid var(--main);
+  
   cursor: pointer;
   :hover {
     opacity: 0.8;
