@@ -61,7 +61,7 @@ useEffect(()=>{
  }}> &nbsp;&nbsp;&nbsp;&nbsp;Studies</p>
           <ArrowDropDownIcon style={{ display: "inline" }} />
           <div className="div1">
-            <Link to="/" style={{ textDecoration: "none" }}>
+            <Link to="/field" style={{ textDecoration: "none" }}>
               {" "}
               <h4 className="item">Lung Diseases</h4>
             </Link>

@@ -11,7 +11,7 @@ import e from "../images/e.jpg";
 import w from "../images/w.png";
 import pic3 from "../images/pic3.png";
 import pic4 from "../images/pic4.png";
- 
+ import {Link} from 'react-router-dom'
 import pic6 from "../images/pic6.png";
 import pic7 from "../images/pic7.png";
 // import required modules
@@ -136,10 +136,10 @@ export const Swipper = () => {
         >
           {({ isActive }) => (
             <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "" }}>
-            <img alt=""
+          <Link to="/field">  <img alt=""
                 src={e}
                 style={{ display: "block"}}
-              />
+              /></Link>
             </Card>
           )}
         </SwiperSlide>

@@ -55,9 +55,9 @@ function App(props) {
       <ThemeProvider theme={theme}>
        
         <div {...props} className="App">
-        {window.location.pathname === "/field" ? 
-       null:  
-  <Header />}
+        {window.location.pathname !== "/field" ? 
+      <Header /> :  null 
+ }
 
 
 
