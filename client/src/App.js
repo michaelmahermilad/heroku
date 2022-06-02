@@ -14,6 +14,7 @@ import Sendmail from './components/Sendmail/index'
 import ResearchField from "./pages/ResearchField";
 import Footer from "./components/Footer";
 import Article from "./pages/Article/Article";
+import ALL from "./pages/ALL/ALL";
   const theme = createTheme();
 const customStyles = {
   content: {
@@ -54,7 +55,11 @@ function App(props) {
       <ThemeProvider theme={theme}>
        
         <div {...props} className="App">
-          <Header />
+        {window.location.pathname === "/field" ? 
+       null:  
+  <Header />}
+
+
 
           <Modal
            style={ modalStyles }
@@ -81,6 +86,7 @@ function App(props) {
             <Route path='/email' element={<Sendmail/>}/>
             <Route path='/researchfield'element={<ResearchField/>}/>
             <Route path='/article' element={<Article/>}/>
+            <Route path='/field' element={<ALL/>}/>
           </Routes>
           
         </div>

@@ -1,15 +1,68 @@
-import gsap from "gsap";
 import React, { useEffect, useState } from "react";
-import MovingText from "react-moving-text";
+import gsap from "gsap";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.core.css";
+import "react-quill/dist/quill.snow.css";
+import "../Article/article.css";
+import styled from "styled-components";
+import Footer from "../../components/Footer";
 import COVID from "../../images/COVID.png";
 import Banner2 from "../Article/Banner2";
-import styled from "styled-components";
-import "../Article/article.css";
 import AC from "../../images/AC.jpg";
 import MAGDY from "../../images/MAGDY.png";
-import Footer from "../../components/Footer";
+import Articl from "../../images/Articl.png";
 function Article() {
   const [show, setShow] = useState(true);
+
+  const [state, setState] = useState({ text: " "});
+  const [article, setArticle] = useState("");
+  const handleArticle = () => {
+    setArticle(state.text);
+    setState(null);
+  };
+  const handleChange = (value) => {
+    setState({ text: value });
+    console.log(state.text);
+  };
+
+  const modules = {
+    toolbar: [
+      [{ header: 2 }],
+      ["bold", "underline"],
+
+      [{ list: "bullet" }],
+
+      [{ header: [1, 2, 3, 4, 5, 6, false] }],
+
+      [{ indent: "-1" }, { indent: "+1" }],
+
+      [{ font: [] }],
+      [{ align: [] }],
+
+      ["clean"],
+    ],
+    clipboard: {
+      matchVisual: false,
+    },
+  };
+
+  const formats = [
+    "header",
+    "font",
+    "size",
+    "bold",
+    "italic",
+    "underline",
+    "strike",
+    "blockquote",
+    "list",
+    "bullet",
+    "indent",
+    "link",
+    "image",
+    "color",
+  ];
+
   const [lastScrollY, setLastScrollY] = useState(0);
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
@@ -23,14 +76,9 @@ function Article() {
       setLastScrollY(window.scrollY);
     }
   };
-useEffect(()=>{
-  window.scrollTo(0, 0);
-
-
-},[])
-
-
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -63,7 +111,6 @@ useEffect(()=>{
           transition: ".4s linear",
           opacity: show ? "0" : "1",
           transitionDelay: ".2s",
-
           boxShadow: ".1px .3px 5px brown",
           position: "sticky",
           top: "0rem ",
@@ -76,7 +123,6 @@ useEffect(()=>{
             "linear-gradient(242deg, rgba(130,19,19,1) 0%, rgba(117,16,16,0.7813276207965354) 0%, rgba(131,20,20,0.47076861458535524) 0%, rgba(115,20,40,0.5) 0%, rgba(119,17,17,0.9366071239021254) 16%, rgba(119,17,17,1) 22%, rgba(119,17,17,1) 41%, rgba(119,17,17,1) 43%, rgba(119,17,17,1) 63%, rgba(119,17,17,0.9366071239021254) 80%, rgba(119,17,17,1) 83%, rgba(119,17,17,1) 88%)",
         }}
       >
-        {" "}
         <div
           id="lo"
           style={{
@@ -99,21 +145,42 @@ useEffect(()=>{
               textAlign: "left",
             }}
           >
+            {" "}
             The Chance of Helping others is a great Gift .
           </h5>
         </div>
       </div>
 
       <div
-      className="articlepagemain"
+        className="articlepagemain"
         style={{
           maxWidth: "100vw",
-       
           gridTemplateColumns: "70% 30%",
         }}
       >
         <div className="diva">
-          <h2>
+          {article ? (
+            <div dangerouslySetInnerHTML={{ __html: article }}></div>
+          ) : (<>
+           
+            <div
+              style={{
+                backgroundColor: "white",
+                overflow: "hidden",
+                width: "fit-content",
+                height: "fit-content",
+                color: "brown",
+                borderRadius: "10px",
+                margin: "auto",
+                marginTop: "0rem",
+                marginBottom: "3rem",
+              }}
+            >
+             {" "}
+            </div> <img src={COVID} style={{ marginBottom:'2rem',marginTop:'-2rem' }} /></>
+          )}
+
+            <h2>
             Children at the age of 11 can be healed from this disease if quickly
             discovered
           </h2>
@@ -221,39 +288,48 @@ useEffect(()=>{
             had ever. Come across with zoom and that was one of the first
             devices that I recorded voice over for for like videos when I was
             working at Mophie the battery case company.
-          </p>
+          </p> 
+          <ReactQuill
+            theme="snow"
+            onChange={handleChange}
+            formats={formats}
+            modules={modules}
+          />
+        
+          <div onClick={handleArticle}>
+            <button className="btn">Attach Article</button>
+          </div>  
         </div>
-        <div
-          style={{ width: "91%", marginInline: "auto",  }}
-        >
+
+        <div style={{ width: "91%", marginInline: "auto" }}>
           <img src={MAGDY} style={{ width: "100%" }} />
 
-          <h5 style={{marginTop:'3rem',marginBotom:'1rem',color:'brown',fontWeight:'700',marginLeft:'.2rem'}}>Latest articles</h5>
-{[...Array(10)].map((k,i)=>(
-
+          <h5
+            style={{
+              marginTop: "3rem",
+              marginBotom: "1rem",
+              color: "brown",
+              fontWeight: "700",
+              marginLeft: ".2rem",
+            }}
+          >
+            Latest articles
+          </h5>
+          {[...Array(10)].map((k, i) => (
             <div>
-<div class="grid-container">
+              <div class="grid-container">
+                <img class="item2" src={AC} />
 
+                <div class="item3">
+                  {" "}
+                  Children at the age of 11 can be healed from this disease if
+                  quickly discovered
+                </div>
 
- <img class='item2' src={AC}/>
- 
- 
-  <div class="item3">            Children at the age of 11 can be healed from this disease if quickly
-            discovered
-</div>  
-  
-  <div class="item5">By: john trivial</div>
-
-</div>
-
-
-</div>
-))}
-
-
-
-
-
+                <div class="item5">By: john trivial</div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       <Banner2 />

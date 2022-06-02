@@ -32,6 +32,7 @@ display:none;
   font-size: 18px;
   padding-inline: 1rem;
   overflow-x: hidden;
+
 }
 
 
@@ -50,7 +51,11 @@ h2{
   margin-bottom: 0;
   padding-top: 1rem;
  }
-
+ .diva img{
+   display: block;
+  width: 70%;
+  margin:auto;
+}
 a{
   font-size:100%;
   color: var(--text-color);
@@ -161,7 +166,51 @@ border-radius: 10px;
 
 }
  
+.quill > .ql-toolbar:first-child {
+  display: none !important;
+}
+.quill{
+  border: 2px solid brown;
+  border-top-left-radius: 20px; 
+}
+.ql-toolbar{
+  background-color: brown;
 
+  border-top-left-radius: 20px; 
+  border-bottom-right-radius: 30px;
+
+}
+.ql-toolbar>*{
+  background-color: rgb(255, 255, 255);
+  border-top-left-radius: 13px;  padding: 6px;
+  margin:4px;
+
+}
+.diva .btn{
+   width:fit-content;
+   padding:.3rem;
+   margin: 1rem;
+   color: rgb(97, 7, 7);
+   font-weight: 800;
+   border-top-left-radius: 16px ;
+   border:2px solid brown;
+}
+.diva .btn:hover{
+  background-color: rgb(255, 224, 249);
+  border-bottom-right-radius: 9px ;
+  transition: all .3s linear;
+}
+
+
+.QUILL{
+  background-color: rgb(237, 237, 255);
+  width: 80%;
+  margin: auto;
+
+  border-radius: 25px;
+  border:none;
+  outline: none;
+}
 @media (max-width:700px){
   .diva{
     font-size: 12px;
@@ -170,4 +219,12 @@ border-radius: 10px;
 .diva h5{
   transform: translateX(50%);
 }
+.ql-toolbar>*{
+  background-color: rgb(255, 255, 255);
+  border-top-left-radius: 13px;  padding: 1.5px;
+  margin:2px;
+
+}
+
+
 }
