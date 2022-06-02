@@ -176,17 +176,18 @@ style={{}}          src={ml2}
               
               }}
             >
-              Go to Fields{" "}
+              Go to Fields 
             </h5>
           </Col>
         </Row>
 
-        <Row className="justify-content-center ">
-          {[...Array(20)].map((a, i) => (
-            <Col xs="12" sm="6" md="4" className=" "  style={{ marginBottom: "2rem" }}>
+        <Row className="justify-content-around
+ ">
+          {[...Array(21)].map((a, i) => (
+            <Col xs="12" sm="6" md="4" className=" "  style={{  margin:'auto',marginBottom: "2rem" }}>
               <Card
                 className=" "  style={{
-                  width: "90%",
+                  width: "100%",
                   height: "auto",
                   position: "relative",
                   minHeight: "210px",
@@ -198,6 +199,7 @@ style={{}}          src={ml2}
                   className=" "  style={{
                     zIndex: "10",
                     width: "100%",
+                    margin:'auto',
                     height: "100%",
                     backgroundColor: "rgba(111,111,111,.4)",  
                   }}
@@ -251,75 +253,7 @@ style={{}}          src={ml2}
               </Card>
             </Col>
           ))}{" "}
-          <Col xs="12" sm="6" md="4">
-            <Card
-              className=" "  style={{
-
-                width: "90%",
-                height: "auto",
-                position: "relaive",
-                minHeight: "210px",
-               padding:'0px',
-                margin: "0px",
-                 
-              }}
-            >
-              <DivHover
-                className=" "  style={{
-                  zIndex: "10",
-                  width: "100%",
-                  height: "100%",
-                  backgroundColor: "rgba(111,111,111,.4)",
-                }}
-              >
-                <div
-                  className=" "  style={{
-
-                    width: "6rem",
-                    height: "2.2rem",
-                    backgroundColor: "brown",
-                    borderRadius: "5px",
-                    margin: "auto",
-                    marginTop: "calc(40% - 2rem  )",
-                    color: "",
-                  }}
-                >
-                  <p
-                    className=" "  style={{
-                      width: "100%",
-                      textAlign: "center",
-                      lineHeight: "2.2rem",
-                      margin: "auto",
-                      color: "white",
-                      fontWeight: "700",
-                    }}
-                  >
-                    More Info
-                  </p>
-                </div>
-              </DivHover>
-              <Card.Img
-                className=" "  style={{
-                  height: "84%",
-                  paddingBottom: "0px",
-                  borderRadius: "0",
-                }}
-                variant="top"
-                src={article1}
-              />
-              <Card.Body className=" "  style={{ padding: ".4rem" }}>
-                <Card.Title
-                  className=" "  style={{
-                    fontSize: "1.03rem",
-                    fontWeight: "700",
-                    color: "#606060	",
-                  }}
-                >
-                  One of the most important thing important One of the most{" "}
-                </Card.Title>
-              </Card.Body>
-            </Card>
-          </Col>
+        
         </Row>
       </Container>
       <Footer />    </>

@@ -41,7 +41,7 @@ function ALL() {
       </div>
       <div
         style={{
-          backgroundColor: "white",
+          
           marginTop: "1.06rem",
           paddingTop: "1rem",
         }}

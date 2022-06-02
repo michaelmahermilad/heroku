@@ -136,7 +136,7 @@ export const Swipper = () => {
         >
           {({ isActive }) => (
             <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "" }}>
-          <Link to="/field">  <img alt=""
+          <Link to="field">  <img alt=""
                 src={e}
                 style={{ display: "block"}}
               /></Link>

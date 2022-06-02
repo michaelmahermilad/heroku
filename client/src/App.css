@@ -1,5 +1,7 @@
 @import '~antd/dist/antd.css';
-
+ body{
+   background-color: white;
+ }
 *
 {
   margin:0;
@@ -26,12 +28,7 @@
 p {
   margin-bottom: 0px;
 }
-body{
-    
 
-
-  background: rgb(56,4,4);
-  background: linear-gradient(118deg, rgba(56,4,4,0.5794642667592682) 0%, rgba(255,255,255,0) 46%);} 
   .header_middle .div1{
     position:absolute;
 

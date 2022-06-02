@@ -8,25 +8,26 @@ import Auth from "./pages/Auth";
 import AuthLogin from "./pages/AuthLogin";
 import Modal from "react-modal";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import modal from '../src/images/modal.svg'
+import modal from "../src/images/modal.svg";
 import SupportAdmin from "./chat/SupportAdmin";
-import Sendmail from './components/Sendmail/index'
+import Sendmail from "./components/Sendmail/index";
 import ResearchField from "./pages/ResearchField";
 import Footer from "./components/Footer";
 import Article from "./pages/Article/Article";
 import ALL from "./pages/ALL/ALL";
-  const theme = createTheme();
+import A from "./pages/A";
+import B from "./pages/B";
+const theme = createTheme();
 const customStyles = {
   content: {
     top: "50%",
     left: "50%",
     right: "auto",
     bottom: "auto",
-   
+
     height: "20rem",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    
   },
 };
 
@@ -39,7 +40,7 @@ function App(props) {
   function openModal() {
     setIsOpen(true);
   }
-  var modalStyles = {overlay: {}};
+  var modalStyles = { overlay: {} };
   modalStyles.overlay["z-index"] = 10;
 
   function afterOpenModal() {
@@ -53,45 +54,50 @@ function App(props) {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-       
         <div {...props} className="App">
-        {window.location.pathname !== "/field" ? 
-      <Header /> :  null 
- }
-
-
-
           <Modal
-           style={ modalStyles }
-
+            style={modalStyles}
             isOpen={modalIsOpen}
             onAfterOpen={afterOpenModal}
             onRequestClose={closeModal}
-            className='Modal'
+            className="Modal"
             overlayClassName="Overlay"
             contentLabel="Example Modal"
           >
             <h2 ref={(_subtitle) => (subtitle = _subtitle)}></h2>
 
-            <img alt="" style={{width:'100%'}} src={modal}/>
-            <button  style={{width:'5rem',height:'2rem',marginLeft:'3rem', backgroundColor:'var(--main)'}}onClick={closeModal}>Not now</button>
-        
+            <img alt="" style={{ width: "100%" }} src={modal} />
+            <button
+              style={{
+                width: "5rem",
+                height: "2rem",
+                marginLeft: "3rem",
+                backgroundColor: "var(--main)",
+              }}
+              onClick={closeModal}
+            >
+              Not now
+            </button>
           </Modal>
 
           <Routes>
-            <Route path="/" element={<Home openModal={openModal} />} />
-            <Route path="/login" element={<AuthLogin />} />
-            <Route path="/signup" element={<Auth />} />
-            <Route path='/main' element={<SupportAdmin/>}/>
-            <Route path='/email' element={<Sendmail/>}/>
-            <Route path='/researchfield'element={<ResearchField/>}/>
-            <Route path='/article' element={<Article/>}/>
-            <Route path='/field' element={<ALL/>}/>
+            {" "}
+            <Route element={<B />}>
+              <Route path="/field" element={<ALL />} />
+            </Route>
+            <Route element={<A />}>
+              <Route path="/" element={<Home openModal={openModal} />} />
+              <Route path="/login" element={<AuthLogin />} />
+              <Route path="/signup" element={<Auth />} />
+              <Route path="/main" element={<SupportAdmin />} />
+              <Route path="/email" element={<Sendmail />} />
+              <Route path="/researchfield" element={<ResearchField />} />
+              <Route path="/article" element={<Article />} />
+            </Route>
           </Routes>
-          
         </div>
       </ThemeProvider>
-      ;
+      
     </BrowserRouter>
   );
 }
