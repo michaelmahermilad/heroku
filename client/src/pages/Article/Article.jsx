@@ -26,41 +26,66 @@ function Article() {
   };
 
   const modules = {
-    toolbar: [
-      [{ header: 2 }],
-      ["bold", "underline"],
-
-      [{ list: "bullet" }],
-
-      [{ header: [1, 2, 3, 4, 5, 6, false] }],
-
-      [{ indent: "-1" }, { indent: "+1" }],
-
-      [{ font: [] }],
-      [{ align: [] }],
-
+    toolbar:{  container:[
+      ["bold", "italic", "underline", "strike", "blockquote"],
+      [
+        { list: "ordered" },
+        { list: "bullet" },
+        { indent: "-4" },
+        { indent: "+4" }
+      ],
+      ["link", "image", "video"],
       ["clean"],
-    ],
-    clipboard: {
-      matchVisual: false,
+    ]} 
+        
+    
+  };{/*
+   handlers: {
+      image: imageHandler
     },
-  };
+    clipboard: {
+      matchVisual: false,}
+  */}
+  {/*const imageHandler=()=> {
+    const input = document.createElement('input');
+    input.setAttribute('type', 'file');
+    input.setAttribute('accept', 'image/*');
+    input.click();
+    input.onchange = async () => {
+        const file = input.files[0];
+        let formData = new FormData();
+        formData.append('uri', file);
+        const range = quill.getSelection(true);
+        this.quill.insertEmbed(range.index, 'image', `${window.location.origin}/images/loaders/placeholder.gif`);
+        this.quill.setSelection(range.index + 1);
+        //fetch api call for upload the image
+        const data = await fetch(apiPath + '/api/upload'
+        , {
+            method: 'POST',
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('feathers-jwt')}`,
+            },
+            body: formData
+        })
+        const res = await data.json()
+        this.quill.deleteText(range.index, 1);
+        this.quill.insertEmbed(range.index, 'image', res.url);
+    };
+}   */}
 
   const formats = [
     "header",
-    "font",
-    "size",
-    "bold",
-    "italic",
-    "underline",
-    "strike",
-    "blockquote",
-    "list",
-    "bullet",
-    "indent",
-    "link",
-    "image",
-    "color",
+  "bold",
+  "italic",
+  "underline",
+  "strike",
+  "blockquote",
+  "list",
+  "bullet",
+  "indent",
+  "link",
+  "image",
+  "video",
   ];
 
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -294,6 +319,8 @@ function Article() {
             onChange={handleChange}
             formats={formats}
             modules={modules}
+            preserveWhitespace={true} 
+
           />
         
           <div onClick={handleArticle}>
@@ -301,7 +328,7 @@ function Article() {
           </div>  
         </div>
 
-        <div style={{ width: "91%", marginInline: "auto" }}>
+        <div style={{ width: "92%", marginInline: "auto" }}>
           <img src={MAGDY} style={{ width: "100%" }} />
 
           <h5
