@@ -257,7 +257,6 @@ const USE = styled.div`
     font-size: 12px;
     color:#ffffff;
    margin-right: .7rem;
-
     :hover{
         color:#433116;
     }

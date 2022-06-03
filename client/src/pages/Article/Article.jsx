@@ -333,8 +333,7 @@ function Article() {
         </div>
       </div>
       <Banner2 />
-      <Divider />
-      <Footer />
+    
     </div>
   );
 }

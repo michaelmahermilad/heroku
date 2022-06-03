@@ -51,13 +51,13 @@ function Footer() {
      
         <FooterMain>
           <FlexSocial>
-            <p className="para"  style={{ color:'brown',fontweight:'800'}}>Social media</p>
-            <div style={{ display: "flex", gap: "12px" }}>
+            <div style={{ display: "flex" }}>
               <FontAwesomeIcon
                 style={{
                   fontSize: "1.5rem",
                   cursor: "pointer",
                   color: "#4968ad",
+                  marginRight:'1rem'
                 }}
                 icon={faFacebook}
               />
@@ -65,7 +65,7 @@ function Footer() {
                 style={{
                   fontSize: "1.5rem",
                   cursor: "pointer",
-                  color: "#0a66c2",
+                  color: "#0a66c2", marginRight:'1rem'
                 }}
                 icon={faLinkedin}
               />
@@ -73,27 +73,26 @@ function Footer() {
                 style={{
                   fontSize: "1.5rem",
                   cursor: "pointer",
-                  color: " #1da1f2",
+                  color: " #1da1f2", marginRight:'1rem'
                 }}
                 icon={faTwitter}
               />
               <FontAwesomeIcon
-                style={{ fontSize: "1.5rem", color: "red", cursor: "pointer" }}
+                style={{ fontSize: "1.5rem", color: "red", cursor: "pointer" ,marginRight:'1rem' }}
                 icon={faYoutube}
               />
-            </div>
-            <p className="para">Get email offers and the latest news from our team.</p>
-          </FlexSocial>
-        </FooterMain>
-    
-      <div style={{ width:'100%',display:'flex',marginBottom:'3rem',justifyContent:'space-around'}}>
+            </div>   <div style={{ width:'80%',margin:'auto',display:'flex',marginBottom:'1rem',justifyContent:'space-between'}}>
  
-        <div style={{flex:'50%'}}  >
-        <img style={{display:'block',maxWidth:'9rem',margin:'auto'}}  alt=""  src={logo}  /></div>
-        <div style={{flex:'50%'}}   ><a href="/signup" className="buttonfooter"  style={{display:'block',maxWidth:'9rem',margin:'auto' ,textAlign:'center',textDecoration:'none',borderRadius:'23px'}}  >
+        <div   >
+        <img style={{display:'block',maxWidth:'8rem'}}  alt=""  src={logo}  /></div>
+        <div    ><a href="/signup" className="buttonfooter"  style={{display:'block',padding:'.2rem 1rem .2rem 1rem' ,textAlign:'center',textDecoration:'none',borderRadius:'23px'}}  >
           Sign up
         </a></div>
       </div>
+          </FlexSocial>
+        </FooterMain>
+    
+   
     </>
   );
 }
@@ -101,31 +100,25 @@ function Footer() {
 export default Footer;
 
 const FooterMain = styled.div`
-
-
-`;
-const Flex = styled.ul``;
-const Container = styled.div`
-
+border-top: 7px solid brown;
+margin-top: 2rem;
+padding-top: .2rem;
+padding-bottom: 1rem;
 
 `;
+
 const FlexSocial = styled.div`
   display: flex;
-  flex: 50%;
-
-  justify-content: space-around;
+  flex: 40%;
+padding: 2rem;
+padding-bottom: 0;
+  justify-content: space-between;
   align-items: center;
-  .para {
-    text-align: center;
-    font-size: 17px;
-    max-width:80%;
-    margin:auto;margin-bottom: 2rem;
-  }
 
-  @media (max-width:700px){align-items: center;
-    .para{
-      font-size: 13px;
-    }
+
+  @media (max-width:700px){
+    align-items: center;
+
   }
   flex-direction: column;
   > * {

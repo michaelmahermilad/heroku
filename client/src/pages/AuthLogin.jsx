@@ -117,6 +117,9 @@ useEffect(()=>{
   const onSubmit = data => {  console.log(data); };
   
   return (
+
+
+    <>
     <BOX><img alt="" src={m} style={{ width:'7rem' ,margin:"auto",padding:'0',}}/>
       <A variant="h6" component="h2"  >
      Log in
@@ -169,8 +172,10 @@ useEffect(()=>{
             <Button type="submit" sx={{color:'var(--main)',borderRadius:'25px',width:'70%',mx:'15%',backgroundColor:'rgba(241, 179, 165 ,.99)'}}  onClick={handleSubmit}>Submit</Button>
  </form>
   
-   
-    </BOX>)
+
+    </BOX>
+    <br/> <br/> <br/>
+    </>)
 }
 
 export default AuthLogin;

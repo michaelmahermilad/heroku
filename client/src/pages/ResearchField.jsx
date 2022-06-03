@@ -256,7 +256,7 @@ style={{}}          src={ml2}
         
         </Row>
       </Container>
-      <Footer />    </>
+   </>
   );
 }
 

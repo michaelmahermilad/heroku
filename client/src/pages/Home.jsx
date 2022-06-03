@@ -40,11 +40,11 @@ function Home({ openModal }) {
      <AnimaGasp />      
      
       <Sendmail/> 
-      <Divider />
+    
       
 
     
-      <Footer />
+    
 
 
       <SupportEngine />
