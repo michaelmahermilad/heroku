@@ -254,7 +254,7 @@ const DIV = styled.div`
 const USE = styled.div` 
 .link{
     text-decoration: none;
-    font-size: small;
+    font-size: 12px;
     color:#ffffff;
    margin-right: .7rem;
 

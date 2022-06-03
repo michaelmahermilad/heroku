@@ -110,11 +110,9 @@ filter: blur(80px);
         font-size: 17px;
         color:white;
     }     
-     .BTNFLX{
-        width:70%;
-    }
+  
     .btnheader{
-        width:12rem;
+        width:10rem;
         height: 2rem;
         border:2px solid  #f9a11b;
         background-color: transparent;
@@ -128,7 +126,7 @@ filter: blur(80px);
   
     
     .btnheader:hover{
-        font-size: 12px;
+        font-size: 10px;
      
        
         border:2px solid  #36240a43;

@@ -35,7 +35,7 @@ function ALL() {
             display: "flex",
             marginTop: "2rem",
             justifyContent: "flex-start",
-            width: "70%",
+        
           }}
          
         >
