@@ -57,9 +57,7 @@ export const Swipper = () => {
           disableOnInteraction: false,
         }}
       
-        pagination={{
-          clickable: true,
-        }}
+       
         modules={[Autoplay, Pagination, Navigation]}
       >
         
@@ -160,14 +158,14 @@ const Card = styled.div`
   flex-direction: column;
    justify-content:space-around;
    height:15rem;
-  overflow:hidden
+  overflow:hidden;
   @media (max-width:700px){
     height:auto;
   }
 `;
  export const Heading=styled.h4`
 font-size:var(--fonttitle);
-@medai (max-width:600px){
+@media (max-width:600px){
   font-size:var(--fonttitlesmall);
 }
 

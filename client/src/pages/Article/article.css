@@ -1,5 +1,5 @@
 
-@media (max-width:800px)
+@media (max-width:770px)
 {
  
    .ads{
@@ -39,7 +39,7 @@ display:none;
  
 .diva h5{
    font-size:100%;
-   transform: translateX(80%);
+   transform: translateX(75%);
    font-family: var(--font-display);
    padding-bottom: 0rem;
 
@@ -70,12 +70,13 @@ strong{
 
   display: inline-block;
   transform: translateX(-5px);
-  font-size: 100%;
+  font-size: 130%;
   line-height: 1;
   font-family: var(--font-display);
 }
 
 strong:before{
+  font-size: 130%;
   content: '🎙️';
   margin-right: 5px;
   margin-top: 34px; 
@@ -88,7 +89,7 @@ strong:before{
   height: 8px;
   background: var(--main2);
   max-width: 55px;
-  transform: skewX(-21deg) translateY(-13px);
+  transform: skewX(-21deg) translateY(-10px);
   border-radius: 3px;
 }
 .articlepagemain{
@@ -103,7 +104,7 @@ strong:before{
 
 
 
-@media (max-width:900px){
+@media (max-width:770px){
   .articlepagemain{
   display: block;
  
@@ -211,10 +212,14 @@ border-radius: 10px;
   border:none;
   outline: none;
 }
-@media (max-width:700px){
+@media (max-width:770px){
   .diva{
     font-size: 12px;
 
+}
+p{
+  font-size:90%;
+  margin-bottom: 2em;
 }
 .diva h5{
   transform: translateX(50%);

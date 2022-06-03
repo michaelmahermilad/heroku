@@ -138,7 +138,7 @@ style={{}}          src={ml2}
           }}
           className="justify-content-space-around align-items-center  "
         >
-          <Col md="12" lg="6" >
+          <Col md="12" lg="8" >
             <Form   >
               <InputGroup
               className="centersearch"  style={{
@@ -160,7 +160,7 @@ style={{}}          src={ml2}
               </InputGroup> 
             </Form>{" "}
           </Col>
-          <Col md="12" lg="6" className=""  >
+          <Col md="12" lg="4" className=""  >
             <h5
               className="centersearch " 
                style={{
@@ -170,7 +170,7 @@ style={{}}          src={ml2}
                 borderRadius: "25px",
                 backdropFilter: "blur(13px)",
                 textAlign: "center",
-                width: "40%",
+                width: "70%",
                 fontWeight: "500",
                 border: "2px solid grey",
               

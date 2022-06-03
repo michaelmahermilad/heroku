@@ -127,9 +127,9 @@
     padding:1rem .7rem .6rem .7rem;
     flex-flow: wrap-reverse;
     background-color: rgba(12, 33, 19, 0.442);
-   
+    backdrop-filter: blur(0px);
   
-    backdrop-filter: blur(16px);
+    
      
     }
     .NAVBAR .LOGO {

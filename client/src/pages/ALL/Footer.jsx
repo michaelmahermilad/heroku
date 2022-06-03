@@ -115,10 +115,10 @@ function Footer() {
           <USE>
             <Link className='link' to="/">
               {" "}
-              <span>2022 Medical LLC</span>
+              <span>2022 MICHAEL</span>
             </Link >
             <Link className='link' to="/">
-              <span>PRIVACY POLICY</span>
+              <span>PRIVACY</span>
             </Link >
             <Link className='link' to="/">
               <span>TERMS OF USE</span>

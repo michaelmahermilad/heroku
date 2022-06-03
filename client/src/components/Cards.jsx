@@ -35,7 +35,7 @@ function Cards() {
           </div>
         </div>
        <Link to='article'style={{textDecoration:'none'}}> <div className="title" >
-          <p>Learn From the Best Learn From the Best  Learn From the Best </p>
+          <p>Learn From the Best Learn From the Best  Learn From the </p>
         </div></Link>
         <div className="info">
          <div style={{display:'flex',alignItems:'center'}}> <CalendarMonthIcon style={{color:'var(--main)',fontSize:'19px',marginRight:'5px'}} /><p>  17/2/1994 2000 4pm  </p>

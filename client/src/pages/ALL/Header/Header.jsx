@@ -43,7 +43,7 @@ useEffect(()=>{
 
 
   return (
-    <div    style={{backgroundColor:show? "rgba(12, 33, 19, 0.13)":"white"}} className="NAVBAR">
+    <div    style={{backgroundColor:show? "rgba(12, 33, 19, 0.096)":"white"}} className="NAVBAR">
       <div className="LOGO">
        
         <img  className="IMG" src={logo} />
