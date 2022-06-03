@@ -13,6 +13,11 @@
   transition: all .3s linear;
 
 }
+
+.flexcolumn{
+  flex-direction: row;
+}
+
 :root {
   --main: #800000	;
   --main2:rgb(250, 187, 187) ;
@@ -132,6 +137,10 @@ color:var(--main);
  
  }
 @media (max-width:700px){
+  .flexcolumn{
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
   .Articles-banner{
     justify-content: start;
   }

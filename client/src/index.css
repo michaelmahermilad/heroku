@@ -1,15 +1,9 @@
- body{
-   background-color: white;
- }
-
 .contactme {
     width: 100%;
     background-image: url("http://www.mmasynergy.com/images/inner-banner.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-   
-    
   }
   .contactOverlay {
     width: 100%;

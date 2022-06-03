@@ -2,20 +2,23 @@ import React from "react";
 import Header from "./Header/Header";
 import Framemain from "../../images/Framemain.png";
 import "../ALL/ALL.css";
- import Antd from "./Carousol/Antd";
+import Antd from "./Carousol/Antd";
+import { Carasoularticle } from "./Carasoularticle";
+import Footer from "./Footer";
 function ALL() {
   return (
-    <div style={{ }}>
+    <>
       <Header />
 
       <img
         style={{
           width: "100%",
           position: "absolute",
-          marginTop: "-11rem",
+          marginTop: "-12rem",
           display: "block",
           zIndex: "-6",
         }}
+        className='imagepage'
         src={Framemain}
       />
       <div className="headermain">
@@ -27,13 +30,14 @@ function ALL() {
           Much and more Accurate medical date ,read more, discover more and be
           one from who share valuable knowledge.
         </h4>
-        <div
+        <div  className='BTNFLX'
           style={{
             display: "flex",
             marginTop: "2rem",
-            justifyContent: "space-between",
+            justifyContent: "flex-start",
             width: "70%",
           }}
+         
         >
           <button className="btnheader">Who we are?</button>
           <button className="btnheader"> Start Sharing</button>
@@ -54,10 +58,10 @@ function ALL() {
         <div style={{ marginTop: "1rem" }}>
            <Antd/>
         </div>
-        
+        <Carasoularticle/>
       </div>
-     
-    </div>
+     <Footer/>
+    </>
   );
 }
 

@@ -25,8 +25,8 @@ function Antd() {
      
   return (
    <div style={{width:'90%',margin:'auto'}}>
-      <div    style={{display:'flex',gap:'2rem' ,alignItems:'flex-start'}} className="flex">
-      <div  style={{flex:'45%',width:'90%' }}className="flexR">
+      <div     style={{display:'flex',gap:'2rem' ,alignItems:'flex-start'}} className="flex   flexcolumn ">
+      <div  style={{flex:'45%',width:'90%',margin:'auto' }}className="flexR">
      
        <Collapse
       defaultActiveKey={['']}
@@ -34,7 +34,7 @@ function Antd() {
       expandIconPosition={expandIconPosition}
       style={{textAlign:'right'}}
     > 
-     <Panel header="  هل يمكن الوثوق بفعالية لقاح كورونا بعد أن تم إنتاجه به ✔️" key="1" >
+     <Panel header="  هل يمكن الوثوق بفعالية لقاح كورونا بعد أن تم إنتاجه ✔️" key="1" >
         <div> 
         تم إنتاج لقاح كورونا بسرعة لأنه أعطي الأولوية في الموارد والإنتاج، وتم إثبات فعاليته في العديد من الدراسات.
 
@@ -81,7 +81,7 @@ function Antd() {
   
          </div>
     
-       <div  style={{flex:'45%' ,marginTop:'0px'}}className="flexL">
+       <div  style={{flex:'45%',width:'90%',margin:'auto',marginTop:'0'}}className="flexL">
      
        <Collapse
       defaultActiveKey={['']}

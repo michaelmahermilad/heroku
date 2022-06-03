@@ -1,115 +1,188 @@
-.NAVBAR{
-    z-index: 99;
-display:flex;
-align-items: center;
-flex-direction: row;
-padding: .3rem;
-background-color: rgba(12, 33, 19, 0.13);
-height: 3.6rem;
+.NAVBAR {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 0.3rem;
+  background-color: rgba(12, 33, 19, 0.13);
+  height: 3.6rem;
 
-backdrop-filter: blur(5px)
-
-}
-.NAVBAR .LOGO{
-flex:15%;
-background-color: #de9a340d;
-backdrop-filter: plur(6px);
-
-}
-.NAVBAR .INPTCONTAINER{
-    flex:29%;
-    background-color: rgba(218, 165, 32, 0.551);
-    padding:.5rem;
-    border-radius: 25px;
-    margin-left: 1rem;
-
+  backdrop-filter: blur(5px);
 }
 
-.NAVBAR .INPTCONTAINER .INPT{
-border: none;
-outline: none;
-font-size: 1.05rem;
-background-color: rgba(65, 16, 16, 0);
-width: 16rem;
-padding-left: .9rem;
-}
-.NAVBAR .INPTCONTAINER .INPT::placeholder{
-    color: rgba(255, 255, 255, 0.84); 
-    }
-
-.NAVBAR .INPTCONTAINER .ICN{
-    color: rgba(255, 255, 255, 0.84); 
+.NAVBAR .LOGO {
+  flex: 15%;
+  background-color: #de9a340d;
+  backdrop-filter: plur(6px);
 }
 
-.NAVBAR .LNKS{
-   margin-left: 2rem; flex:27%;
+.NAVBAR .INPTCONTAINER {
+  flex: 29%;
+  background-color: rgba(218, 165, 32, 0.551);
+  padding: 0.5rem;
+  border-radius: 25px;
+  margin-left: 1rem;
 }
 
-.NAVBAR .LNKS .menu::after{
-    content: '';
-    position: absolute;
-    height:8px;
-    top:-1.7rem;
-    left:0;
-    width:100%;
-    background-color:  #f9a11b;
-   
+.NAVBAR .INPTCONTAINER .INPT {
+  border: none;
+  outline: none;
+  font-size: 1.05rem;
+  background-color: rgba(65, 16, 16, 0);
+  width: 16rem;
+  padding-left: 0.9rem;
 }
-.NAVBAR .LNKS .menu{
-      font-size: 1.1rem;
-    position: relative;
-    border:none;
-    outline: none;
-    background-color: transparent;
-    color: rgba(255, 255, 255, 0.84);    font-weight: 800;
-    margin-right: 2rem;
-    text-decoration: none;
-    
-  }
-  .NAVBAR .LNKS .menu:hover{
-     
-font-size: 1.1rem;
+
+.NAVBAR .INPTCONTAINER .INPT::placeholder {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.NAVBAR .INPTCONTAINER .ICN {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.NAVBAR .LNKS {
+  margin-left: 2rem;
+  flex: 27%;
+}
+
+
+.NAVBAR .LNKS .menu::after {
+  content: "";
+  position: absolute;
+  height: 8px;
+  top: -1.7rem;
+  left: 0;
+  width: 100%;
+  background-color: #f9a11b;
+}
+.NAVBAR .LNKS .menu {
+  font-size: 1.1rem;
   position: relative;
-  border:none;
+  border: none;
   outline: none;
   background-color: transparent;
-  color:  #f9a11b;    font-weight: 800;
+  color: rgba(255, 255, 255, 0.84);
+  font-weight: 800;
   margin-right: 2rem;
   text-decoration: none;
+}
+.NAVBAR .LNKS .menu:hover {
+  font-size: 1.1rem;
+  position: relative;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #f9a11b;
+  font-weight: 800;
+  margin-right: 2rem;
+  text-decoration: none;
+}
+
+.NAVBAR .LNKS .menu:hover::after {
+  transition: all 0.3s linear;
+  content: " ";
+  position: absolute;
+  height: 8px;
+  top: -1.27rem;
+  left: 0;
+  width: 100%;
+  background-color: #f9a11b;
+}
+.button{
+   display: none;
+    
+}
+.NAVBAR .AUTH {
+  flex: 18%;
+}
+
+
+
+
+.NAVBAR .AUTH .LINK {
+  text-decoration: none;
+}
+.NAVBAR .AUTH .auth {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #f9a11b;
+  font-weight: 800;
+  margin-right: 2rem;
+}
+.NAVBAR .AUTH .auth:hover {
+  color: #f9a11b;
+}
+@media (max-width: 1000px) {
+    .NAVBAR {
+       
+    align-items: center;
+     
+    height: 5rem;
+    padding:1rem .7rem .6rem .7rem;
+    flex-flow: wrap-reverse;
+    background-color: rgba(12, 33, 19, 0.442);
+   
   
-}
+    backdrop-filter: blur(16px);
+     
+    }
+    .NAVBAR .LOGO {
+      display: none;
+    }
+  
+    .NAVBAR .INPTCONTAINER {
+        margin-top: .4rem;
+      flex: 100%;
+      margin-inline: auto;
+     width:7rem;
+      background-color: rgba(218, 165, 32, 0.551);
+     padding: .2rem;
+      border-radius: 25px;
+      height:2rem;
+     }
+    .NAVBAR .INPTCONTAINER .ICN {
+        float:right;
+        margin-right: 1rem;
+
+      }
+
+    .NAVBAR .LNKS {
+      display: none;
+    }
+    .NAVBAR .AUTH {
+        flex:70%; 
+      
+      }
+      .NAVBAR .AUTH>* {
+       float:right;
+       
+      }
+      .NAVBAR .AUTH .auth {
+        margin-right: 0.7rem;
+        
+       }
+
+       .NAVBAR .INPTCONTAINER .INPT {
+      
+        font-size: .8rem;
+        background-color: rgba(65, 16, 16, 0);
+        width: 8rem;
+        padding-left: 0.5rem;
+      }
+ 
 
 
+      .button{
+          display: block;
+          flex:30%;
+          color:#f9a11b;
+          
+      }
 
-.NAVBAR .LNKS .menu:hover::after{
-    transition: all  .3s linear;
-    content: ' ';
-    position: absolute;
-    height:8px;
-    top:-1.27rem;
-    left:0;
-    width:100%;
-    background-color:  #f9a11b;
-   
-}
-
-
-.NAVBAR .AUTH{
-    flex:18%;
-}
-.NAVBAR .AUTH .LINK{
-   text-decoration: none;
-}
-.NAVBAR .AUTH .auth{
-    border:none;
-    outline: none;
-    background-color: transparent;
-    color:  #f9a11b;    font-weight: 800;
-    margin-right: 2rem;
-}
-.NAVBAR .AUTH .auth:hover{
-    color:  #f9a11b;
-   
-}
-
-
+  }
