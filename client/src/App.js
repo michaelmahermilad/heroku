@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -12,11 +12,11 @@ import modal from "../src/images/modal.svg";
 import SupportAdmin from "./chat/SupportAdmin";
 import Sendmail from "./components/Sendmail/index";
 import ResearchField from "./pages/ResearchField";
-import Footer from "./components/Footer";
-import Article from "./pages/Article/Article";
+ import Article from "./pages/Article/Article";
 import ALL from "./pages/ALL/ALL";
 import A from "./pages/A";
 import B from "./pages/B";
+import sound from '../src/pages/sound.wav'
 const theme = createTheme();
 const customStyles = {
   content: {
@@ -24,16 +24,26 @@ const customStyles = {
     left: "50%",
     right: "auto",
     bottom: "auto",
-
     height: "20rem",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
   },
 };
+ Modal.setAppElement(document.getElementById("root"));
 
-// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
-Modal.setAppElement(document.getElementById("root"));
 function App(props) {
+  const audio = new Audio(
+    `${sound}`
+  );
+useEffect(()=>{
+   const start = () => {
+    audio.play();
+  };
+  var o=document.querySelectorAll("input")
+  o.forEach(a=>a.addEventListener('dblclick',start)) 
+},[])
+
+
   let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -79,7 +89,7 @@ function App(props) {
               Not now
             </button>
           </Modal>
-
+    
           <Routes>
             {" "}
             <Route element={<B />}>

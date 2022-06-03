@@ -58,10 +58,10 @@ function EmailForm() {
         }}
       >
         <Avatar  
-          style={{ position: "absolute", left: "calc(80% - 25px)", top: "5%" }}
+          style={{ position: "absolute", left: "calc(80% - 5px)", top: "2%" }}
         />
         <div className="LIVESUPPORT" style={styles.topText}>
-          <br />
+         
           Live Support
         </div>
         <form   
@@ -92,12 +92,13 @@ function EmailForm() {
                   position: "absolute",
                   width: "8rem",
                   top: "150%",
-                  height: "2rem",
+                  height: "2.5rem",
                   border: "none",
                   outline: "none",
-                  fontWeight: "600",
+                  fontWeight: "700",
                    borderRadius: "25px",
                   left: "calc(50% - 4rem",
+                  lineHeight:'2.5rem',
                   color: email ? "var(--main)" : "var(--main)",
                   backgroundColor: email ? "var(--main2)" : "",
                 

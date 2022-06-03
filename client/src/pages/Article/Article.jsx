@@ -5,13 +5,11 @@ import "react-quill/dist/quill.core.css";
 import "react-quill/dist/quill.snow.css";
 import "../Article/article.css";
 import styled from "styled-components";
-import Footer from "../../components/Footer";
-import COVID from "../../images/COVID.png";
+ import COVID from "../../images/COVID.png";
 import Banner2 from "../Article/Banner2";
 import AC from "../../images/AC.jpg";
 import MAGDY from "../../images/MAGDY.png";
-import Articl from "../../images/Articl.png";
-function Article() {
+ function Article() {
   const [show, setShow] = useState(true);
 
   const [state, setState] = useState({ text: " "});
@@ -328,7 +326,7 @@ function Article() {
           </div>  
         </div>
 
-        <div style={{ width: "92%", marginInline: "auto" }}>
+        <div style={{ width: "92%", paddingRight:'4%',paddingLeft:'4%' }}>
           <img src={MAGDY} style={{ width: "100%" }} />
 
           <h5

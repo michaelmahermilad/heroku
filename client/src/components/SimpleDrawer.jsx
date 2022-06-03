@@ -24,7 +24,7 @@ const Logo = styled.img`
   margin-left: 1rem;
   display: block;
   @media (max-width: 900px) {
-    height: 30px;
+    height: 35px;
   }
 `;
 export default function SimpleDrawer() {

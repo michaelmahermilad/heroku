@@ -146,6 +146,9 @@ const Button = styled.button`
 
   display: block;
   margin: auto;
+  @media(max-width:700px){
+    font-size:14px;
+  }
 `;
 const Linkat = styled(Link)`
   min-height: 100%;

@@ -85,7 +85,7 @@ function Footer() {
  
         <div   >
         <img style={{display:'block',maxWidth:'8rem'}}  alt=""  src={logo}  /></div>
-        <div    ><a href="/signup" className="buttonfooter"  style={{display:'block',padding:'.2rem 1rem .2rem 1rem' ,textAlign:'center',textDecoration:'none',borderRadius:'23px'}}  >
+        <div    ><a href="/signup" className="buttonfooter"  style={{display:'block',padding:'.2rem 1rem .2rem 1rem' , textAlign:'center',textDecoration:'none',fontSize:'14px',borderRadius:'25px'}}  >
           Sign up
         </a></div>
       </div>
