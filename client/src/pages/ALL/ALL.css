@@ -114,13 +114,13 @@ filter: blur(80px);
         width:70%;
     }
     .btnheader{
-        width:9rem;
+        width:12rem;
         height: 2rem;
         border:2px solid  #f9a11b;
         background-color: transparent;
         border-radius: 25px;
         color:white;
-        font-size: 13px;
+        font-size: 12px;
         backdrop-filter: blur(1px);
        margin-right: 1rem;
      background-color:  #f9a11b;
@@ -128,13 +128,13 @@ filter: blur(80px);
   
     
     .btnheader:hover{
-        font-size: 13px;
-        width:9rem;
-        height:2rem;
+        font-size: 12px;
+     
+       
         border:2px solid  #36240a43;
         background-color: transparent;
         border-radius: 25px;
-        width:7rem;
+        width:12rem;
         height: 2rem;
        
         
