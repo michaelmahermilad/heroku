@@ -4,30 +4,20 @@ import gsap from "gsap";
 import ml from "../images/ml.png";
 import ml2 from "../images/ml2.png";
 
-import '../pages/ResearchFiled.css'
-import {
- 
-  Card,
-  Col,
-  Container,
-  Form,
-  InputGroup,
-  Row,
-} from "react-bootstrap";
+import "../pages/ResearchFiled.css";
+import { Card, Col, Container, Form, InputGroup, Row } from "react-bootstrap";
 import styled from "styled-components";
 import article1 from "../images/article1.webp";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Capture from "../images/Capture.PNG";
- import Capture1 from "../images/Capture1.PNG";
+import Capture1 from "../images/Capture1.PNG";
 import Article from "../pages/Article/Article";
 import Footer from "../components/Footer";
 function ResearchField() {
- 
   useEffect(() => {
-   
-      window.scrollTo(0, 0);
-    
+    window.scrollTo(0, 0);
+
     var tl = gsap.timeline({
       repeat: 100,
       repeatDelay: 50,
@@ -43,18 +33,16 @@ function ResearchField() {
     });
     tl.fromTo(
       "#ml2",
-      { opacity: 0.8, scale: .6, y: -60 },
+      { opacity: 0.8, scale: 0.6, y: -60 },
       { duration: 5, opacity: 1, scale: 1, y: -10 }
     );
   }, []);
 
   return (
     <>
-    
       <div
-
-      
-        className=" "  style={{
+        className=" "
+        style={{
           backgroundImage: `url(${Frame})`,
           letterSpacing: "4px",
           height: "auto",
@@ -62,12 +50,12 @@ function ResearchField() {
           overflow: "Hidden",
           backgroundPosition: "bottom right",
           backgroundSize: "cover",
-          marginLeft:'.4rem',
+          marginLeft: ".4rem",
           backgroundRepeat: "no-repeat",
         }}
       >
         <h1
-            style={{
+          style={{
             backgroundColor: "brown",
             textShadow: "16px 5px 17px brown",
             boxShadow: ".3px 4px 20px brown",
@@ -76,7 +64,7 @@ function ResearchField() {
             paddingTop: "4rem",
             maxWidth: "fit-content",
             paddingBottom: "1rem",
-  
+
             marginBottom: "1.5rem",
             width: "auto",
             color: "var(--main2)",
@@ -89,13 +77,11 @@ function ResearchField() {
         </h1>
         <img
           id="ml"
-          className="imagemain "  style={{ height: "10rem", right: "6rem", position: "absolute" }}
+          className="imagemain "
+          style={{ height: "10rem", right: "6rem", position: "absolute" }}
           src={ml}
         />
-           <img className="imagemobile"
-          id="ml2"
-style={{}}          src={ml2}
-        />
+        <img className="imagemobile" id="ml2" style={{}} src={ml2} />
         <h2
           style={{
             boxShadow: ".3px 6px 12px lightblue",
@@ -104,16 +90,17 @@ style={{}}          src={ml2}
             padding: "1rem",
             borderRadius: "25px",
             backgroundColor: "brown",
-             paddingBottom: "1rem",
+            paddingBottom: "1rem",
             color: "white",
             fontsize: "30px",
-           }} className="subtitle"  
+          }}
+          className="subtitle"
         >
-          
           Here you will find all you want to know about Heart Care.
         </h2>
         <img
-          className="imageanimation "  style={{
+          className="imageanimation "
+          style={{
             position: "absolute",
             right: "0rem",
             top: "2rem",
@@ -126,7 +113,7 @@ style={{}}          src={ml2}
       </div>
       <Container>
         <Row
-            style={{
+          style={{
             backgroundImage: `url(${Capture1})`,
             backgroundSize: "contain",
             backgroundOrigin: "0 0",
@@ -138,32 +125,37 @@ style={{}}          src={ml2}
           }}
           className="justify-content-space-around align-items-center  "
         >
-          <Col md="12" lg="8" >
-            <Form   >
+          <Col md="12" lg="8">
+            <Form>
               <InputGroup
-              className="centersearch"  style={{
+                className="centersearch"
+                style={{
                   border: "1px solid brown",
                   width: "14rem",
                   borderRadius: "25px",
                   overflow: "hidden",
-                  
                 }}
               >
                 <InputGroup.Text>
-                  <FontAwesomeIcon className=" "  style={{ color: "brown" }} icon={faSearch} />
+                  <FontAwesomeIcon
+                    className=" "
+                    style={{ color: "brown" }}
+                    icon={faSearch}
+                  />
                 </InputGroup.Text>
                 <Form.Control
-                  className=" "  style={{   border: "none", width: "7rem" }}
+                  className=" "
+                  style={{ border: "none", width: "7rem" }}
                   id="inlineFormInputName"
                   placeholder="Search Heart Care"
                 />
-              </InputGroup> 
+              </InputGroup>
             </Form>{" "}
           </Col>
-          <Col md="12" lg="4" className=""  >
+          <Col md="12" lg="4" className="">
             <h5
-              className="centersearch " 
-               style={{
+              className="centersearch "
+              style={{
                 color: "white",
                 margin: "auto",
                 cursor: "pointer",
@@ -173,39 +165,49 @@ style={{}}          src={ml2}
                 width: "70%",
                 fontWeight: "500",
                 border: "2px solid grey",
-              
               }}
             >
-              Go to Fields 
+              Go to Fields
             </h5>
           </Col>
         </Row>
 
-        <Row className="justify-content-around
- ">
+        <Row
+          className="justify-content-around
+ "
+        >
           {[...Array(21)].map((a, i) => (
-            <Col xs="12" sm="6" md="4" className=" "  style={{  margin:'auto',marginBottom: "2rem" }}>
+            <Col
+              xs="12"
+              sm="6"
+              md="4"
+              className=" "
+              style={{ margin: "auto", marginBottom: "2rem" }}
+            >
               <Card
-                className=" "  style={{
+                className=" "
+                style={{
                   width: "100%",
                   height: "auto",
                   position: "relative",
                   minHeight: "210px",
                   margin: "auto",
-                  borderRadius: "0",  
+                  borderRadius: "0",
                 }}
               >
                 <DivHover
-                  className=" "  style={{
+                  className=" "
+                  style={{
                     zIndex: "10",
                     width: "100%",
-                    margin:'auto',
+                    margin: "auto",
                     height: "100%",
-                    backgroundColor: "rgba(111,111,111,.4)",  
+                    backgroundColor: "rgba(111,111,111,.4)",
                   }}
                 >
                   <div
-                    className=" "  style={{
+                    className=" "
+                    style={{
                       width: "6rem",
                       height: "2.2rem",
                       backgroundColor: "brown",
@@ -216,7 +218,8 @@ style={{}}          src={ml2}
                     }}
                   >
                     <p
-                      className=" "  style={{
+                      className=" "
+                      style={{
                         width: "100%",
                         textAlign: "center",
                         lineHeight: "2.2rem",
@@ -230,18 +233,20 @@ style={{}}          src={ml2}
                   </div>
                 </DivHover>
                 <Card.Img
-                  className=" "  style={{
+                  className=" "
+                  style={{
                     height: "84%",
                     paddingBottom: "0px",
-                     padding:'0px',
+                    padding: "0px",
                     margin: "0px",
                   }}
                   variant="top"
                   src={article1}
                 />
-                <Card.Body className=" "  style={{ padding: ".4rem" }}>
+                <Card.Body className=" " style={{ padding: ".4rem" }}>
                   <Card.Title
-                    className=" "  style={{
+                    className=" "
+                    style={{
                       fontSize: "1.03rem",
                       fontWeight: "700",
                       color: "#606060	",
@@ -253,10 +258,9 @@ style={{}}          src={ml2}
               </Card>
             </Col>
           ))}{" "}
-        
         </Row>
       </Container>
-   </>
+    </>
   );
 }
 
@@ -267,9 +271,9 @@ const DivHover = styled.div`
   right: 0;
   opacity: 0;
   border: 3px solid var(--main);
-  
+
   cursor: pointer;
   :hover {
-    opacity:1;
+    opacity: 1;
   }
 `;

@@ -1,11 +1,8 @@
-
-
-
-.carousel .thumb ,.control-dots{
-    display:none !important;
+.carousel .thumb,
+.control-dots {
+  display: none !important;
 }
 
 .carousel.carousel-slider:hover .control-arrow {
-    background: #f9a11b;
+  background: #f9a11b;
 }
-

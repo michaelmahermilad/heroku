@@ -1,139 +1,96 @@
-.sidebar { width: 0px;
-  
-
+.sidebar {
+  width: 0px;
 }
 #main {
-       
-position: relative;
-top:0;
-
-
-
-
+  position: relative;
+  top: 0;
 }
 
-.backdropDiv{
-  position:absolute;
-  right:0;
-  left:0;
-  top:0;
- bottom: 0;
-z-index: 99999;
+.backdropDiv {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99999;
 
-  height:0px;
-  
-transition: all 1s linear;
-border-bottom-right-radius: 50px;
+  height: 0px;
+
+  transition: all 1s linear;
+  border-bottom-right-radius: 50px;
 }
-.openbackdropDiv{
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.06) , #f9a01b8f);
-height: 100%;
+.openbackdropDiv {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.06), #f9a01b8f);
+  height: 100%;
   border-bottom-right-radius: 0%;
   z-index: 1;
-
-
 }
 
 .sidebar .a {
   display: none;
-
 }
 
 @media screen and (max-width: 1000px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    }
-    
-    .sidebar {
-      overflow: hidden;
-      width: 0px;
-      position: fixed;
-      z-index: 999;
+  .sidebar {
+    overflow: hidden;
+    width: 0px;
+    position: fixed;
+    z-index: 999;
     height: fit-content;
-   top:5rem;
-     height: 100%;
-      transition: 0.5s;
-      
-     
-    }
-    
-    .sidebar .a {
-      width:50%;
-      margin: auto;
-      text-decoration: none;
-      font-size: 16px;
-      color: #976d19;
-      display: block;
-      transition: 0.3s;
-      z-index:  9999;
-  font-weight: 800;
-  margin-top: 2rem;
+    top: 5rem;
+    height: 100%;
+    transition: 0.5s;
+  }
 
-    }
+  .sidebar .a {
+    width: 50%;
+    margin: auto;
+    text-decoration: none;
+    font-size: 14px;
+    color: #976d19;
+    display: block;
+    transition: 0.3s;
+    z-index: 9999;
+    font-weight: 800;
+    margin-top: 2rem;
+  }
+
+  .sidebar .a:hover {
+    color: #322f16;
+  }
+
  
-    .sidebar .a:hover {
-      color: #322f16;
-    }
-    
-    .sidebar .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
-    
-    .openbtn {
-      font-size: 20px;
-      cursor: pointer;
-      background-color: #111;
-      color: white;
-      padding: 16rem 15px;
-      border: none;
-      z-index:10000;
-    }
-    
-    .openbtn:hover {
-      background-color: #444;
-    }
-    
-    #main {
-       
-        
-            transition: margin-left .5s;
-       
-     
-  
-   
-      
-    }
-    .backdropDiv{
-      position:absolute;
-      right:0;
-      left:0;
-      top:0;
-     bottom: 0;
-    
-    
-      height:0px;
-      
+
+
+  #main {
+    transition: margin-left 0.5s;
+  }
+  .backdropDiv {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    height: 0px;
+
     transition: all 1s linear;
     border-bottom-right-radius: 50px;
-    }
-    .openbackdropDiv{
-                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.06) , #f9a01b8f);
+  }
+  .openbackdropDiv {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.06),
+      #f9a01b8f
+    );
     height: 100%;
-      border-bottom-right-radius: 0%;
-      z-index: -8;
-    
-    
-    } 
-    
-    
-    
-   
+    border-bottom-right-radius: 0%;
+    z-index: -8;
+  }
 }

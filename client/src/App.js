@@ -40,7 +40,7 @@ useEffect(()=>{
    const start = () => {
     audio.play();
   };
-  var o=document.querySelectorAll("input")
+  var o=document.querySelectorAll(".a")
   o.forEach(a=>a.addEventListener('dblclick',start)) 
 },[])
 

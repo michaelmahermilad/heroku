@@ -5,11 +5,20 @@ import { Collapse, Select } from 'antd';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel'
  import '../Carousol/Carousol.css'
-import a from '../../../images/a.jpg'
-import b from '../../../images/b.jpg'
+
+import image1 from '../../../images/image1.avif'
+import image2 from '../../../images/image2.avif'
+import image3 from '../../../images/image3.avif'
+import image4 from '../../../images/image4.avif'
+import image5 from '../../../images/image5.avif'
+import image6 from '../../../images/image6.avif'
+import image7 from '../../../images/image7.avif'
+ import image8 from '../../../images/a.jpg'
+import image9 from '../../../images/b.jpg'
+
 
 const { Panel } = Collapse;
-
+const arr=[ image1,image2,image3,image4,image5,image6,image7,image8,image9  ]
 
 const text = `
   A dog is a type of domesticated animal.
@@ -57,14 +66,18 @@ function Antd() {
    
   
      >
- 
+ {arr.map((i,k)=>{
+return (
+ <div style={{width:'100%',height:'18rem' }}>
+                     <img style={{display:'block',width:'100%',borderRight:'1px solid grey',borderLeft:'1px solid grey' ,height:'100%'}}src={i} />
+                 </div>
+
+  )
+
+
+ })}
   
-                 <div style={{width:'100%' ,height:'18rem'}}>
-                     <img style={{display:'block',width:'100%',borderRight:'1px solid grey',borderLeft:'1px solid grey' ,height:'100%'}}src={a} />
-                 </div>
-                 <div style={{width:'100%',height:'18rem' }}>
-                     <img style={{display:'block',width:'100%',borderRight:'1px solid grey',borderLeft:'1px solid grey' ,height:'100%'}}src={b} />
-                 </div>
+                
    
       
                 

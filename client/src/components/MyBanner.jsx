@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Button } from "./Header";
-import a from "../images/a.webp";
+import Layer from "../images/Layer.svg";
 import Main from "../images/Main.svg";
 import gsap from "gsap";
+import LOGO from '../images/LOGO.mp4'
 function MyBanner(props) {
   useEffect(()=>{
     var tl = gsap.timeline({
@@ -23,7 +24,17 @@ function MyBanner(props) {
         <BannerLeft><h2 className="banneer-title">
             Medical Data for Students and Researchers.
           </h2>
-          <img alt="" style={{ display: "block", }} src={a} />
+         <div> <video autoPlay muted   loop style={{  borderRadius:'10px' }}    >
+          
+        <source
+          src={LOGO}
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video> </div>
+
+
+         
           
         </BannerLeft>
         <BannerRight>
@@ -37,8 +48,9 @@ function MyBanner(props) {
             onClick={props.openModal}
           >
             Join The Community Now
+
           </Button>
-        </BannerRight>
+         </BannerRight>
       </Banner>
     </div>
   );
@@ -46,14 +58,14 @@ function MyBanner(props) {
 
 export default MyBanner;
 const Banner = styled.div`
-  padding-top: 8rem;
+  padding-top: 6rem;
   padding-right: 7%;
   padding-left: 7%;
   display: flex;
   flex-direction: row;
 
   @media (max-width: 800px) {
-    padding-top: 7rem;
+    padding-top: 6rem;
 
     flex-direction: column;
     
@@ -65,9 +77,9 @@ const Banner = styled.div`
 `;
 const BannerLeft = styled.div`
 
- flex:50%;
+ flex:40%;
 img{
-  width:60%;
+  width:70%;
   @media (max-width: 800px) {
     text-align: center;
     display:block;
@@ -76,22 +88,53 @@ img{
     margin-bottom:3rem;
   }
 
+}  
+div{
+  box-shadow: .3px 5px 20px brown;
+  width: fit-content;
+  height: fit-content;
+  width:60%;
+  box-shadow: -3px 41px 109px 27px rgba(153,83,83,0.61) ;
+  background-color: #a52a2a19;
+  border-radius: 10%;
+   border-bottom-right-radius: 50%;
+  margin-left: 3rem;  @media (max-width: 800px) {
+   
+   display:block;
+   width:100%;
+   margin:auto;
+   margin-bottom:3rem;
+ }
 }
+video{
+  position: relative;
+  width:100%;
+  
+ 
+clip-path: circle(46.0% at 50% 49%);
+  filter: contrast(1.2) brightness(1.1);
+  box-shadow: -3px 41px 109px 27px rgba(153,83,83,0.61) inset;
+  
+ 
+
+}
+
   h2 {
-    width: 86%;
+    width: 100%;
     line-height: 2.1rem;
     font-weight: 800;
     letter-spacing: 1px;
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
     color: var(--main);
     font-size: 1.6em;
     @media (max-width:900px){
       width:90%;
-
+margin-top:0;
     }
     @media (max-width: 800px) {
       text-align: center;
       margin:auto;
+      margin-bottom: 1rem;
     }
   }
 
@@ -100,6 +143,7 @@ img{
 const BannerRight = styled.div`
 flex:50%;
   img {
+    padding-top: 1rem;
     margin: auto;
     display: block;
  width:90%;

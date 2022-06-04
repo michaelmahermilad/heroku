@@ -7,16 +7,14 @@ import { Carasoularticle } from "./Carasoularticle";
 import Footer from "./Footer";
 import Sidebar from "../Sidebar";
 import { useMediaQuery } from "react-responsive";
- function ALL({onClick,onClick2}) {      const issmall = useMediaQuery({ query: "(min-width: 1000px)" });
+function ALL({ onClick, onClick2 }) {
+  const issmall = useMediaQuery({ query: "(min-width: 1000px)" });
 
-  useEffect(()=>{
-  
-    onClick2()
-    },[issmall])
+  useEffect(() => {
+    onClick2();
+  }, [issmall]);
   return (
-    <div style={{overflowX:'hidden'}}> 
- 
-
+    <div style={{ overflowX: "hidden" }}>
       <Header onClick={onClick} onClick2={onClick2} />
 
       <img
@@ -27,7 +25,7 @@ import { useMediaQuery } from "react-responsive";
           display: "block",
           zIndex: "-6",
         }}
-        className='imagepage'
+        className="imagepage"
         src={Framemain}
       />
       <div className="headermain">
@@ -39,14 +37,13 @@ import { useMediaQuery } from "react-responsive";
           Much and more Accurate medical date ,read more, discover more and be
           one from who share valuable knowledge.
         </h4>
-        <div  className='BTNFLX'
+        <div
+          className="BTNFLX"
           style={{
             display: "flex",
             marginTop: "2rem",
             justifyContent: "flex-start",
-        
           }}
-         
         >
           <button className="btnheader">Who we are?</button>
           <button className="btnheader"> Start Sharing</button>
@@ -54,7 +51,6 @@ import { useMediaQuery } from "react-responsive";
       </div>
       <div
         style={{
-          
           marginTop: "1.06rem",
           paddingTop: "1rem",
         }}
@@ -65,17 +61,11 @@ import { useMediaQuery } from "react-responsive";
           Trending Now
         </h5>
         <div style={{ marginTop: "1rem" }}>
-           <Antd/>
+          <Antd />
         </div>
-        <Carasoularticle/>
+        <Carasoularticle />
       </div>
-     <Footer/>
-
-
- 
-
-
-    
+      <Footer />
     </div>
   );
 }

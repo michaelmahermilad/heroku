@@ -8,7 +8,12 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MailIcon from "@mui/icons-material/Mail";
 import ListIcon from "@mui/icons-material/List";
-import { faBook,faLungsVirus,faHeartbeat,faBuildingLock } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBook,
+  faLungsVirus,
+  faHeartbeat,
+  faBuildingLock,
+} from "@fortawesome/free-solid-svg-icons";
 
 import { Collapse, IconButton } from "@mui/material";
 import logo from "../images/logo.svg";
@@ -81,8 +86,14 @@ export default function SimpleDrawer() {
         {ArrayofSections.map((i, index) => (
           <>
             <ListItem disablePadding key={i.text}>
-              <ListItemButton style={{ height: "4rem",color:'var(--main)',fontSize:'1.3rem' }}>
-             <p className="iconafter">  {i.icon}</p>
+              <ListItemButton
+                style={{
+                  height: "4rem",
+                  color: "var(--main)",
+                  fontSize: "1.3rem",
+                }}
+              >
+                <p className="iconafter"> {i.icon}</p>
                 <ListItemText
                   primaryTypographyProps={{
                     color: "var(--main)",

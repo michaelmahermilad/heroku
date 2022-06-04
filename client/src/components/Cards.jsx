@@ -1,9 +1,9 @@
 import React from "react";
 import '../components/Cards.css'
-import m from '../images/m.png'
-import article1 from '../images/article1.webp'
-import l from '../images/l.jfif'
-import o from '../images/o.jpg'
+import image7 from '../images/image7.avif'
+import image2 from '../images/image2.avif'
+import image6 from '../images/image6.avif'
+
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import { Link } from "react-router-dom";
@@ -13,7 +13,7 @@ function Cards() {
     <div   className="grids">
       <div className="outline">
         <div className="image1">
-          <img alt="" src={o}/>
+          <img alt="" src={image6}/>
           <div className="category">
             <p>Research</p>
           </div>
@@ -29,7 +29,7 @@ function Cards() {
    
       <div className="outline">
         <div className="image1">
-          <img alt="" src={l}/>
+          <img alt="" src={image2}/>
           <div className="category">
             <p> Students</p>
           </div>
@@ -44,7 +44,7 @@ function Cards() {
       </div>
       <div className="outline">
         <div className="image1">
-          <img alt="" src={article1}/>
+          <img alt="" src={image7}/>
           <div className="category">
             <p> Corona Virus</p>
           </div>

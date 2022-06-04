@@ -1,25 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../images/logo.svg";
-import { faSearch,faBars } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import '../Header/Header.css'
+import "../Header/Header.css";
 import Sidebar from "../../Sidebar";
 import { useMediaQuery } from "react-responsive";
-function Header({onClick,onClick2}) {
-const [truee,setTruee]=useState(true);
-  
-  
-  useEffect(()=>{
-const g=(e)=>{ if(truee)
-    onClick2() 
-     else
-    onClick()
-  
-  }
-  g()
+function Header({ onClick, onClick2 }) {
+  const [truee, setTruee] = useState(true);
 
-  },[!truee])
+  useEffect(() => {
+    const g = (e) => {
+      if (truee) onClick2();
+      else onClick();
+    };
+    g();
+  }, [!truee]);
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const controlNavbar = () => {
@@ -38,18 +34,13 @@ const g=(e)=>{ if(truee)
   };
   const issmall = useMediaQuery({ query: "(min-width: 1000px)" });
 
-  useEffect(()=>{
-  
-  setTruee(true)
-    },[issmall])
+  useEffect(() => {
+    setTruee(true);
+  }, [issmall]);
 
-
-useEffect(()=>{
-  window.scrollTo(0, 0);
-
-
-
-},[])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", controlNavbar);
@@ -61,48 +52,62 @@ useEffect(()=>{
     }
   }, [lastScrollY]);
 
-
-
-
-
   return (
-   <> <div    style={{backgroundColor:show? "rgba(12, 33, 19, 0.096)":"white"}} className="NAVBAR">
-      <div className="LOGO">
-     
-        <img  className="IMG" src={logo} />
-      </div>
+    <>
+      {" "}
+      <div
+        style={{ backgroundColor: show ? "rgba(12, 33, 19, 0.096)" : "white" }}
+        className="NAVBAR"
+      >
+        <div className="LOGO">
+          <img className="IMG" src={logo} />
+        </div>
 
+        <div className="INPTCONTAINER">
+          <input className="INPT" placeholder="Search ..." />
+          <span className="ICN">
+            <FontAwesomeIcon icon={faSearch} />
+          </span>
+        </div>
 
-      <div className="INPTCONTAINER">
-      
-        <input className="INPT" placeholder="Search ..." />
-        <span className="ICN">
-          <FontAwesomeIcon icon={faSearch} /> 
-        </span>
-      </div>
+        <div
+          style={{ zIndex: "9999999" }}
+          onClick={() => setTruee(!truee)}
+          className={`   button ${truee ? "" : "btna"}`}
+        >
+          {" "}
+          <div></div>
+          <div></div>
+          <div></div>{" "}
+        </div>
 
-      <div    style={{zIndex:'9999999'}}   onClick={()=>setTruee(!truee)}  className={`   button ${truee?'':'btna'}`}>  <div></div><div></div><div></div> </div>
-
-
-
-      <div className="LNKS">
-       
-        <Link to='/' style={{color:show?'white':'#8f6420'}}    className="menu">Heart Care</Link>
-        <Link to='/'   style={{color:show?'white':'#8f6420'}}    className="menu">Mental Health</Link>
-      </div>
-      <div  className="AUTH">
-        <Link   to='/'  className="LINK">
-          <button className="auth">SIGN UP</button>
-        </Link>
-        <Link  to='/'  className="LINK">
-          <button className="auth">SIGN IN</button>
-        </Link>
-      </div>
-
-
-
-    </div> </>
-  )
+        <div className="LNKS">
+          <Link
+            to="/"
+            style={{ color: show ? "white" : "#8f6420" }}
+            className="menu"
+          >
+            Heart Care
+          </Link>
+          <Link
+            to="/"
+            style={{ color: show ? "white" : "#8f6420" }}
+            className="menu"
+          >
+            Mental Health
+          </Link>
+        </div>
+        <div className="AUTH">
+          <Link to="/" className="LINK">
+            <button className="auth">SIGN UP</button>
+          </Link>
+          <Link to="/" className="LINK">
+            <button className="auth">SIGN IN</button>
+          </Link>
+        </div>
+      </div>{" "}
+    </>
+  );
 }
 
-export default Header
+export default Header;

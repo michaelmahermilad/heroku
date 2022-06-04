@@ -10,8 +10,8 @@ import { useMediaQuery } from "react-responsive";
 import e from "../images/e.jpg";
 import w from "../images/w.png";
 import pic3 from "../images/pic3.png";
-import pic4 from "../images/pic4.png";
- import {Link} from 'react-router-dom'
+import Capture8 from "../images/Capture8.PNG";
+import { Link } from "react-router-dom";
 import pic6 from "../images/pic6.png";
 import pic7 from "../images/pic7.png";
 // import required modules
@@ -32,119 +32,112 @@ export const Swipper = () => {
           margin: "auto",
           textAlign: "center",
           color: "var(--main)",
-         
+
           fontWeight: "700",
-          
         }}
       >
-       Their Smile Matters 
+        Their Smile Matters
       </Heading>
       <Swiper
         style={{
           width: "87%",
           margin: "auto",
-         marginTop:'2rem',
-  
-        
+          marginTop: "2rem",
         }}
-        
-        centeredSlides={true} 
+        centeredSlides={true}
         centeredSlidesBounds={true}
         spaceBetween={4}
-        slidesPerView={issmall ? 1 : issmall2 ? 2 :5}
+        slidesPerView={issmall ? 1 : issmall2 ? 2 : 5}
         autoplay={{
           delay: 2400,
           disableOnInteraction: false,
         }}
-      
-       
         modules={[Autoplay, Pagination, Navigation]}
       >
-        
-
- 
- 
-        <SwiperSlide
-           
-        >
+        <SwiperSlide>
           {({ isActive }) => (
-            <Card style={{  borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "" }}>
-            <img alt=""
-                src={pic3}
-                style={{ display: "block"}}
-              />
+            <Card
+              style={{
+                borderBottom: isActive ? "9px solid var(--main2)" : "",
+                borderLeft: isActive ? "9px solid var(--main2)" : "",
+              }}
+            >
+              <img alt="" src={pic3} style={{ display: "block" }} />
             </Card>
           )}
         </SwiperSlide>
 
-
-
-
-        <SwiperSlide
-           
-        >
+        <SwiperSlide>
           {({ isActive }) => (
-            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "" }}>
-            <img alt=""
-                src={w}
-                style={{ display: "block"}}
-              />
-            </Card>
-          )}
-        </SwiperSlide>
-     
-   
-        
-        <SwiperSlide
-           
-        >
-         
-          {({ isActive }) => (
-            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "" }}>
-            <img alt=""
-                src={pic6}
-                style={{ display: "block"}}
-              />
-            </Card>
-          )}
-        </SwiperSlide>
-        <SwiperSlide
-         
-        >
-          {({ isActive }) => (
-            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "" }}>
-              <Link to="field">  <img alt=""
-                src={pic7}
-                style={{ display: "block"}}
-              /></Link>
+            <Card
+              style={{
+                borderBottom: isActive ? "9px solid var(--main2)" : "",
+                borderLeft: isActive ? "9px solid var(--main2)" : "",
+              }}
+            >
+              <img alt="" src={w} style={{ display: "block" }} />
             </Card>
           )}
         </SwiperSlide>
 
-        
-
-
-
-
-
-
-
-        <SwiperSlide
-           
-        >
+        <SwiperSlide>
           {({ isActive }) => (
-            <Card style={{ borderBottom: isActive ? "9px solid var(--main2)" : "" ,borderLeft:isActive ? "9px solid var(--main2)" : "" }}>
-          <Link to="R">  <img alt=""
-                src={e}
-                style={{ display: "block"}}
-              /></Link>
+            <Card
+              style={{
+                borderBottom: isActive ? "9px solid var(--main2)" : "",
+                borderLeft: isActive ? "9px solid var(--main2)" : "",
+              }}
+            >
+              <img alt="" src={pic6} style={{ display: "block" }} />
+            </Card>
+          )}
+        </SwiperSlide>
+        <SwiperSlide>
+          {({ isActive }) => (
+            <Card
+              style={{
+                borderBottom: isActive ? "9px solid var(--main2)" : "",
+                borderLeft: isActive ? "9px solid var(--main2)" : "",
+              }}
+            >
+              <Link to="field">
+                {" "}
+                <img alt="" src={pic7} style={{ display: "block" }} />
+              </Link>
             </Card>
           )}
         </SwiperSlide>
 
-
-
-
+        <SwiperSlide>
+          {({ isActive }) => (
+            <Card
+              style={{
+                borderBottom: isActive ? "9px solid var(--main2)" : "",
+                borderLeft: isActive ? "9px solid var(--main2)" : "",
+              }}
+            >
+              <Link to="R">
+                {" "}
+                <img alt="" src={e} style={{ display: "block" }} />
+              </Link>
+            </Card>
+          )}
+        </SwiperSlide>
+        <SwiperSlide>
+          {({ isActive }) => (
+            <Card
+              style={{
+                borderBottom: isActive ? "9px solid var(--main2)" : "",
+                borderLeft: isActive ? "9px solid var(--main2)" : "",
+              }}
+            >
+              <Link to="R">
+                {" "}
+                <img alt="" src={Capture8} style={{ display: "block" }} />
+              </Link>
+            </Card>
+          )}
+        </SwiperSlide>
 
       </Swiper>
     </>
@@ -152,26 +145,23 @@ export const Swipper = () => {
 };
 
 const Card = styled.div`
-  z-index:1 !important;
- border-radius: 50%;
+  z-index: 1 !important;
+  border-radius: 50%;
   display: flex;
   flex-direction: column;
-   img{
-     height:38vh;
-     width:100%;
-     border-radius: 50%;
-     border:3px solid brown;
-   }
- 
- 
-  @media (max-width:700px){
-  
+  img {
+    height: 38vh;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid brown;
+  }
+
+  @media (max-width: 700px) {
   }
 `;
- export const Heading=styled.h4`
-font-size:var(--fonttitle);
-@media (max-width:600px){
-  font-size:var(--fonttitlesmall);
-}
-
-`
+export const Heading = styled.h4`
+  font-size: var(--fonttitle);
+  @media (max-width: 600px) {
+    font-size: var(--fonttitlesmall);
+  }
+`;

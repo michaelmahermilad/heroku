@@ -1,53 +1,59 @@
-import React, { useEffect } from 'react'
-import '../pages/Sidebar.css'
-import ALL from './ALL/ALL';      import { useMediaQuery } from "react-responsive";
-import { Link } from 'react-router-dom';
+import React, { useEffect } from "react";
+import "../pages/Sidebar.css";
+import ALL from "./ALL/ALL";
+import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
+import sound from '../../src/pages/sound.mp3'
 
 function Sidebar() {
-    function openNav() {
-        document.getElementById("mySidebar").style.width = "180px";
-        document.getElementById("main").style.marginLeft = "180px";
-        document.getElementById("main").style.marginRight = "-180px";
-        document.getElementById('backdropDiv').classList.add('openbackdropDiv')
-      }
-      
-      function closeNav() {
-        document.getElementById("mySidebar").style.width = "0px";
-        document.getElementById("main").style.marginLeft= "0px";
-         document.getElementById("main").style.marginRight = "0px";
-         document.getElementById('backdropDiv').classList.remove('openbackdropDiv');
-      }
-  
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "180px";
+    document.getElementById("main").style.marginLeft = "180px";
+    document.getElementById("main").style.marginRight = "-180px";
+    document.getElementById("backdropDiv").classList.add("openbackdropDiv");
+  }
 
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0px";
+    document.getElementById("main").style.marginLeft = "0px";
+    document.getElementById("main").style.marginRight = "0px";
+    document.getElementById("backdropDiv").classList.remove("openbackdropDiv");
+  }
+  const audio = new Audio(
+    `${sound}`
+  );
+useEffect(()=>{
+   const start = () => {
+    audio.play();
+  };
+  var o=document.querySelectorAll("a")
+  o.forEach(a=>a.addEventListener('click',start)) 
+},[])
   return (
-      
-    <div  style={{overflowX:'hidden'}}>
+    <div style={{ overflowX: "hidden" }}>
+      <div id="mySidebar" className="sidebar">
+        <div id="backdropDiv" className="backdropDiv"></div>
+        <Link className="a" to="/">
+          Main
+        </Link>
+        <Link className="a" to="/researchfield">
+          {" "}
+          Heart Care{" "}
+        </Link>{" "}
+        <Link className="a" to="/article">
+          Contribute
+        </Link>
+        <Link className="a" to="/ ">
+          {" "}
+          ABOUT{" "}
+        </Link>
+      </div>
 
-
-
-       <div id="mySidebar" className="sidebar">
-<div id='backdropDiv' className="backdropDiv">
-
-</div>
-   <Link  className='a'   to='/'>Main</Link> 
-  <Link  className='a'   to='/researchfield' > Heart Care </Link>  <Link className='a'   to='/article'>Contribute</Link> 
-  <Link  className='a'   to='/ ' > ABOUT </Link>
- 
- 
-</div>
-
-<div id="main">
-  
-  <ALL  onClick2={closeNav}     onClick={openNav}/>
-
-</div>
- 
-
-
-
-
+      <div id="main">
+        <ALL onClick2={closeNav} onClick={openNav} />
+      </div>
     </div>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;
