@@ -1,13 +1,13 @@
 .NAVBAR {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   right: 0;
   left: 0;
-  z-index: 99;
+  z-index: 9999999;
   display: flex;
   align-items: center;
   flex-direction: row;
-  padding: 0.3rem;
+  padding: 0.3rem;z-index: 999999;
   background-color: rgba(12, 33, 19, 0.13);
   height: 3.6rem;
 
@@ -95,7 +95,7 @@
 }
 .button{
    display: none;
-    
+    z-index: 9999999;
 }
 .NAVBAR .AUTH {
   flex: 18%;
@@ -184,7 +184,29 @@
           display: block;
           flex:30%;
           color:#f9a11b;
+          z-index: 9999;
           
       }
+
+      .button >*{
+       
+        width:25px;
+        height:3px;
+        background-color:#f9a11b;
+        display: block;
+        margin-bottom: 4px;
+        z-index: 9999999999;
+        transition: all .3s linear;
+      }
+      .btna :first-child{
+        display: none;
+      }
+      .btna :nth-child(2){
+        transform: rotate(45deg);
+      }
+      .btna :last-child{
+        transform: rotate(-45deg) translateY(-7px) translateX(4PX);
+      }
+     
 
   }

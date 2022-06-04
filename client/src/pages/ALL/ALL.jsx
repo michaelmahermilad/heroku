@@ -1,20 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header/Header";
 import Framemain from "../../images/Framemain.png";
 import "../ALL/ALL.css";
 import Antd from "./Carousol/Antd";
 import { Carasoularticle } from "./Carasoularticle";
 import Footer from "./Footer";
-function ALL() {
+import Sidebar from "../Sidebar";
+import { useMediaQuery } from "react-responsive";
+ function ALL({onClick,onClick2}) {      const issmall = useMediaQuery({ query: "(min-width: 1000px)" });
+
+  useEffect(()=>{
+  
+    onClick2()
+    },[issmall])
   return (
-    <>
-      <Header />
+    <div style={{overflowX:'hidden'}}> 
+ 
+
+      <Header onClick={onClick} onClick2={onClick2} />
 
       <img
         style={{
           width: "100%",
           position: "absolute",
-          marginTop: "-12rem",
+          marginTop: "-8rem",
           display: "block",
           zIndex: "-6",
         }}
@@ -61,7 +70,13 @@ function ALL() {
         <Carasoularticle/>
       </div>
      <Footer/>
-    </>
+
+
+ 
+
+
+    
+    </div>
   );
 }
 

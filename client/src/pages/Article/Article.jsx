@@ -326,7 +326,7 @@ import MAGDY from "../../images/MAGDY.png";
           </div>  
         </div>
 
-        <div style={{ width: "92%", paddingRight:'4%',paddingLeft:'4%' }}>
+        <div style={{ width: "92%", marginRight:'auto',marginLeft:'auto' }}>
           <img src={MAGDY} style={{ width: "100%" }} />
 
           <h5

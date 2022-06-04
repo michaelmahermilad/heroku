@@ -4,7 +4,22 @@ import logo from "../../../images/logo.svg";
 import { faSearch,faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import '../Header/Header.css'
-function Header() {
+import Sidebar from "../../Sidebar";
+import { useMediaQuery } from "react-responsive";
+function Header({onClick,onClick2}) {
+const [truee,setTruee]=useState(true);
+  
+  
+  useEffect(()=>{
+const g=(e)=>{ if(truee)
+    onClick2() 
+     else
+    onClick()
+  
+  }
+  g()
+
+  },[!truee])
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const controlNavbar = () => {
@@ -21,6 +36,14 @@ function Header() {
       setLastScrollY(window.scrollY);
     }
   };
+  const issmall = useMediaQuery({ query: "(min-width: 1000px)" });
+
+  useEffect(()=>{
+  
+  setTruee(true)
+    },[issmall])
+
+
 useEffect(()=>{
   window.scrollTo(0, 0);
 
@@ -43,9 +66,9 @@ useEffect(()=>{
 
 
   return (
-    <div    style={{backgroundColor:show? "rgba(12, 33, 19, 0.096)":"white"}} className="NAVBAR">
+   <> <div    style={{backgroundColor:show? "rgba(12, 33, 19, 0.096)":"white"}} className="NAVBAR">
       <div className="LOGO">
-       
+     
         <img  className="IMG" src={logo} />
       </div>
 
@@ -58,7 +81,7 @@ useEffect(()=>{
         </span>
       </div>
 
-      <div className="button">  <FontAwesomeIcon style={{fontSize:'1rem'}}   icon={faBars} /> </div>
+      <div    style={{zIndex:'9999999'}}   onClick={()=>setTruee(!truee)}  className={`   button ${truee?'':'btna'}`}>  <div></div><div></div><div></div> </div>
 
 
 
@@ -78,7 +101,7 @@ useEffect(()=>{
 
 
 
-    </div>
+    </div> </>
   )
 }
 

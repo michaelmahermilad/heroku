@@ -17,6 +17,7 @@ import ALL from "./pages/ALL/ALL";
 import A from "./pages/A";
 import B from "./pages/B";
 import sound from '../src/pages/sound.wav'
+import Sidebar from "./pages/Sidebar";
 const theme = createTheme();
 const customStyles = {
   content: {
@@ -62,9 +63,11 @@ useEffect(()=>{
     setIsOpen(false);
   }
   return (
-    <BrowserRouter>
+    <BrowserRouter> 
       <ThemeProvider theme={theme}>
         <div {...props} className="App">
+        
+
           <Modal
             style={modalStyles}
             isOpen={modalIsOpen}
@@ -93,7 +96,8 @@ useEffect(()=>{
           <Routes>
             {" "}
             <Route element={<B />}>
-              <Route path="/field" element={<ALL />} />
+              <Route path="/field" element={<ALL />} />              <Route path="/R" element={<Sidebar/> } />
+
             </Route>
             <Route element={<A />}>
               <Route path="/" element={<Home openModal={openModal} />} />

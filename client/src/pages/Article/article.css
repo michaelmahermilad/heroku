@@ -112,6 +112,7 @@ strong:before{
   }
   .articlepagemain>*{
    margin-top:3rem;
+   width:100%;
   }
 
 }
@@ -140,25 +141,26 @@ height:4rem;
 border-top:3px solid rgb(197, 151, 151);
 border-top-left-radius:10px;}
 .item3{
-height:1.9rem;
+height:2.7rem;
 padding-top: .2rem;
 overflow:hidden;
-max-width:97%; 
+max-width:98%; 
 
 font-size:1rem;
 color:rgb(136, 78, 78);
 font-weight:700;
-line-height:.9rem;
+line-height:1.2rem;
  text-align: left;}
 .item5{
-text-align:right; border-right:3px solid rgb(197, 151, 151);
+text-align:right;
+border-right:3px solid rgb(197, 151, 151);
 overflow:hidden;
 line-height:1rem;
 max-width:100%;
 font-size:.9rem;
 height: fit-content;
 padding: .2rem;
-
+padding-top: 0;
 color:rgb(79, 56, 56);
 font-weight:600;
  word-break: break-all;
