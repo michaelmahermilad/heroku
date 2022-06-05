@@ -8,7 +8,7 @@ import Auth from "./pages/Auth";
 import AuthLogin from "./pages/AuthLogin";
 import Modal from "react-modal";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import modal from "../src/images/modal.svg";
+import C from "../src/images/C.png";
 import SupportAdmin from "./chat/SupportAdmin";
 import Sendmail from "./components/Sendmail/index";
 import ResearchField from "./pages/ResearchField";
@@ -16,8 +16,8 @@ import Article from "./pages/Article/Article";
 import ALL from "./pages/ALL/ALL";
 import A from "./pages/A";
 import B from "./pages/B";
-import mainsound from "./pages/mainsound.m4a";
 import Sidebar from "./pages/Sidebar";
+import { width } from "@mui/system";
 const theme = createTheme();
 const customStyles = {
   content: {
@@ -41,7 +41,10 @@ function App(props) {
   function openModal() {
     setIsOpen(true);
   }
-  var modalStyles = { overlay: {} };
+  var modalStyles = { 
+    height: "6rem",
+    
+    overlay: {} };
   modalStyles.overlay["z-index"] = 10;
 
   function afterOpenModal() {
@@ -65,20 +68,10 @@ function App(props) {
             overlayClassName="Overlay"
             contentLabel="Example Modal"
           >
-            <h2 ref={(_subtitle) => (subtitle = _subtitle)}></h2>
-
-            <img alt="" style={{ width: "100%" }} src={modal} />
-            <button
-              style={{
-                width: "5rem",
-                height: "2rem",
-                marginLeft: "3rem",
-                backgroundColor: "var(--main)",
-              }}
-              onClick={closeModal}
-            >
-              Not now
-            </button>
+            <h2    style={{fontSize:'3rem',position:'absolute',top:'4rem',left:'9rem',color:'white'}}   ref={(_subtitle) => (subtitle = _subtitle)}> </h2>
+             <button onClick={closeModal}  style={{ borderRadius:'25px', position:'absolute' }}      >Sign up</button>
+            <img   alt="" style={{ objectPosition:'top', width:'100%' ,margin:'auto'}} src={C}  className="imagemodal"/>
+           
           </Modal>
 
           <Routes>

@@ -1,12 +1,13 @@
-import iconchat from '../images/iconchat.jpg'
+import ChatAgent from './CallAgent.PNG'
+
 export const styles = {
   chatWithMeButton: {
     cursor: "pointer",
-    boxShadow: "0px 0px 16px 6px rgba(0, 0, 0, 0.33)",
+    boxShadow: "0px 0px 7px 4px BROWN",
     // Border
-    borderRadius: "40%",
+    borderRadius: "50%",
     // Background
-    backgroundImage: `url(${iconchat})`,
+    backgroundImage: `url(${ChatAgent})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundSize: "84px",

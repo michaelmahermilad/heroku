@@ -1,5 +1,7 @@
 @import '~antd/dist/antd.css';
- body{
+
+
+body{
    background-color: white;
    overflow-x: hidden;
  }
@@ -10,8 +12,7 @@
   scroll-behavior: smooth;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin-bottom: 0;
-  transition: all .23s linear;
-}
+ }
 
 .flexcolumn{
   flex-direction: row;
@@ -169,22 +170,54 @@ color:var(--main);
 
 .Modal {
   position: absolute;
-  top: 12rem;
-  left: 16rem;
-  right: 16rem;
-  border-radius:3rem;
-  overflow: hidden;
-  bottom: 4rem;
+  top: -2rem;
+  left: 7rem;
+  right: 7rem;
+height: 90vh;
+  
+  
+ 
  
  }
+ .Modal button{
+color:white;
+border:none;
+bottom: 8rem;
+text-shadow: .2px 3px 5px brown;
+ }
+ .Modal button:hover{
+   color:brown;
+ }
 @media(max-width:900px){
-  .Modal{
-      top: 15rem;
-  left: 3rem;
-  right: 3rem;
-  bottom: 4rem;
-  }
 
+
+   .imagemodal{
+     display:none;
+   }
+  .Modal{
+    background-image: url('./images//cccc.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top:2rem;
+    left:1rem;
+    right:1rem;
+    bottom: -1rem;
+    font-size: 3rem;
+  }
+   .Modal button{
+  color:rgb(242, 236, 224);
+ bottom: -1.4rem;
+ padding: 0rem .6rem;
+  border:none;
+  background-color: rgb(210, 122, 40);
+  font-weight: 900;
+  font-size: 17px;
+  text-shadow: .2px 3px 5px brown;
+   }
+   .Modal button:hover{
+     color:orangered;
+   }
 
 }
 
