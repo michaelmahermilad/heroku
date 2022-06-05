@@ -5,7 +5,6 @@ import "../ALL/ALL.css";
 import Antd from "./Carousol/Antd";
 import { Carasoularticle } from "./Carasoularticle";
 import Footer from "./Footer";
-import Sidebar from "../Sidebar";
 import { useMediaQuery } from "react-responsive";
 function ALL({ onClick, onClick2 }) {
   const issmall = useMediaQuery({ query: "(min-width: 1000px)" });

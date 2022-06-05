@@ -4,8 +4,7 @@ import { Button } from "./Header";
 import LOGOO from "../images/LOGOO.svg";
 import Main from "../images/Main.svg";
 import gsap from "gsap";
-import LOGO from '../images/LOGO.mp4'
-function MyBanner(props) {
+ function MyBanner(props) {
   useEffect(()=>{
     var tl = gsap.timeline({
         repeat: 100, 

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import a from "../../images/a.webp";
 import l from "../../images/l.png";
 import gsap from "gsap";
 
@@ -106,7 +105,7 @@ const Button2 = styled.button`
  color: ${(props) => props.textcolor};
  width: ${(props) => props.width};
  height: ${(props) => props.height};
- margin:${(props) => props.margin}
+ margin:${(props) => props.margin};
  border: none;
  outline: none;
  

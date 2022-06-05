@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom";
-import "./App.css";
+import React  from "react";
+ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Header from "./components/Header";
-import Auth from "./pages/Auth";
+ import Auth from "./pages/Auth";
 import AuthLogin from "./pages/AuthLogin";
 import Modal from "react-modal";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -17,8 +15,7 @@ import ALL from "./pages/ALL/ALL";
 import A from "./pages/A";
 import B from "./pages/B";
 import Sidebar from "./pages/Sidebar";
-import { width } from "@mui/system";
-const theme = createTheme();
+ const theme = createTheme();
 const customStyles = {
   content: {
     top: "50%",
@@ -75,7 +72,7 @@ function App(props) {
           </Modal>
 
           <Routes>
-            {" "}
+            
             <Route element={<B />}>
               <Route path="/field" element={<ALL />} />{" "}
               <Route path="/R" element={<Sidebar />} />

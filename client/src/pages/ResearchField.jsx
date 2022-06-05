@@ -1,19 +1,18 @@
 import React, { useEffect } from "react";
-import Frame from "../images/Frame.svg";
 import gsap from "gsap";
-import ml from "../images/ml.png";
-import ml2 from "../images/ml2.png";
-
-import "../pages/ResearchFiled.css";
-import { Card, Col, Container, Form, InputGroup, Row } from "react-bootstrap";
 import styled from "styled-components";
-import article1 from "../images/article1.webp";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
+import { Card, Col, Container, Form, InputGroup, Row } from "react-bootstrap";
+
+ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Capture from "../images/Capture.PNG";
 import Capture1 from "../images/Capture1.PNG";
-import Article from "../pages/Article/Article";
-import Footer from "../components/Footer";
+import ml from "../images/ml.png";
+import ml2 from "../images/ml2.png";
+import image6 from "../images/image6.avif" 
+import Frame from "../images/Frame.svg";
+import "../pages/ResearchFiled.css";
 function ResearchField() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -241,7 +240,7 @@ function ResearchField() {
                     margin: "0px",
                   }}
                   variant="top"
-                  src={article1}
+                  src={image6}
                 />
                 <Card.Body className=" " style={{ padding: ".4rem" }}>
                   <Card.Title

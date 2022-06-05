@@ -1,10 +1,8 @@
-import React, { useEffect } from "react";
+import React  from "react";
 import "../pages/Sidebar.css";
 import ALL from "./ALL/ALL";
-import { useMediaQuery } from "react-responsive";
-import { Link } from "react-router-dom";
-import sound from '../../src/pages/sound.mp3'
-
+ import { Link } from "react-router-dom";
+ 
 function Sidebar() {
   function openNav() {
     document.getElementById("mySidebar").style.width = "180px";

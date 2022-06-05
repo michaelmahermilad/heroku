@@ -180,10 +180,17 @@ height: 90vh;
  
  }
  .Modal button{
-color:white;
-border:none;
-bottom: 8rem;
-text-shadow: .2px 3px 5px brown;
+  color:rgb(242, 236, 224);
+ bottom: 8rem;
+ width: 8rem;
+ margin-left: calc(25% - 4rem);
+ padding: .6rem 1rem;
+ color:brown;
+ background-color: #f5aaaa;
+  border:none;
+   
+  font-weight: 900;
+  font-size: 19px;
  }
  .Modal button:hover{
    color:brown;
@@ -199,25 +206,27 @@ text-shadow: .2px 3px 5px brown;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    top:2rem;
-    left:1rem;
-    right:1rem;
-    bottom: -1rem;
+   
+    top:0rem;
+    left:0rem;
+    right:0rem;
+    bottom: 0rem;
     font-size: 3rem;
   }
    .Modal button{
   color:rgb(242, 236, 224);
- bottom: 0rem;
- padding: 0rem .6rem;
+ bottom: 1rem;
+ width: 6rem;
+ margin-left: calc(50% - 3rem);
+ padding: .4rem .6rem;
+ color:brown;
+ background-color: #f5aaaa;
   border:none;
-  background-color: rgb(210, 122, 40);
+   
   font-weight: 900;
   font-size: 17px;
-  text-shadow: .2px 3px 5px brown;
    }
-   .Modal button:hover{
-     color:orangered;
-   }
+ 
 
 }
 
