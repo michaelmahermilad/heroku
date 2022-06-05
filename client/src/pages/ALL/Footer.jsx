@@ -232,7 +232,7 @@ grid-template-columns: 15.5% 15.5% 15.5%  15.5% 15.5% 15.5% ;
 const Pages = styled.div`
 h5{
     color:#fcf398;
-    font-size:16px;
+    font-size:15px;
     font-weight: 700;
 }
 display:flex;
@@ -240,7 +240,7 @@ flex-direction: column;
 .link{
     text-decoration: none;
     color:white;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     :hover{
         color:#f9a11b;
@@ -259,6 +259,9 @@ const USE = styled.div`
    margin-right: .7rem;
     :hover{
         color:#433116;
+    }
+    @media(max-width:700px){
+      font-size: 9px;
     }
 
 

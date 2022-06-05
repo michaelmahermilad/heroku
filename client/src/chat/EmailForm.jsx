@@ -72,7 +72,7 @@ function EmailForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             style={styles.emailInput}
-            placeholder="Your Email"
+            placeholder="Enter Name"
           />
           {loading ? (
             <div style={styles.bottomText}>Waiting...</div>

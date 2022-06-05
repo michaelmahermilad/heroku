@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Button } from "./Header";
-import Layer from "../images/Layer.svg";
+import LOGOO from "../images/LOGOO.svg";
 import Main from "../images/Main.svg";
 import gsap from "gsap";
 import LOGO from '../images/LOGO.mp4'
@@ -9,10 +9,10 @@ function MyBanner(props) {
   useEffect(()=>{
     var tl = gsap.timeline({
         repeat: 100, 
-        repeatDelay:18,
+        repeatDelay:80,
         
       });
-     tl.fromTo("#r",   {opacity:.8,scale:.6 ,rotate:-9 , },{duration:1,rotate:0 ,y:10, opacity:1,   scale:1});         
+     tl.fromTo("#r",   { scale:.9 ,rotate:-5 , },{duration:3,rotate:0 ,y:10 ,   scale:1});         
 
 
 },[])
@@ -21,17 +21,8 @@ function MyBanner(props) {
   return (
     <div>
       <Banner>
-        <BannerLeft><h2 className="banneer-title">
-            Medical Data for Students and Researchers.
-          </h2>
-         <div> <video autoPlay muted   loop style={{  borderRadius:'10px' }}    >
-          
-        <source
-          src={LOGO}
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video> </div>
+        <BannerLeft>
+         <img src={LOGOO}/> 
 
 
          
@@ -79,13 +70,13 @@ const BannerLeft = styled.div`
 
  flex:40%;
 img{
-  width:70%;
+  width:100%;margin-top: 1rem;
   @media (max-width: 800px) {
     text-align: center;
     display:block;
-    width:60%;
+    width:97%;
     margin:auto;
-    margin-bottom:3rem;
+    margin-top: unset;
   }
 
 }  
@@ -146,7 +137,7 @@ flex:50%;
     padding-top: 1rem;
     margin: auto;
     display: block;
- width:90%;
+ width:80%;
     
   }
 `;

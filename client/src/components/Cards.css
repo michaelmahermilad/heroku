@@ -162,4 +162,8 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   .tags {
     font-size: .95rem;
   }
+  .image1{height:55%;}
+  .outline{
+    height: 17rem;
+  }
 }

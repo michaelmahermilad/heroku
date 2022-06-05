@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -12,11 +12,11 @@ import modal from "../src/images/modal.svg";
 import SupportAdmin from "./chat/SupportAdmin";
 import Sendmail from "./components/Sendmail/index";
 import ResearchField from "./pages/ResearchField";
- import Article from "./pages/Article/Article";
+import Article from "./pages/Article/Article";
 import ALL from "./pages/ALL/ALL";
 import A from "./pages/A";
 import B from "./pages/B";
-import sound from '../src/pages/sound.wav'
+import mainsound from "./pages/mainsound.m4a";
 import Sidebar from "./pages/Sidebar";
 const theme = createTheme();
 const customStyles = {
@@ -30,20 +30,10 @@ const customStyles = {
     transform: "translate(-50%, -50%)",
   },
 };
- Modal.setAppElement(document.getElementById("root"));
+Modal.setAppElement(document.getElementById("root"));
 
 function App(props) {
-  const audio = new Audio(
-    `${sound}`
-  );
-useEffect(()=>{
-   const start = () => {
-    audio.play();
-  };
-  var o=document.querySelectorAll(".a")
-  o.forEach(a=>a.addEventListener('dblclick',start)) 
-},[])
-
+ 
 
   let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -63,11 +53,9 @@ useEffect(()=>{
     setIsOpen(false);
   }
   return (
-    <BrowserRouter> 
+    <BrowserRouter>
       <ThemeProvider theme={theme}>
         <div {...props} className="App">
-        
-
           <Modal
             style={modalStyles}
             isOpen={modalIsOpen}
@@ -92,12 +80,12 @@ useEffect(()=>{
               Not now
             </button>
           </Modal>
-    
+
           <Routes>
             {" "}
             <Route element={<B />}>
-              <Route path="/field" element={<ALL />} />              <Route path="/R" element={<Sidebar/> } />
-
+              <Route path="/field" element={<ALL />} />{" "}
+              <Route path="/R" element={<Sidebar />} />
             </Route>
             <Route element={<A />}>
               <Route path="/" element={<Home openModal={openModal} />} />
@@ -109,11 +97,8 @@ useEffect(()=>{
               <Route path="/article" element={<Article />} />
             </Route>
           </Routes>
-        
-
         </div>
       </ThemeProvider>
-      
     </BrowserRouter>
   );
 }

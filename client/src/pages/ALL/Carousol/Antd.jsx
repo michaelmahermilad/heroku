@@ -34,8 +34,8 @@ function Antd() {
      
   return (
    <div style={{width:'90%',margin:'auto'}}>
-      <div     style={{display:'flex',gap:'2rem' ,alignItems:'flex-start'}} className="flex   flexcolumn ">
-      <div  style={{flex:'45%',width:'90%',margin:'auto' }}className="flexR">
+      <div     style={{display:'flex',gap:'2rem' ,alignItems:'flex-start',marginTop:'0'}} className="flex   flexcolumn ">
+      <div  style={{flex:'45%',width:'96%',margin:'auto',marginTop:'0' }}className="flexR">
      
        <Collapse
       defaultActiveKey={['']}
@@ -56,7 +56,7 @@ function Antd() {
        <br/>
       
       <Carousel 
-     
+     className='carsol'
      infiniteLoop={true}
     
      autoPlay={true}
@@ -68,8 +68,8 @@ function Antd() {
      >
  {arr.map((i,k)=>{
 return (
- <div style={{width:'100%',height:'18rem' }}>
-                     <img style={{display:'block',width:'100%',borderRight:'1px solid grey',borderLeft:'1px solid grey' ,height:'100%'}}src={i} />
+ <div     className='carsol'  style={{width:'100%' }}>
+                     <img      className='carsol'   style={{display:'block' , width:'100%',borderRight:'1px solid grey',borderLeft:'1px solid grey' }}src={i} />
                  </div>
 
   )
@@ -124,10 +124,7 @@ return (
 الألم في العضلات.
 الإرهاق.
 وغالبية هذه الأعراض تتحسن خلال أيام قليلة
-
-:اقرا المزيد من خلال موقع الطبي
-
-https://altibbi.com/corona/index</div>
+</div>
       </Panel>
      
     </Collapse>
@@ -145,10 +142,24 @@ https://altibbi.com/corona/index</div>
 الألم في العضلات.
 الإرهاق.
 وغالبية هذه الأعراض تتحسن خلال أيام قليلة
-
-:اقرا المزيد من خلال موقع الطبي
-
-https://altibbi.com/corona/index</div>
+</div>
+      </Panel>
+     
+    </Collapse>
+    <br/>
+     <Collapse  style={{textAlign:'right'}}
+      defaultActiveKey={['']}
+      onChange={onChange}
+      expandIconPosition={expandIconPosition}
+    > 
+     <Panel   header="   ما هي الأعراض الجانبية للقاح كورونا؟ ✔️" key="1" >
+        <div>التورم في موقع الحقن.
+الصداع.
+الارتفاع في درجة الحرارة.
+الألم في العضلات.
+الإرهاق.
+وغالبية هذه الأعراض تتحسن خلال أيام قليلة
+</div>
       </Panel>
      
     </Collapse>
@@ -166,29 +177,7 @@ https://altibbi.com/corona/index</div>
 الإرهاق.
 وغالبية هذه الأعراض تتحسن خلال أيام قليلة
 
-:اقرا المزيد من خلال موقع الطبي
-
-https://altibbi.com/corona/index</div>
-      </Panel>
-     
-    </Collapse>
-    <br/>
-     <Collapse  style={{textAlign:'right'}}
-      defaultActiveKey={['']}
-      onChange={onChange}
-      expandIconPosition={expandIconPosition}
-    > 
-     <Panel   header="   ما هي الأعراض الجانبية للقاح كورونا؟ ✔️" key="1" >
-        <div>التورم في موقع الحقن.
-الصداع.
-الارتفاع في درجة الحرارة.
-الألم في العضلات.
-الإرهاق.
-وغالبية هذه الأعراض تتحسن خلال أيام قليلة
-
-:اقرا المزيد من خلال موقع الطبي
-
-https://altibbi.com/corona/index</div>
+</div>
       </Panel>
      
     </Collapse>

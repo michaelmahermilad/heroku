@@ -19,16 +19,7 @@ function Sidebar() {
     document.getElementById("main").style.marginRight = "0px";
     document.getElementById("backdropDiv").classList.remove("openbackdropDiv");
   }
-  const audio = new Audio(
-    `${sound}`
-  );
-useEffect(()=>{
-   const start = () => {
-    audio.play();
-  };
-  var o=document.querySelectorAll("a")
-  o.forEach(a=>a.addEventListener('click',start)) 
-},[])
+
   return (
     <div style={{ overflowX: "hidden" }}>
       <div id="mySidebar" className="sidebar">

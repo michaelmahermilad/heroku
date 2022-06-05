@@ -3,8 +3,40 @@ import io from "socket.io-client";
 import Mymessage from "./Mymessage";
 import OtherMessage from "./OtherMessage";
 import BlurOnIcon from '@mui/icons-material/BlurOn';
+ import sound from '../pages/sound.mp3'
+ import mainsound from '../pages/mainsound.m4a'
 let socket;
 function ChatRoom({ email }) {
+  const [play, setPlay] = useState(false);
+  const [playing,setPlaying]=useState(false)
+  const [stop,setStop]=useState(false);
+  const audio = new Audio(`${mainsound}`);
+  const audio2 = new Audio(`${sound}`);
+
+  const Playit = () => {
+    if(!playing){
+       audio.play();
+        setTimeout(() => {
+          audio.pause();
+         
+        }, 70000); 
+    }
+       
+    
+    }
+   
+     
+
+
+  useEffect(()=>{
+      Playit()  
+      setPlaying(true);
+  },[play])
+  useEffect(() => {
+    document.addEventListener("scroll",()=>setPlay(true));
+  }, []);
+
+
   const [messages, setMessages] = useState([{}]);
   const [message, setMessage] = useState({});
   const email1 = email.trim().split(' ')[0];
@@ -23,7 +55,7 @@ function ChatRoom({ email }) {
   useEffect(() => {
   }, [messages]);
   useEffect(() => {
-    const ENDPOINT = "medicalprojectnet.herokuapp.com";
+    const ENDPOINT = "http://medicalprojectnet.herokuapp.com";
     socket = io(ENDPOINT);
     socket.emit("join", email.trim().split(' ')[0]);
   }, [email]);
@@ -40,23 +72,25 @@ function ChatRoom({ email }) {
 if(message!=={})
 setMessages(messages=> [...messages,message])
 scrollToBottom()
+audio2.play()
   }, [message]);
 console.log(messages)
 
   const getdata = (e, name) => {
     setTextandmessage({ email:email.trim().split(' ')[0], [name]: e.target.value });
   };
- 
+
   useEffect(() => {
    if (textandmessage.message1 !== "" && email !== undefined) {
      socket.emit("sendMessage", data);}
  
-  }, [data]);
+   }, [data]);
   function Handlesubmiting(e){
 e.preventDefault();
 if(data===textandmessage){
   if (textandmessage.message1 !== "" && email !== undefined) {
-    socket.emit("sendMessage", data);}
+    socket.emit("sendMessage", data);
+  }
 }
  setData(textandmessage)
  scrollToBottom()

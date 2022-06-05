@@ -87,7 +87,7 @@
     max-width: 93vw;
     margin: auto;
     margin-top: 6rem;
-
+padding-left: 1rem;
     background-color: rgba(67, 71, 16, 0.478);
 
     backdrop-filter: blur(7px);
