@@ -207,7 +207,7 @@ text-shadow: .2px 3px 5px brown;
   }
    .Modal button{
   color:rgb(242, 236, 224);
- bottom: -1.4rem;
+ bottom: 0rem;
  padding: 0rem .6rem;
   border:none;
   background-color: rgb(210, 122, 40);
