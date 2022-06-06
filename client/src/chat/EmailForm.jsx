@@ -4,7 +4,7 @@ import { styles } from "./styles.js";
 import { Bars } from "react-loading-icons";
 import ChatRoom from "./ChatRoom.jsx";
  
-function EmailForm() {
+function EmailForm({visble}) {
   const [email, setEmail] = useState(null);
   const [loading, setLoading] = useState(false);
   const [start, setStart] = useState('');
@@ -90,15 +90,18 @@ function EmailForm() {
                 ...{
                   cursor: email ? "pointer" : "not-allowed",
                   position: "absolute",
-                  width: "8rem",
+                  width: "9rem",
+                  
+                  fontSize:'14px',
+                  padding: '.3rem',
                   top: "150%",
-                  height: "2.5rem",
+                  height: "2.6rem",
                   border: "none",
                   outline: "none",
                   fontWeight: "700",
                    borderRadius: "25px",
                   left: "calc(50% - 4rem",
-                  lineHeight:'2.5rem',
+                  lineHeight:'2rem',
                   color: email ? "var(--main)" : "var(--main)",
                   backgroundColor: email ? "var(--main2)" : "",
                 
@@ -114,7 +117,7 @@ function EmailForm() {
       </div>
     </div>  }
     
-    {start && <ChatRoom email={start}/> }</>
+    {start && <ChatRoom   visble={visble} email={start}/> }</>
   );
 }
 

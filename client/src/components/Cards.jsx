@@ -1,8 +1,8 @@
 import React from "react";
 import '../components/Cards.css'
-import image7 from '../images/image7.avif'
-import image2 from '../images/image2.avif'
-import image6 from '../images/image6.avif'
+import image7 from '../images/image7.png'
+import image2 from '../images/image2.png'
+import image6 from '../images/image6.png'
 
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ReadMoreIcon from '@mui/icons-material/ReadMore';

@@ -113,7 +113,7 @@
       margin: auto;
       height: 40px;
       margin-bottom: 2%;
-      border: 1px solid brown;
+      border: 1px solid var(--main);
      border-radius: 13px;}
 
 
@@ -121,7 +121,7 @@
       width: 100%;     margin: auto;
       height: 30px;
       margin-bottom: 8%;
-      border: 1px solid brown;
+      border: 1px solid var(--main);
      border-radius: 13px;
       
       

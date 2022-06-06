@@ -5,21 +5,22 @@ import SupportWindow from "./SupportWindow.jsx";
 function SupportEngine() {
   const ref = useRef(null);
   const [visble, setVisble] = useState(false);
+ 
   useEffect(() => {
     function handleClickOutSide(event) {
       if (ref.current && !ref.current.contains(event.target)) {
         setVisble(false);
+    
+       
       }
     }
-    document.addEventListener("mousedown", handleClickOutSide);
+    document.addEventListener("mouseup", handleClickOutSide);
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutSide);
-    };
+  
   }, [ref]);
   return (
     <div ref={ref}>
-      <SupportWindow visble={visble} />
+      <SupportWindow  visble={visble} />
 
       <Avatar
        

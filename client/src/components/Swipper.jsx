@@ -153,7 +153,7 @@ const Card = styled.div`
     height: 38vh;
     width: 100%;
     border-radius: 50%;
-    border: 3px solid brown;
+    border: 3px solid var(--main);
   }
 
   @media (max-width: 700px) {

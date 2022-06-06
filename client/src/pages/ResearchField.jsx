@@ -1,16 +1,14 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import styled from "styled-components";
-
 import { Card, Col, Container, Form, InputGroup, Row } from "react-bootstrap";
-
- import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Capture from "../images/Capture.PNG";
 import Capture1 from "../images/Capture1.PNG";
 import ml from "../images/ml.png";
 import ml2 from "../images/ml2.png";
-import image6 from "../images/image6.avif" 
+import image6 from "../images/image6.png";
 import Frame from "../images/Frame.svg";
 import "../pages/ResearchFiled.css";
 function ResearchField() {
@@ -55,9 +53,9 @@ function ResearchField() {
       >
         <h1
           style={{
-            backgroundColor: "brown",
-            textShadow: "16px 5px 17px brown",
-            boxShadow: ".3px 4px 20px brown",
+            backgroundColor: "var(--main)",
+            textShadow: "16px 5px 17px var(--main)",
+            boxShadow: ".3px 4px 20px var(--main)",
             borderRadius: "20px",
             padding: ".5rem",
             paddingTop: "4rem",
@@ -88,7 +86,7 @@ function ResearchField() {
             borderTop: "10px solid white",
             padding: "1rem",
             borderRadius: "25px",
-            backgroundColor: "brown",
+            backgroundColor: "var(--main)",
             paddingBottom: "1rem",
             color: "white",
             fontsize: "30px",
@@ -120,7 +118,7 @@ function ResearchField() {
             borderRadius: "25px",
             padding: ".2rem",
             backgroundColor: "white",
-            border: "2px solid brown",
+            border: "2px solid var(--main)",
           }}
           className="justify-content-space-around align-items-center  "
         >
@@ -129,7 +127,7 @@ function ResearchField() {
               <InputGroup
                 className="centersearch"
                 style={{
-                  border: "1px solid brown",
+                  border: "1px solid var(--main)",
                   width: "14rem",
                   borderRadius: "25px",
                   overflow: "hidden",
@@ -138,7 +136,7 @@ function ResearchField() {
                 <InputGroup.Text>
                   <FontAwesomeIcon
                     className=" "
-                    style={{ color: "brown" }}
+                    style={{ color: "var(--main)" }}
                     icon={faSearch}
                   />
                 </InputGroup.Text>
@@ -209,7 +207,7 @@ function ResearchField() {
                     style={{
                       width: "6rem",
                       height: "2.2rem",
-                      backgroundColor: "brown",
+                      backgroundColor: "var(--main)",
                       borderRadius: "5px",
                       margin: "auto",
                       marginTop: "calc(40% - 2rem  )",

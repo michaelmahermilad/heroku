@@ -168,14 +168,13 @@
 
   .button {
     display: block;
-  
- 
+
     flex: 30%;
     color: #f9a11b;
     z-index: 9999;
   }
 
-  .button > *  {
+  .button > * {
     width: 16px;
     height: 3px;
     background-color: #f9a11b;

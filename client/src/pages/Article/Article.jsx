@@ -134,7 +134,7 @@ import MAGDY from "../../images/MAGDY.png";
           transition: ".4s linear",
           opacity: show ? "0" : "1",
           transitionDelay: ".2s",
-          boxShadow: ".1px .3px 5px brown",
+          boxShadow: ".1px .3px 5px var(--main)",
           position: "sticky",
           top: "0rem ",
           left: "0",
@@ -192,7 +192,7 @@ import MAGDY from "../../images/MAGDY.png";
                 overflow: "hidden",
                 width: "fit-content",
                 height: "fit-content",
-                color: "brown",
+                color: "var(--main)",
                 borderRadius: "10px",
                 margin: "auto",
                 marginTop: "0rem",
@@ -213,9 +213,9 @@ import MAGDY from "../../images/MAGDY.png";
             style={{
               width: "100%",
               borderRadius: "4px",
-              borderTop: "2px solid brown",
-              borderLeft: "2px solid brown",
-              boxShadow: "2px 3px 4px brown",
+              borderTop: "2px solid var(--main)",
+              borderLeft: "2px solid var(--main)",
+              boxShadow: "2px 3px 4px var(--main)",
               maxHeight: "24rem",
             }}
           />
@@ -333,7 +333,7 @@ import MAGDY from "../../images/MAGDY.png";
             style={{
               marginTop: "3rem",
               marginBotom: "1rem",
-              color: "brown",
+              color: "var(--main)",
               fontWeight: "700",
               marginLeft: ".2rem",
             }}

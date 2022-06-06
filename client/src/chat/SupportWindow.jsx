@@ -1,7 +1,7 @@
 import React from "react";
 import EmailForm from "./EmailForm.jsx";
 import { styles } from "./styles.js";
-function SupportWindow({ visble }) {
+function SupportWindow({  visble }) {
   return (
     <div
       className="transition-5"
@@ -10,7 +10,7 @@ function SupportWindow({ visble }) {
         ...{ display: visble ? "block" : "none" },
       }}
     >
-      <EmailForm />
+      <EmailForm visble={visble}/>
     </div>
   );
 }

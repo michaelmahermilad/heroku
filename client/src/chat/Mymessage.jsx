@@ -9,7 +9,7 @@ function Mymessage({email,message,h}) {
             style={{
               width: "var(--chatwidth)",
               display: "flex",
-              marginInline: "auto",
+              margin: "auto",
               flexDirection: "row",
               justifyContent: "space-between",
               alignItems:'center',

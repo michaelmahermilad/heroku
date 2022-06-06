@@ -3,7 +3,7 @@ import ChatAgent from './CallAgent.PNG'
 export const styles = {
   chatWithMeButton: {
     cursor: "pointer",
-    boxShadow: "0px 0px 7px 4px BROWN",
+    boxShadow: "0px 0px 7px 4px var(--main)",
     // Border
     borderRadius: "50%",
     // Background

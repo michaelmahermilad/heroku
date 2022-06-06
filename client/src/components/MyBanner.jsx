@@ -80,7 +80,7 @@ img{
 
 }  
 div{
-  box-shadow: .3px 5px 20px brown;
+  box-shadow: .3px 5px 20px var(--main);
   width: fit-content;
   height: fit-content;
   width:60%;

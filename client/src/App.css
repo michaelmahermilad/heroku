@@ -11,7 +11,7 @@ body{
   padding: 0;
   scroll-behavior: smooth;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin-bottom: 0;
+   
  }
 
 .flexcolumn{
@@ -19,7 +19,7 @@ body{
 }
 
 :root {
-  --main: #800000	;
+  --main: rgb(131, 17, 17)	;
   --main2:rgb(250, 187, 187) ;
   --chatwidth:90%;
   --fonttitle:1.5rem;
@@ -185,7 +185,7 @@ height: 90vh;
  width: 8rem;
  margin-left: calc(25% - 4rem);
  padding: .6rem 1rem;
- color:brown;
+ color:var(--main);
  background-color: #f5aaaa;
   border:none;
    
@@ -193,7 +193,7 @@ height: 90vh;
   font-size: 19px;
  }
  .Modal button:hover{
-   color:brown;
+   color:var(--main);
  }
 @media(max-width:900px){
 
@@ -219,7 +219,7 @@ height: 90vh;
  width: 6rem;
  margin-left: calc(50% - 3rem);
  padding: .4rem .6rem;
- color:brown;
+ color:var(--main);
  background-color: #f5aaaa;
   border:none;
    
@@ -371,14 +371,14 @@ height: 90vh;
     font-weight: 600;
     background-color: #961414;
      color:rgb(255, 255, 255);
-     padding:.2rem ;border:2px solid brown; 
+     padding:.2rem ;border:2px solid var(--main); 
    }
    
   
 .buttonfooter:hover{
  background-color: #f5aaaa;
   color:rgb(130, 20, 20);
-  border:2px solid brown;    padding:.2rem ;
+  border:2px solid var(--main);    padding:.2rem ;
  box-sizing: border-box;
 }
 
@@ -391,6 +391,9 @@ height: 90vh;
    margin-bottom: 0rem;
     }
     .avatar{
+
+
+      
       display:none;
     }
   }
