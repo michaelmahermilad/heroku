@@ -212,10 +212,10 @@ input:focus + label {
 @media screen and (max-width: 480px) {
   .HEADERMAINTITLE{
     font-size:19px;
-    line-height: .9rem;
-     width: 80%;
+    line-height: 1rem;
+     width: 87%;
      text-align: center;
-     margin-left: 12.5%;
+     margin-left: 6.5%;
      margin-top: 4rem;
      margin-bottom: .5rem;
  

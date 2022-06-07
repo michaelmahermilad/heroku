@@ -17,7 +17,7 @@ function Design() {
           style={{
             position: "relative",
             width: "13rem",
-            marginLeft: "calc(50% - 6.5rem)",
+            marginLeft: "calc(50% - 5.7rem)",
           }}
           src={logofigma}
         />
