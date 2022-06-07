@@ -5,6 +5,8 @@ import "../components/Design.css";
 import explore from "./explore.PNG";
 import discover from "./discover.PNG";
 import share from "./share.PNG";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faSearch} from '@fortawesome/free-solid-svg-icons'
 function Design() {
   return (
     <>
@@ -24,8 +26,21 @@ function Design() {
          className="HEADERMAINTITLE"
         >
           {" "}
-          EXPLORE WHAT'S NEW
-        </h2>
+          Discover Our Innovative Medical Promotion 
+
+</h2>
+
+<form>
+     <div class="input-group">
+      <input type="text" id="search" placeholder="Search..." autocomplete="off"/>
+      <label for="search"><FontAwesomeIcon icon={faSearch}/></label>
+    </div>
+    
+    <div class="suggestion-list hidden">
+    </div>
+  </form>
+
+
         <h5 className="headersmall">
           {" "}
           Find latest researches ,share medical articles, connect with other
