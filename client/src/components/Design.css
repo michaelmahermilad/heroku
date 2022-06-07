@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Noticia+Text|Lalezar");
 .maindiv {
    
-height: 100vh;
+  height: 100vh;
   width: 100vw;
   position: relative;
   overflow-x: hidden;
@@ -32,18 +32,13 @@ display: none;
   overflow: visible;
   bottom: 0;
   z-index: -3;
-  
   filter: contrast(1.2) brightness(0.8);
 }
 .overlaydiv {
   position: absolute;
   top:0;
   bottom: 0;
-  /*
-    
-      clip-path: polygon(0% 0%, 0 56%, 36% 100%, 100% 100%, 100% 54%, 59% 0);
-
-    */
+   
   width: 100%;
 
 
@@ -73,23 +68,10 @@ position: relative;
 @media (max-width: 480px) {
   .maindiv {
     height:auto;
-     width: 100vw;
+    
      padding-top: 0rem;
    
   }
-  .HEADERMAINTITLE{
- 
-   
-   font-size:17px;
-   line-height: .9rem;
-    width: 80%;
-    text-align: center;
-    margin-left: 12.5%;
-    margin-top: 4rem;
-    margin-bottom: .5rem;
-
-}
-
 
   .CARDS {
     width: 95vw;
@@ -100,18 +82,18 @@ position: relative;
   }
 
   .imagecover {
-    object-fit: cover;
-height:100vh;
+     object-fit: cover;
+     height:100vh;
      z-index: -3;
-    object-position: 75% 0%;
+     object-position: 75% 0%;
   }
   .overlaydiv {
-    height: 100vh;
+      height: 100vh;
    
-    width: 100%;
-  
-    z-index: -1;
-    background-color: #1f3b3e67;
+       width: 100%;
+   
+        z-index: -1;
+      background-color: #1f3b3e67;
   }
 }
 #container {
@@ -180,25 +162,8 @@ height:100vh;
   }
 }
 
-@media screen and (max-width: 540px) {
-  .headersmall {
-   display: none;
-  }
-
-
-  .card {
-    width: 49%;
-  }
-}
-@media screen and (max-width: 480px) {
  
-  .cards {
-    justify-content: center;
-  }
-  .card {
-    width: 100%;
-  }
-}
+
 form {
   max-width: 80%;
   margin: 3rem auto;
@@ -235,10 +200,71 @@ input {
 }
 
 input:focus { 
-  border-color: ;
+  border-color:#24a27c ;
 }
 
 input:focus + label {
   transform: scale(1.05) translatey(-50%);
   color: #24a27c;
+}
+
+
+@media screen and (max-width: 480px) {
+  .HEADERMAINTITLE{
+    font-size:19px;
+    line-height: .9rem;
+     width: 80%;
+     text-align: center;
+     margin-left: 12.5%;
+     margin-top: 4rem;
+     margin-bottom: .5rem;
+ 
+ }
+ 
+ 
+  .cards {
+    justify-content: center;
+  }
+  .card {
+    width: 100%;
+  }
+
+  form {
+    max-width: 90%;
+    margin: 2rem auto;
+    position: relative;
+    
+  }
+  
+  .input-group {
+    position: relative;
+  }
+  
+  label {
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translatey(-50%);
+    color: #24a27c;
+    transition: all 0.2s ease;
+    
+  }
+  .headersmall {
+    display: none;
+   }
+  input {
+    width: 100%;
+    padding: 4px 20px 4px 8px;
+    border: 2px solid #24a27c;
+    outline: none;
+    font-size: 14px;
+    box-shadow: 0px 2px 5px #24a27c;
+    color: #24a27c;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 9px;
+    transition: all 0.2s ease;
+  }
+
+
 }
