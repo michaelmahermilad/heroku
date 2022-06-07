@@ -68,7 +68,7 @@ position: relative;
 
 @media (max-width: 480px) {
   .maindiv {
-   
+    height:auto;
      width: 100vw;
      
    
@@ -95,7 +95,7 @@ position: relative;
 
   .imagecover {
     object-fit: cover;
-height:110vh;
+height:100vh;
      z-index: -3;
     object-position: 75% 0%;
   }
@@ -120,7 +120,7 @@ height:110vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 80%;
+  width: 90%;
   margin: auto;
   margin-top: 2rem;
 }
@@ -168,10 +168,9 @@ height:110vh;
 }
 
 @media   (max-width: 800px) {
-
  
   .card {
-    width: 45%;
+    width: 49%;
   }
 }
 
@@ -182,7 +181,7 @@ height:110vh;
 
 
   .card {
-    width: 45%;
+    width: 49%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -191,6 +190,6 @@ height:110vh;
     justify-content: center;
   }
   .card {
-    width: 98%;
+    width: 100%;
   }
 }
