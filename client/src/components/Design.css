@@ -39,12 +39,16 @@ margin: auto;
   position: absolute;
   top:0;
   bottom: 0;
-  clip-path: polygon(0% 0%, 0 56%, 36% 100%, 100% 100%, 100% 54%, 59% 0);
+  /*
+    
+      clip-path: polygon(0% 0%, 0 56%, 36% 100%, 100% 100%, 100% 54%, 59% 0);
+
+    */
   width: 100%;
 
 
   z-index: -1;
-  background-color: #1f3b3e5d;
+  background-color: #1a1d1e62;
   
 }
 .CARDS {
@@ -70,7 +74,7 @@ position: relative;
   .maindiv {
     height:auto;
      width: 100vw;
-     
+     padding-top: 5rem;
    
   }
   .HEADERMAINTITLE{
@@ -80,7 +84,8 @@ position: relative;
     width: 70%;
     text-align: center;
     margin-left: 15%;
-    margin-top: 2rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
 
 }
 
