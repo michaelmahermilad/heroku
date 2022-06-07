@@ -33,7 +33,7 @@ function Design() {
 <form>
      <div class="input-group">
       <input type="text" id="search" placeholder="Search..." autocomplete="off"/>
-      <label for="search"><FontAwesomeIcon icon={faSearch}/></label>
+      <label for="search"><FontAwesomeIcon style={{fontSize:'1.2rem'}} icon={faSearch}/></label>
     </div>
     
     <div class="suggestion-list hidden">

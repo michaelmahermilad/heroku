@@ -8,7 +8,7 @@
   border: 0.02px solid rgb(209, 152, 152);
   border-radius: 10px;
   background-color: white;
-  height: 22rem;
+  height:fit-content;
   position: relative;
   
 width:96%;
@@ -161,7 +161,7 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border:1px solid rgb(125, 84, 55);
     border-radius: 10px;
     background-color: white;
-    height: 17rem;    position: relative;
+    height: fit-content;    position: relative;
     max-width: 95vw;
      
     transition: all 0.3s ease-in-out;
