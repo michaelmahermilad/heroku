@@ -14,8 +14,8 @@ export const ArrayofSections = [
   {
     text: "Lungs section",
     icon: (
-      <FontAwesomeIcon className="icons" icon={ faLungsVirus} />
-    ),
+      <Link to="DESIGN"> <FontAwesomeIcon className="icons" icon={ faLungsVirus} />
+   </Link> ),
   },
   { text: "Eyes care", icon:   <FontAwesomeIcon className="icons" icon={ faEye} /> }, { text: "Studies", icon: <FontAwesomeIcon className="icons"  icon={faBuildingColumns} />},
   {
