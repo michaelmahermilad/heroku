@@ -15,6 +15,7 @@ import ALL from "./pages/ALL/ALL";
 import A from "./pages/A";
 import B from "./pages/B";
 import Sidebar from "./pages/Sidebar";
+import Design from "./components/Design";
  const theme = createTheme();
 const customStyles = {
   content: {
@@ -76,6 +77,7 @@ function App(props) {
             <Route element={<B />}>
               <Route path="/field" element={<ALL />} />{" "}
               <Route path="/R" element={<Sidebar />} />
+              <Route path="/DESIGN" element={<Design/>}/>
             </Route>
             <Route element={<A />}>
               <Route path="/" element={<Home openModal={openModal} />} />

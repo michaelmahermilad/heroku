@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css?family=Noticia+Text|Lalezar");
+.maindiv {
+   
+height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+.headersmall {
+  color: #ffffffde;
+  width: 30rem;
+  text-align: center;
+margin: auto;
+  margin-top: 3rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  font-family: "monospace";
+
+  position: relative;
+  z-index: 7;
+
+
+}
+.imagecover {
+  object-fit: cover;
+  object-position: 40% 0%;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top:0;
+  overflow: visible;
+  bottom: 0;
+  z-index: -3;
+  
+  filter: contrast(1.2) brightness(0.8);
+}
+.overlaydiv {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  clip-path: polygon(0% 0%, 0 56%, 36% 100%, 100% 100%, 100% 54%, 59% 0);
+  width: 100%;
+
+
+  z-index: -1;
+  background-color: #1f3b3e5d;
+  
+}
+.CARDS {
+  width: 90vw;
+  margin-left: calc(50% - 45%);
+
+position: relative;
+  z-index: 7;
+}
+@media (max-width: 480px) {
+  .maindiv {
+   
+     width: 100vw;
+     
+   
+  }
+  .CARDS {
+    width: 95vw;
+    margin: auto;
+    position: relative;
+    overflow: visible;
+    z-index: 7;
+  }
+
+  .imagecover {
+    object-fit: cover;
+height:35vh;
+     z-index: -3;
+    object-position: 60% 0%;
+  }
+  .overlaydiv {
+    height: 35vh;
+   
+    width: 100%;
+  
+    z-index: -1;
+    background-color: #1f3b3e67;
+  }
+}
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 95%;
+  margin: auto;
+  margin-top: 2rem;
+}
+.card {
+  width: 32%;
+  padding: 10px 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  transition: transform 0.3s;
+  height: 12rem;
+  margin-bottom: 1rem;
+}
+.card a {
+  color: inherit;
+  text-decoration: none;
+}
+.card-thumb {
+  width: 100%;
+  text-align: center;
+}
+.card-thumb img {
+  width: 45px;
+}
+.card-title {
+  margin: 5px 0;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 0;
+}
+.card-excerpt {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-align: center;
+  font-family: "Noticia Text";
+  color: #000000;
+}
+.card:hover {
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+@media   (max-width: 800px) {
+
+ 
+  .card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .headersmall {
+   display: none;
+  }
+
+
+  .card {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 480px) {
+ 
+  .cards {
+    justify-content: center;
+  }
+  .card {
+    width: 85%;
+  }
+}
