@@ -31,7 +31,7 @@ function Carasoul() {
                 Prof . Amgad tawfiq
                 </NAME>
                 <WORK>
-                  Lungs and special cases Department
+                  Lungs and special cases Department.
                 </WORK>
             </Div>
         </SwiperSlide>
@@ -42,7 +42,7 @@ function Carasoul() {
                 Dr . Nancy talat
                 </NAME>
                 <WORK>
-                  Heart and blood balance Related specialist
+                  Heart and blood balance Related specialist.
                 </WORK>
             </Div>
         </SwiperSlide>
@@ -53,7 +53,7 @@ function Carasoul() {
                 Dr . John tomas
                 </NAME>
                 <WORK>
-                   Severe Eyes vision cases expert
+                   Severe Eyes vision cases expert.
                 </WORK>
             </Div>
         </SwiperSlide>
