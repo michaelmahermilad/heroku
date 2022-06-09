@@ -23,14 +23,15 @@ function Carasoul() {
       }}
       modules={[Autoplay, Navigation]}
         navigation={true} >
+  
         <SwiperSlide>
-            <Div className='cardmain'>
-                 <IMAGE src='https://health.wyo.gov/wp-content/uploads/2017/05/older-doctor-46950_300x.jpg'/>
-               <NAME>
-                Dr. BARKER
+            <Div>
+                <IMAGE src='https://health.wyo.gov/wp-content/uploads/2017/05/older-doctor-46950_300x.jpg'/>
+                <NAME>
+                Prof . Amgad tawfiq
                 </NAME>
                 <WORK>
-              Manager
+                  Lungs and special cases Department
                 </WORK>
             </Div>
         </SwiperSlide>
@@ -38,14 +39,35 @@ function Carasoul() {
             <Div>
                 <IMAGE src='https://health.wyo.gov/wp-content/uploads/2017/05/older-doctor-46950_300x.jpg'/>
                 <NAME>
-                Dr. BARKER
+                Dr . Nancy talat
                 </NAME>
                 <WORK>
-                  Manager
+                  Heart and blood balance Related specialist
                 </WORK>
             </Div>
         </SwiperSlide>
-       
+        <SwiperSlide>
+            <Div>
+                <IMAGE src='https://health.wyo.gov/wp-content/uploads/2017/05/older-doctor-46950_300x.jpg'/>
+                <NAME>
+                Dr . John tomas
+                </NAME>
+                <WORK>
+                   Severe Eyes vision cases expert
+                </WORK>
+            </Div>
+        </SwiperSlide>
+        <SwiperSlide>
+            <Div>
+                <IMAGE src='https://health.wyo.gov/wp-content/uploads/2017/05/older-doctor-46950_300x.jpg'/>
+                <NAME>
+                Dr .Laila helmy
+                </NAME>
+                <WORK>
+                  Chidren weight related problems researcher.
+                </WORK>
+            </Div>
+        </SwiperSlide>
       </Swiper>
     </div>
   )
@@ -59,7 +81,7 @@ margin-top: 3rem;
     height:150px;
     width:100%;
     border-radius: 40px;
-    padding : 5rem;
+    padding : 3.6rem;
     background: rgb(255,180,0);
 background: radial-gradient(circle, rgba(255,180,0,0.18194873880895768) 34%, rgba(9,121,22,0.28443321085864715) 92%);    
     img{
@@ -102,8 +124,10 @@ const NAME =styled.h6`
 const WORK=styled.h6`
 
     color: #332d2d7b; 
-    width: fit-content;
+    width: 170px;
+    text-align: center;
       margin:auto;
+      margin-left: calc(50% - 85px);
     margin-top: 1rem;
     font-weight: 800;
 `
