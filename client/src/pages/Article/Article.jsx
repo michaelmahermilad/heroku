@@ -159,7 +159,7 @@ import MAGDY from "../../images/MAGDY.png";
             fontWeight: "700",
           }}
         >
-          <img src={COVID} style={{ height: "100%" }} />
+          <img alt='' src={COVID} style={{ height: "100%" }} />
           <h5
             style={{
               color: "white",
@@ -200,7 +200,7 @@ import MAGDY from "../../images/MAGDY.png";
               }}
             >
              {" "}
-            </div> <img src={COVID} style={{ marginBottom:'2rem',marginTop:'-2rem' }} /></>
+            </div> <img alt='' src={COVID} style={{ marginBottom:'2rem',marginTop:'-2rem' }} /></>
           )}
 
             <h2>
@@ -327,7 +327,7 @@ import MAGDY from "../../images/MAGDY.png";
         </div>
 
         <div style={{ width: "92%", marginRight:'auto',marginLeft:'auto' }}>
-          <img src={MAGDY} style={{ width: "100%" }} />
+          <img alt='' src={MAGDY} style={{ width: "100%" }} />
 
           <h5
             style={{
@@ -343,7 +343,7 @@ import MAGDY from "../../images/MAGDY.png";
           {[...Array(10)].map((k, i) => (
             <div>
               <div class="grid-container">
-                <img class="item2" src={AC} />
+                <img alt='' class="item2" src={AC} />
 
                 <div class="item3">
                   {" "}

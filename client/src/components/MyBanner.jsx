@@ -21,14 +21,14 @@ import gsap from "gsap";
     <div>
       <Banner>
         <BannerLeft>
-         <img src={LOGOO}/> 
+         <img alt='' src={LOGOO}/> 
 
 
          
           
         </BannerLeft>
         <BannerRight>
-          <img alt=""  id="r"    src={Main} />
+          <img alt=''   id="r"    src={Main} />
           <Button
             background={"var(--main2)"}
             textcolor={"var(--main)"}

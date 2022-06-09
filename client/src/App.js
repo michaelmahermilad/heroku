@@ -68,7 +68,7 @@ function App(props) {
           >
             <h2    style={{fontSize:'3rem',position:'absolute',top:'4rem',left:'9rem',color:'white'}}   ref={(_subtitle) => (subtitle = _subtitle)}> </h2>
              <button onClick={closeModal}  style={{ borderRadius:'25px', position:'absolute' }}      >Sign up</button>
-            <img   alt="" style={{ objectPosition:'top', width:'100%' ,margin:'auto'}} src={C}  className="imagemodal"/>
+            <img alt=''  style={{ objectPosition:'top', width:'100%' ,margin:'auto'}} src={C}  className="imagemodal"/>
            
           </Modal>
 

@@ -25,7 +25,7 @@ function Mymessage({email,message,h}) {
                 gap:'10px'
               }}
             >
-              <img alt=""
+              <img alt='' 
                 style={{ width: "30px", height: "30px", borderRadius: "15px" }}
                 src={chaticon}
               />

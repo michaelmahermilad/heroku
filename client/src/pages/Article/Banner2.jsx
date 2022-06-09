@@ -31,7 +31,7 @@ function Banner2() {
         </Button2>
       </BannerLeft>
       <BannerRight>
-        <img alt="" id="r" src={l} />
+        <img alt=''  id="r" src={l} />
       </BannerRight>
     </Banner>
   );

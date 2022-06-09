@@ -60,7 +60,7 @@ function Header({ onClick, onClick2 }) {
         className="NAVBAR"
       >
         <div className="LOGO">
-          <img className="IMG" src={logo} />
+          <img alt='' className="IMG" src={logo} />
         </div>
 
         <div className="INPTCONTAINER">

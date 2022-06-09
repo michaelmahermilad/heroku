@@ -78,7 +78,7 @@ function ResearchField() {
           style={{ height: "10rem", right: "6rem", position: "absolute" }}
           src={ml}
         />
-        <img className="imagemobile" id="ml2" style={{}} src={ml2} />
+        <img alt='' className="imagemobile" id="ml2" style={{}} src={ml2} />
         <h2
           style={{
             boxShadow: ".3px 6px 12px lightblue",

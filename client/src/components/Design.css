@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Noticia+Text|Lalezar");
 .maindiv {
-   
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -11,7 +10,7 @@
   color: #ffffffde;
   width: 40rem;
   text-align: center;
-margin: auto;
+  margin: auto;
   margin-top: 3rem;
   line-height: 1.3rem;
   font-weight: 500;
@@ -19,8 +18,7 @@ margin: auto;
 
   position: relative;
   z-index: 7;
-display: none;
-
+  display: none;
 }
 .imagecover {
   object-fit: cover;
@@ -28,7 +26,7 @@ display: none;
   width: 100%;
   position: absolute;
   height: 100%;
-  top:0;
+  top: 0;
   overflow: visible;
   bottom: 0;
   z-index: -3;
@@ -36,41 +34,34 @@ display: none;
 }
 .overlaydiv {
   position: absolute;
-  top:0;
+  top: 0;
   bottom: 0;
-   
-  width: 100%;
 
+  width: 100%;
 
   z-index: -1;
   background-color: #1a1d1e62;
-  
 }
 .CARDS {
   width: 90vw;
   margin-left: calc(50% - 45%);
 
-position: relative;
+  position: relative;
   z-index: 7;
 }
-.HEADERMAINTITLE{
- 
-    color: #ffffff;
-    font-weight: 500;
-    width: 30rem;
-    text-align: center;
-    margin-left: calc(50% - 15rem);
-    margin-top: 2rem;
-
+.HEADERMAINTITLE {
+  color: #ffffff;
+  font-weight: 500;
+  width: 30rem;
+  text-align: center;
+  margin-left: calc(50% - 15rem);
+  margin-top: 2rem;
 }
-
-
 @media (max-width: 480px) {
   .maindiv {
-    height:auto;
-    
-     padding-top: 0rem;
-   
+    height: auto;
+
+    padding-top: 0rem;
   }
 
   .CARDS {
@@ -82,18 +73,18 @@ position: relative;
   }
 
   .imagecover {
-     object-fit: cover;
-     height:100vh;
-     z-index: -3;
-     object-position: 75% 0%;
+    object-fit: cover;
+    height: 100vh;
+    z-index: -3;
+    object-position: 75% 0%;
   }
   .overlaydiv {
-      height: 100vh;
-   
-       width: 100%;
-   
-        z-index: -1;
-      background-color: #1f3b3e67;
+    height: 100vh;
+
+    width: 100%;
+
+    z-index: -1;
+    background-color: #1f3b3e67;
   }
 }
 #container {
@@ -120,7 +111,7 @@ position: relative;
   transition: transform 0.3s;
   height: max-content;
   margin-bottom: 1.6rem;
-  box-shadow:2px 4px 9px #24a27c52;
+  box-shadow: 2px 4px 9px #24a27c52;
 }
 .card a {
   color: inherit;
@@ -155,20 +146,16 @@ position: relative;
   transform: translateY(-4px);
 }
 
-@media   (max-width: 800px) {
- 
+@media (max-width: 800px) {
   .card {
     width: 49%;
   }
 }
 
- 
-
-form {
+.formstyle {
   max-width: 80%;
   margin: 3rem auto;
   position: relative;
-  
 }
 
 .input-group {
@@ -185,7 +172,7 @@ label {
   border-radius: 9px;
 }
 
-input {
+.inputstyle {
   width: 100%;
   padding: 8px 30px 8px 12px;
   border: 2px solid rgba(0, 0, 0, 0.08);
@@ -199,8 +186,8 @@ input {
   transition: all 0.2s ease;
 }
 
-input:focus { 
-  border-color:#24a27c ;
+input:focus {
+  border-color: #24a27c;
 }
 
 input:focus + label {
@@ -208,20 +195,17 @@ input:focus + label {
   color: #24a27c;
 }
 
-
 @media screen and (max-width: 480px) {
-  .HEADERMAINTITLE{
-    font-size:19px;
+  .HEADERMAINTITLE {
+    font-size: 19px;
     line-height: 1rem;
-     width: 87%;
-     text-align: center;
-     margin-left: 6.5%;
-     margin-top: 4rem;
-     margin-bottom: .5rem;
- 
- }
- 
- 
+    width: 87%;
+    text-align: center;
+    margin-left: 6.5%;
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
+  }
+
   .cards {
     justify-content: center;
   }
@@ -229,17 +213,16 @@ input:focus + label {
     width: 100%;
   }
 
-  form {
+  .formstyle {
     max-width: 90%;
     margin: 2rem auto;
     position: relative;
-    
   }
-  
+
   .input-group {
     position: relative;
   }
-  
+
   label {
     position: absolute;
     right: 4%;
@@ -247,12 +230,11 @@ input:focus + label {
     transform: translatey(-50%);
     color: #24a27c;
     transition: all 0.2s ease;
-    
   }
   .headersmall {
     display: none;
-   }
-  input {
+  }
+  .inputstyle {
     width: 100%;
     padding: 4px 20px 4px 8px;
     border: 2px solid #24a27c;
@@ -265,6 +247,4 @@ input:focus + label {
     border-radius: 9px;
     transition: all 0.2s ease;
   }
-
-
 }

@@ -7,13 +7,16 @@ import discover from "./discover.PNG";
 import share from "./share.PNG";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faSearch} from '@fortawesome/free-solid-svg-icons'
+import Sections from "./Sections";
+import ReactMap from "./ReactMap";
+import Carasoul from "./Carasoul";
 function Design() {
   return (
     <>
       <div className="maindiv">
-        <img className="imagecover" src={D} />
+        <img alt=''     className="imagecover" src={D} />
 
-        <img
+        <img alt=''    
           style={{
             position: "relative",
             width: "13rem",
@@ -30,9 +33,9 @@ function Design() {
 
 </h2>
 
-<form>
+<form className="formstyle">
      <div class="input-group">
-      <input type="text" id="search" placeholder="Search..." autocomplete="off"/>
+      <input   className="inputstyle"   type="text" id="search" placeholder="Search..." autocomplete="off"/>
       <label for="search"><FontAwesomeIcon style={{fontSize:'1.2rem'}} icon={faSearch}/></label>
     </div>
     
@@ -49,9 +52,9 @@ function Design() {
         <div className="CARDS">
           <div class="cards">
             <article class="card">
-              <a href="#">
+              <a  href="/">
                 <figure class="card-thumb">
-                  <img src={explore} alt="angular" />
+                  <img         src={explore} alt="angular" />
                 </figure>
                 <div class="card-content">
                   <h2 class="card-title">Discover</h2>
@@ -63,9 +66,9 @@ function Design() {
               </a>
             </article>
             <article class="card">
-              <a href="#">
+              <a  href="/">
                 <figure class="card-thumb">
-                  <img src={discover} alt="react" />
+                  <img alt=''    src={discover}   />
                 </figure>
                 <div class="card-content">
                   <h2 class="card-title">Explore</h2>
@@ -77,9 +80,9 @@ function Design() {
               </a>
             </article>
             <article class="card">
-              <a href="#">
+              <a  href="/">
                 <figure class="card-thumb">
-                  <img src={share} alt="vue" />
+                  <img alt=''          src={share}  />
                 </figure>
                 <div class="card-content">
                   <h2 class="card-title">Share</h2>
@@ -95,7 +98,10 @@ function Design() {
 
         <div className="overlaydiv"></div>
       </div>
-      <div>hhhhhhhhssssssssssshhhhhh</div>
+     <Sections/>
+     <Carasoul/>
+     <ReactMap/>
+
     </>
   );
 }

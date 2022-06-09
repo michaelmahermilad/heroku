@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "styled-components";
@@ -14,7 +14,7 @@ import Capture8 from "../images/Capture8.PNG";
 import { Link } from "react-router-dom";
 import pic6 from "../images/pic6.png";
 import pic7 from "../images/pic7.png";
-// import required modules
+ 
 import { Autoplay, Pagination, Navigation } from "swiper";
 
 export const Swipper = () => {
@@ -62,7 +62,7 @@ export const Swipper = () => {
                 borderLeft: isActive ? "9px solid var(--main2)" : "",
               }}
             >
-              <img alt="" src={pic3} style={{ display: "block" }} />
+              <img alt=''  src={pic3} style={{ display: "block" }} />
             </Card>
           )}
         </SwiperSlide>
@@ -75,7 +75,7 @@ export const Swipper = () => {
                 borderLeft: isActive ? "9px solid var(--main2)" : "",
               }}
             >
-              <img alt="" src={w} style={{ display: "block" }} />
+              <img alt=''  src={w} style={{ display: "block" }} />
             </Card>
           )}
         </SwiperSlide>
@@ -88,7 +88,7 @@ export const Swipper = () => {
                 borderLeft: isActive ? "9px solid var(--main2)" : "",
               }}
             >
-              <img alt="" src={pic6} style={{ display: "block" }} />
+              <img alt=''  src={pic6} style={{ display: "block" }} />
             </Card>
           )}
         </SwiperSlide>
@@ -102,7 +102,7 @@ export const Swipper = () => {
             >
               <Link to="field">
                 {" "}
-                <img alt="" src={pic7} style={{ display: "block" }} />
+                <img alt=''  src={pic7} style={{ display: "block" }} />
               </Link>
             </Card>
           )}
@@ -118,7 +118,7 @@ export const Swipper = () => {
             >
               <Link to="R">
                 {" "}
-                <img alt="" src={e} style={{ display: "block" }} />
+                <img alt=''  src={e} style={{ display: "block" }} />
               </Link>
             </Card>
           )}
@@ -133,7 +133,7 @@ export const Swipper = () => {
             >
               <Link to="R">
                 {" "}
-                <img alt="" src={Capture8} style={{ display: "block" }} />
+                <img alt=''  src={Capture8} style={{ display: "block" }} />
               </Link>
             </Card>
           )}

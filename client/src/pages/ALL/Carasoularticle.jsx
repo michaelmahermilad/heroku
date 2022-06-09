@@ -54,7 +54,7 @@ export const Carasoularticle = () => {
                 <SwiperSlide className="Slide">
                   {({ isActive }) => (
                     <Card>
-                      <img alt="" className="imageSwipper" src={swippertest} />
+                      <img alt=''  className="imageSwipper" src={swippertest} />
                       <p className="titleswipper">
                         The title medical project net data Articles
                       </p>
