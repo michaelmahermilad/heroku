@@ -96,7 +96,7 @@ background:  radial-gradient(circle, rgba(255,180,0,0.18194873880895768) 34%, rg
       
     }
  @media screen and (max-width:700px) {
-   padding: 3.6rem;
+   padding: 3.61rem ;
    
  }
     
