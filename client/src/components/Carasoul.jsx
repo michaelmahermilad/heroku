@@ -82,8 +82,8 @@ margin-top: 3rem;
     width:100%;
     border-radius: 40px;
     padding : 3.6rem;
-    background: rgb(255,180,0);
-background: radial-gradient(circle, rgba(255,180,0,0.18194873880895768) 34%, rgba(9,121,22,0.28443321085864715) 92%);    
+    background:  rgb(255,180,0 );
+background:  radial-gradient(circle, rgba(255,180,0,0.18194873880895768) 34%, rgba(9,121,22,0.28443321085864715) 92%);    
     img{
       
         display: block;
