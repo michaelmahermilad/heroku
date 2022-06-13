@@ -56,7 +56,7 @@ export default Home;
  export const Divider = styled.div`
   height: ${(props)=>props.height};
   @media(max-width:600px){
-    height:2rem;
+    height:4rem;
 
   }
 `;

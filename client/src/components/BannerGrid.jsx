@@ -45,12 +45,12 @@ export default BannerGrid
 
 const Banner = styled.div`
 
- width:97%;
+  width:97%;
   display: flex;
   flex-direction: row;
-
+  
   @media (max-width: 800px) {
-    padding-top: 6rem;
+    padding-top: 1rem;
     flex-direction: column;
   }
   @media (max-width: 500px) {
@@ -66,7 +66,7 @@ justify-content: flex-start;
     margin-bottom: 2rem;
 }
 margin: 0;
-margin-top: 2rem;
+margin-top: 1rem;
 
 padding:0rem 6rem 1rem 3rem;
  flex:50%;
@@ -182,14 +182,14 @@ letter-spacing: 1px;
    outline: none;
    position: relative;
     display: inline-block;
-    width: 160px;
-    min-height: 35px;
+    width: 180px;
+    min-height: 30px;
     z-index: 1;
     color: #d4dae4;
     outline: none;
     cursor: pointer;
     overflow: hidden;
-    padding: 13px 22px;
+    padding: 10px 15px;
     text-align: center;
     text-decoration: none;
     text-transform: none;
@@ -200,7 +200,7 @@ letter-spacing: 1px;
     background-color: #11a683;
     margin: auto;
    
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: .875;
   }
 margin-bottom: 2rem;

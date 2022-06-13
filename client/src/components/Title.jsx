@@ -33,7 +33,7 @@ font-variant-caps: titling-caps;
     color:${(props)=>props.color};
     @media screen and (max-width:700px) {
         font-size: ${(props)=>props.mobile? '30px':'16px'};
-        margin-bottom: 1rem;
+        margin-bottom: 1.6rem;
 
         
     }
