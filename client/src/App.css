@@ -2,8 +2,15 @@
 
 
 body{
-   background-color: white;
+ 
    overflow-x: hidden;
+   background-image: url('./images/BackFace.svg');
+    background-size: 150px 150px ;
+   background-repeat:repeat;
+ background-origin: 0% 0%;
+ z-index:10;
+ background-position:20%  90%;
+ background-attachment: fixed;
  }
 *{
   margin:0;
@@ -352,7 +359,7 @@ height: 90vh;
     background-color: var(rgb(0, 0, 0));
     cursor:pointer;
   }
-
+ 
 
  *::-webkit-scrollbar {
     width: .5rem;
@@ -395,5 +402,24 @@ height: 90vh;
 
       
       display:none;
+    }
+  }
+  .background-image {
+
+  }
+  @media (max-width:700px){
+    .background-image {
+      background-image: url('./images/BackFace.svg');
+      background-size:700px 700px;
+      
+      background-repeat:repeat-y;
+       background-origin: 0% 0%;
+       
+      padding: 40px 0px;
+      margin: 40px 0px;
+    z-index:-10;
+    background-position:100%  100%;
+    
+    background-attachment: fixed;
     }
   }

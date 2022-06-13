@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import D from "../images/D.svg";
 import logofigma from "../images/logofigma.svg";
 import "../components/Design.css";
@@ -8,15 +8,50 @@ import share from "./share.PNG";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faSearch} from '@fortawesome/free-solid-svg-icons'
 import Sections from "./Sections";
-import ReactMap from "./ReactMap";
-import Carasoul from "./Carasoul";
+import MuiMasonary from './MuiMasonary'
+import VerticalTabs from "./VerticalTab";
+import { Divider } from "../pages/Home";
+import CountDown from './CountDown'
+import { useState } from "react";
+import { useEffect } from "react";
+import Flex from "./Flex";
+import Title from "./Title";
+import BannerGrid from "./BannerGrid";
 function Design() {
+  const [start,setStart]=useState(false); 
+   const ref=useRef()
+ 
+
+ function isInViewport() {
+  const rect=ref.current.getBoundingClientRect()? ref.current.getBoundingClientRect(): null
+   console.log(rect)
+   return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+);
+}
+
+   
+
+  useEffect(()=>{
+     window.onscroll=()=>{
+      if(isInViewport()){
+      setStart(true)
+    };
+     }
+    
+     
+  
+  })
   return (
     <>
-      <div className="maindiv">
-        <img alt=''     className="imagecover" src={D} />
-
-        <img alt=''    
+      <div className="maindiv ">
+ <img alt=''     className="imagecover   " src={D} />
+        <div className="overlaydiv   ">       
+</div>
+        <img  alt=''    
           style={{
             position: "relative",
             width: "13rem",
@@ -66,7 +101,7 @@ function Design() {
               </a>
             </article>
             <article class="card">
-              <a  href="/">
+              <a    href="/">
                 <figure class="card-thumb">
                   <img alt=''    src={discover}   />
                 </figure>
@@ -84,10 +119,10 @@ function Design() {
                 <figure class="card-thumb">
                   <img alt=''          src={share}  />
                 </figure>
-                <div class="card-content">
-                  <h2 class="card-title">Share</h2>
+                <div  class="card-content">
+                  <h2   class="card-title">Share</h2>
                   <p class="card-excerpt">
-                    Share what you find useful to other doctors , that can make
+                   Share what you find useful to other doctors , that can make
                     a shift in many patients cases.
                   </p>
                 </div>
@@ -96,12 +131,28 @@ function Design() {
           </div>
         </div>
 
-        <div className="overlaydiv"></div>
       </div>
+      <Divider height='5rem'/>
+     
+      <Title title='Physical Mental and Virtual Care' color='#11a683' mobile={false}/>;
      <Sections/>
-     <Carasoul/>
-     <ReactMap/>
+     <Divider height='5rem'/> 
+     <Title title='Latest Statistics' color={'#11a683'} mobile={false}/>
+       <div className="countsdown">
+     <CountDown   end={300000} mount={1000}  something={'Users'} start={start}/>
+     <CountDown   end={2000} mount={1}  something={'Daily Post'} start={start}/>
+     <CountDown  a={ref} end={450} mount={1}  something={'Events in cairo'} start={start}/>
+     </div>
+     <Divider height='5rem'/>
+     <Title color={'#11a683'}  mobile={false} title={'Top Actions'} />
+     <VerticalTabs/>
+     <Divider height='5rem' />
+     <Title color={'#11a683'}  mobile={false} title={'Discover Latest Technology'} />
 
+   <BannerGrid/>
+ <Divider height='5rem' />
+     <Title color={'#11a683'}  mobile={false} title={'Social Links'} />
+     <Flex/>
     </>
   );
 }

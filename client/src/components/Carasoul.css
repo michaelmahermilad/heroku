@@ -1,26 +1,53 @@
+
+
+:root{
+    --swiper-theme-color:rgb(0, 132, 255);
+}
 .swippercard{
     height:fit-content;
-    width:240px;
-    margin-top: 6rem;
+    width:95vw;
+    margin-top: 1rem;overflow: visible;
+    margin:auto;
+  
 
 }
 .swiper-button-next{
+    margin-right:4px;
     color:transparent;
 }
+  .swiper-pagination  {
+    color:rgb(0, 0, 0);
+}
 
-
-.swiper-button-next::after, .swiper-button-prev::after {
-background: url("https://quillbot.com/images/theme/light/landingPage/backToTopIcon.svg");
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: -50px;
+}
+.swiper-pagination-bullet{
+    width: 15px;
+    height: 15px;
+    border:2px solid rgb(29, 201, 13);
+}
+.swiper-button-prev{
+    margin-left:4px;
+    color:transparent;
+}
+.y{
+    color:red;
+    display: none;
+}
+.swiper-button-next::after , .swiper-button-prev::after {
+    margin:1rem;
+   
+  background: url("https://www.flaticon.com/svg/vstatic/svg/3916/3916949.svg?token=exp=1654774696~hmac=5d96874cd0556ba2f65f3ae45abc2f9a");
   width:4rem;
-  
   background-size: contain;
   background-repeat: no-repeat;
-  transform: rotate(90deg);
- 
+
 }
-.swiper-button-prev::after{
-    transform:   rotate(-90deg);
-    color:transparent;
+.swiper-button-prev::after   {
+    transform:   rotateY(180deg);
+    color:transparent; 
+   
 }
 
 
@@ -28,7 +55,7 @@ background: url("https://quillbot.com/images/theme/light/landingPage/backToTopIc
 @media (max-width:500px){
     .swippercard{
     height: fit-content;
-    width:85%;
+    width:90%;
     margin: auto;
     margin-top: 1rem;}
 }

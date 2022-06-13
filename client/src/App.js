@@ -80,6 +80,7 @@ function App(props) {
               <Route path="/DESIGN" element={<Design/>}/>
             </Route>
             <Route element={<A />}>
+              
               <Route path="/" element={<Home openModal={openModal} />} />
               <Route path="/login" element={<AuthLogin />} />
               <Route path="/signup" element={<Auth />} />

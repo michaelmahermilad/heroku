@@ -48,4 +48,18 @@ export const Card = styled.div`
   @media (max-width: 500px) {
     width: 87vw;
   }
+
+
+  animation:animated 1s ease infinite alternate;
+  
+  @keyframes animated {
+    50%{
+     
+    }
+    75%{
+       
+    }
+    100%{
+        }
+  }
 `;

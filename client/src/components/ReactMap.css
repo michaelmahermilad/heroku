@@ -1,13 +1,13 @@
 .mapsection {
   border-right: 1rem solid #11a683;
   border-bottom: 1rem solid#11a683;
-  margin-top: 9rem;
+  margin-top: 0rem;
   justify-content: space-between;
 }
 .frameareacont {
   flex: 50%;
   position: relative;
-  height: 28rem;
+  height: 17rem;
 }
 .frameareaoverlay {
   position: absolute;
@@ -23,24 +23,24 @@
   border-left: 1rem solid#11a683;
 }
 .theframe {
-  margin-top: 2rem;
-  margin-left: 3rem;
-  margin-bottom: 2rem;
+   
+  margin-left: 7rem;
+  margin-bottom: 4rem;
   z-index: 66;
-  height: 24rem;
-  width: 24rem;
+  height:15rem;
+  width: 29rem;
   border-radius: 20px;
 }
 
 .theotherareacont {
   flex: 50%;
-  height: 28rem;
+  height: 17rem;
 }
 .theotherarea {
-  height: 28rem;
+  height: 17rem;
 }
 .theimage {
-  height: 28rem;
+  height: 17rem;
 
   display: block;
   float: right;

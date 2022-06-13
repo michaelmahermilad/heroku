@@ -54,7 +54,7 @@ function Home({ openModal }) {
 
 export default Home;
  export const Divider = styled.div`
-  height: 1rem;
+  height: ${(props)=>props.height};
   @media(max-width:600px){
     height:2rem;
 

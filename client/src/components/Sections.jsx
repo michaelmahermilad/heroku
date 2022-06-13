@@ -8,9 +8,7 @@ import { motion } from "framer-motion"
 function Sections() {
   return (
     <>
-        <div   >
-          <Heading style={{width:'100%',textAlign:'center', margin:'auto',color:'black',marginTop:'6rem',marginBottom:'2rem'}}>Physical Mental and Virtual Care</Heading>
-          <Container>
+          <Container style={{width:'100%',overflow:'hidden',paddingBottom:'1rem'}} >
 
           
      
@@ -38,7 +36,7 @@ function Sections() {
                   )
               })}
           </Container>
-      </div>
+   
       
       
       
@@ -53,11 +51,14 @@ export default Sections
 const Container=styled.div`
 display:flex;
 flex-wrap:wrap;
-width:98%;
+width: 95%;
 margin:auto;
- 
+margin-top: 0;
 
-justify-content:center;
+
+ justify-content: center;
+
+
 gap:2rem;
 @media(max-width:700px){
   width:87%;
@@ -70,32 +71,35 @@ gap:2rem;
 export const Card = styled.div`
     background: linear-gradient(0deg,#fff 3%,hsla(0,0%,100%,0)),linear-gradient(-257deg,#aaf2e1,#93edf5 50%,#dbebff);
 transition: all .2s linear;
-  width: 20vw;
-  height: 17rem;
+  width: fit-content;
+  height: 13.5rem;
   border-radius: 5px;
   background: rgb(23 207 151,.2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 1.5rem;
-  gap: .8rem;
+  padding-top: 1.2rem;
+  justify-self: stretch;
+  gap: .5rem;
+  margin:auto;
+  margin-top: 0;
   box-shadow:.4px 3px 12px #11a68367;
   .image{
     background: #11a6834b;
-    width:6rem;
-    height:6rem;
+    width:5rem;
+    height:5rem;
     padding: 1rem;
     border-radius: 50%;
   }
   .plus{
     text-align: center;
     height: 2.7rem;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     position:relative;
     overflow: hidden;
     width: 8REM;
     .btnGreen{
-      width:8rem;
+      width:fit-content;
       height: 2.5rem;
       background-color:#11a683;
       border-radius: 25px;
@@ -105,7 +109,8 @@ transition: all .2s linear;
       color:white;
       font-weight: 600;
       position: absolute;
-
+ width:6rem;
+ left: calc(50% - 3rem);
       top:2.8rem;
     }
 
@@ -146,10 +151,8 @@ transition: all .2s linear;
       color:#13ad7f ;
     }
   }
-  margin-top: 2rem;
-  @media (max-width: 790px) {
-    width: 40vw;
-  }
+ 
+ 
   @media (max-width: 500px) {
     width: 87vw;
   }

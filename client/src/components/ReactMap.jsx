@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
-import Map from "./Map";
+ import Map from "./Map";
 import "./ReactMap.css";
 import corona from "./corona.PNG";
 function ReactMap() {
