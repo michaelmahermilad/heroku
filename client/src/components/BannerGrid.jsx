@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
- 
+ import './BannerGrid.css'
  
  
  import MuiMasonary from '../components/MuiMasonary'
@@ -17,7 +17,7 @@ function BannerGrid() {
  Start Now
            </button>
         </BannerLeft>
-        <div style={{height:'370px',flex:'45%',overflow:'hidden',padding:'5px',margin:'0'}}>
+        <div  style={{ padding:'5px',margin:'0'}} className="height">
             <BannerRight> 
            <div className='animate'>
                  
@@ -182,8 +182,8 @@ letter-spacing: 1px;
    outline: none;
    position: relative;
     display: inline-block;
-    width: 180px;
-    min-height: 47px;
+    width: 140px;
+    min-height: 35px;
     z-index: 1;
     color: #d4dae4;
     outline: none;

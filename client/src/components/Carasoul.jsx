@@ -27,7 +27,7 @@ setBigscreen(true)}
         className="swippercard"
         centeredSlides={true}
         centeredSlidesBounds={true}
-        slidesPerView={bigScreen? 5:2}
+        slidesPerView={bigScreen? 5:1}
         autoplay={{
           delay: 1200,
           disableOnInteraction: false,

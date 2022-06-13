@@ -38,7 +38,7 @@ function Flex() {
            <p  className='textstyle'>search</p>
         </div> */}
         <div className="flex-column-main">
-           <FontAwesomeIcon className='iconstyle icon'   icon={faYoutube}/>  
+           <FontAwesomeIcon className='  icon' icon={faYoutube}/>  
            <p  className='textstyle'>search</p>
         </div>
         <div className="flex-column-main">

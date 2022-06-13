@@ -99,7 +99,7 @@ const StyledTabs = styled((props: StyledTabsProps) => (
 const StyledTab = styled((props     ) => (
   <Tab disableRipple {...props} />
 ))(({ theme }) => ({  
-    
+   
   textTransform: 'none',
   fontWeight: theme.typography.fontWeightRegular,
   fontSize: theme.typography.pxToRem(14),
@@ -125,20 +125,48 @@ const StyledTab = styled((props     ) => (
 }));
 function TabPanel(props: TabPanelProps) {
     const { children, value, index, ...other } = props;
+    const [bigScreen,setBigscreen]=React.useState(true)
+    React.useEffect(()=>{
+      if(window.innerWidth<1000)
+      setBigscreen(false)
+      else
+      setBigscreen(true)
+        
+
+ window.addEventListener('resize',()=>{
   
+    if(window.innerWidth<1000)
+    setBigscreen(false)
+    else
+    setBigscreen(true)
+      
+      
+
+
+ })
+    
+    })
+  
+  
+    
+   
     return (
       <div
         role="tabpanel"
-        hidden={value !== index}
+        hidden={!bigScreen?false: (value !== index)}
         id={`simple-tabpanel-${index}`}
         aria-labelledby={`simple-tab-${index}`}
         {...other}
       >
-        {value === index && (
+        {bigScreen && (value===index) ? (
           <Box sx={{mt:5, bgcolor:"linear-gradient(0deg,#fff 3%,hsla(0,0%,100%,0)),linear-gradient(-257deg,#aaf2e1,#93edf5 50%,#dbebff)"}}>
             <Typography>{children}</Typography>
-          </Box>
-        )}
+          </Box>)
+          :(
+          <Box sx={{mt:5, bgcolor:"linear-gradient(0deg,#fff 3%,hsla(0,0%,100%,0)),linear-gradient(-257deg,#aaf2e1,#93edf5 50%,#dbebff)"}}>
+            <Typography>{children}</Typography>
+          </Box>)
+         }
       </div>
     );
   }
@@ -155,6 +183,28 @@ export default function CustomizedTabs() {
       'aria-controls': `simple-tabpanel-${index}`,
     };
   }
+  const [bigScreen,setBigscreen]=React.useState(true)
+  React.useEffect(()=>{
+    if(window.innerWidth<1000)
+    setBigscreen(false)
+    else
+    setBigscreen(true)
+      
+
+window.addEventListener('resize',()=>{
+
+  if(window.innerWidth<1000)
+  setBigscreen(false)
+  else
+  setBigscreen(true)
+    
+    
+
+
+})})
+
+
+
   return (
     <Box sx={{ width: '100%' }}>
       <Box >
@@ -166,10 +216,11 @@ export default function CustomizedTabs() {
           value={value}
           onChange={handleChange}
           aria-label="styled tabs example"
+          style={{display:!bigScreen?'none':'block'}}
         >
           <StyledTab style={{display:'flex',flexDirection:'row'}} label="Top Contributers" icon={<FontAwesomeIcon style={{ fontSize:'1.3rem',marginRight:'1rem'}} icon={faUsersLine} />} {...a11yProps(0)} />
-          <StyledTab   style={{display:'flex',flexDirection:'row'}} l  faUsersLine label="Top Locations"  icon={<FontAwesomeIcon style={{ fontSize:'1.3rem',marginRight:'1rem'}} icon={faLocationDot} />}   {...a11yProps(1)}/>
-          <StyledTab   style={{display:'flex',flexDirection:'row'}} l  label="Top Events" icon={<FontAwesomeIcon style={{ fontSize:'1.3rem',marginRight:'1rem'}} icon={faCalendarPlus} />}    {...a11yProps(2)}/>
+                  <StyledTab   style={{display:'flex',flexDirection:'row'}} l  label="Top Events" icon={<FontAwesomeIcon style={{ fontSize:'1.3rem',marginRight:'1rem'}} icon={faCalendarPlus} />}    {...a11yProps(2)}/>
+  <StyledTab   style={{display:'flex',flexDirection:'row'}} l  faUsersLine label="Top Locations"  icon={<FontAwesomeIcon style={{ fontSize:'1.3rem',marginRight:'1rem'}} icon={faLocationDot} />}   {...a11yProps(1)}/>
         </StyledTabs>
        
       </Box>
@@ -177,10 +228,10 @@ export default function CustomizedTabs() {
       <Carasoul/>
 
       </TabPanel>
-      <TabPanel value={value} index={1}>
+      <TabPanel value={value} index={2}>
       <ReactMap/>
       </TabPanel>
-      <TabPanel value={value} index={2}>
+      <TabPanel value={value} index={1}>
           <div className='myevents'>
           <a href="#">
   <figure className='C fa' >

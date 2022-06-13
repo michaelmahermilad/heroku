@@ -31,4 +31,9 @@ font-variant-caps: titling-caps;
     font-size: ${(props)=>props.mobile? '14px':'30px'};
     font-weight: 600;
     color:${(props)=>props.color};
+    @media screen and (max-width:700px) {
+        font-size: ${(props)=>props.mobile? '30px':'14px'};
+
+        
+    }
 `
