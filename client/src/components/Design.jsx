@@ -143,16 +143,19 @@ function Design() {
      <CountDown   end={2000} mount={1}  something={'Daily Post'} start={start}/>
      <CountDown  a={ref} end={450} mount={1}  something={'Events in cairo'} start={start}/>
      </div>
-     <Divider height='5rem'/>
-     <Title color={'#11a683'}  mobile={false} title={'Top Actions'} />
-     <VerticalTabs/>
+     
      <Divider height='5rem' />
      <Title color={'#11a683'}  mobile={false} title={'Discover Latest Technology'} />
 
    <BannerGrid/>
- <Divider height='5rem' />
+ 
+         <Divider height='5rem'/>
+ 
+       <Title color={'#11a683'}  mobile={false} title={'Top Actions'} />
+
+     <VerticalTabs/><Divider height='5rem' />
      <Title color={'#11a683'}  mobile={false} title={'Social Links'} />
-     <Flex/>
+     <Flex/>   
     </>
   );
 }

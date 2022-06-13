@@ -182,7 +182,7 @@ letter-spacing: 1px;
    outline: none;
    position: relative;
     display: inline-block;
-    width: 140px;
+    width: 160px;
     min-height: 35px;
     z-index: 1;
     color: #d4dae4;
