@@ -100,7 +100,7 @@ function Footer() {
 export default Footer;
 
 const FooterMain = styled.div`
-border-top: 7px solid var(--main);
+border-top: 1px solid grey;
 margin-top: 2rem;
 padding-top: .2rem;
 padding-bottom: 1rem;

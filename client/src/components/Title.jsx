@@ -4,7 +4,7 @@ function Title(props) {
   return (
     <div>
         <Container>
-            <Heading mobile={props.mobile}  color={props.color}>
+            <Heading   Font={props.Font} Weight={props.Weight} mobile={props.mobile}  color={props.color}>
                 {props.title}
             </Heading>
         </Container>
@@ -23,13 +23,15 @@ const Container=styled.div`
     
 `
 const Heading=styled.h3`
-max-width: 85%;
+max-width: 100%;
+width: fit-content;
 text-align: center;
+margin: auto;
 margin-top:0rem;
-margin-bottom: 3rem;
+margin-bottom: .4rem;
 font-variant-caps: titling-caps;
-    font-size: ${(props)=>props.mobile? '14px':'30px'};
-    font-weight: 600;
+    font-size: ${(props)=>props.Font?props.Font: props.mobile? '14px':'30px'};
+    font-weight:${(props)=>props.Weight?props.Weight:600};
     color:${(props)=>props.color};
     @media screen and (max-width:700px) {
         font-size: ${(props)=>props.mobile? '30px':'16px'};
@@ -37,4 +39,11 @@ font-variant-caps: titling-caps;
 
         
     }
+`
+ export const TitleHere=styled(Title)`
+ 
+border-bottom: 26px solid red;
+
+
+
 `

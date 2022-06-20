@@ -1,7 +1,7 @@
 
 
 :root{
-    --swiper-theme-color:rgb(0, 132, 255);
+    --swiper-theme-color:rgb(8, 99, 76);
 }
 .swippercard{
     height:fit-content;
@@ -11,23 +11,23 @@
   
 
 }
-.swiper-button-next{
+.swippercard  .swiper-button-next{
     margin-right:4px;
     color:transparent;
 }
-  .swiper-pagination  {
+.swippercard .swiper-pagination  {
     color:rgb(0, 0, 0);
 }
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+.swippercard .swiper-horizontal>.swiper-pagination-bullets,.swippercard  .swiper-pagination-bullets.swiper-pagination-horizontal,.swippercard  .swiper-pagination-custom,.swippercard  .swiper-pagination-fraction{
     bottom: -50px;
 }
-.swiper-pagination-bullet{
+.swippercard .swiper-pagination-bullet{
     width: 15px;
     height: 15px;
     border:2px solid rgb(29, 201, 13);
 }
-.swiper-button-prev{
+.swippercard .swiper-button-prev{
     margin-left:4px;
     color:transparent;
 }
@@ -35,7 +35,7 @@
     color:red;
     display: none;
 }
-.swiper-button-next::after , .swiper-button-prev::after {
+.swippercard .swiper-button-next::after ,.swippercard .swiper-button-prev::after {
     margin:1rem;
    
   background: url("https://www.flaticon.com/svg/vstatic/svg/3916/3916949.svg?token=exp=1654774696~hmac=5d96874cd0556ba2f65f3ae45abc2f9a");
@@ -44,7 +44,7 @@
   background-repeat: no-repeat;
 
 }
-.swiper-button-prev::after   {
+.swippercard .swiper-button-prev::after   {
     transform:   rotateY(180deg);
     color:transparent; 
    

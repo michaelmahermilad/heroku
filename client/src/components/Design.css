@@ -139,7 +139,7 @@ body{
   position: relative;
 }
 
-label {
+.label {
   position: absolute;
   right: 3%;
   top: 50%;
@@ -258,8 +258,8 @@ input:focus + label {
     bottom: 0;
     height: 70vh;
     width: 100%;
-
     z-index: -1;
     background-color: #1a1d1e62;
   }
 }
+

@@ -75,14 +75,10 @@ const StyledTabs = styled((props: StyledTabsProps) => (
     TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }}
   />
 ))({
-  height:'40px',
-  justifyContent:'center',
-  alignItems:'center',
-  '& .MuiTabs-indicator': {
-    display: 'flex',
-    justifyContent: 'center',
-    
-    backgroundColor: 'transparent',
+   display: 'flex',
+ 
+    '& .MuiTabs-indicator': {
+     backgroundColor: 'transparent',
   },
   '& .MuiTabs-indicatorSpan': {
     maxWidth: 40,
@@ -99,20 +95,18 @@ const StyledTabs = styled((props: StyledTabsProps) => (
 const StyledTab = styled((props     ) => (
   <Tab disableRipple {...props} />
 ))(({ theme }) => ({  
-   
-  textTransform: 'none',
+  textTransform: 'ubercase',
   fontWeight: theme.typography.fontWeightRegular,
-  fontSize: theme.typography.pxToRem(14),
-  marginTop: theme.spacing(0),
-
-  width: '33%',
+  fontSize: theme.typography.pxToRem(13),
+ minHeight:'0px',
+ height: '2rem',
+display: "flex",flexDirection:'row',
   color: 'rgb(21, 111, 82)',
+ 
   '&.Mui-selected': {
-    color: 'rgb(21, 111, 82)',
-    backgroundColor:'  #0289891d    ',
+    color: 'rgb(16, 181, 167)',
   },
   '&.Mui-focusVisible': {
-    backgroundColor: 'rgba(49, 49, 70, 0.512)',
   },
   [theme.breakpoints.up('sm')]: {
     width: '33%',
@@ -207,10 +201,7 @@ window.addEventListener('resize',()=>{
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Box >
-        
-       
-      </Box>
+    
       <Box sx={{bgcolor: '#a6b3b8e' }}>
         <StyledTabs
           value={value}
@@ -218,9 +209,9 @@ window.addEventListener('resize',()=>{
           aria-label="styled tabs example"
           style={{display:!bigScreen?'none':'block'}}
         >
-          <StyledTab style={{display:'flex',flexDirection:'row'}} label="Top Contributers" icon={<FontAwesomeIcon style={{ fontSize:'1.3rem',marginRight:'1rem'}} icon={faUsersLine} />} {...a11yProps(0)} />
-                  <StyledTab   style={{display:'flex',flexDirection:'row'}} l  label="Top Events" icon={<FontAwesomeIcon style={{ fontSize:'1.3rem',marginRight:'1rem'}} icon={faCalendarPlus} />}    {...a11yProps(2)}/>
-  <StyledTab   style={{display:'flex',flexDirection:'row'}} l  faUsersLine label="Top Locations"  icon={<FontAwesomeIcon style={{ fontSize:'1.3rem',marginRight:'1rem'}} icon={faLocationDot} />}   {...a11yProps(1)}/>
+          <StyledTab label="Top Contributers" icon={<FontAwesomeIcon style={{ fontSize:'1.3rem',marginRight:'1rem'}} icon={faUsersLine} />} {...a11yProps(0)} />
+                  <StyledTab    label="Top Events" icon={<FontAwesomeIcon style={{ fontSize:'1.3rem',marginRight:'1rem'}} icon={faCalendarPlus} />}    {...a11yProps(2)}/>
+  <StyledTab      label="Top Locations"  icon={<FontAwesomeIcon style={{ fontSize:'1.3rem',marginRight:'1rem'}} icon={faLocationDot} />}   {...a11yProps(1)}/>
         </StyledTabs>
        
       </Box>

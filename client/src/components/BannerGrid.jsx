@@ -14,7 +14,7 @@ function BannerGrid() {
           <h3  className="sectionsidetitle">Discover Medical Devices that fit Patients needs and safety.</h3>
           </div>   <p> Access Our medical services on the go! Control your clinic with advanced Devices. Explore ways of how can you import those Technologies.</p>
            <button className="btnbanner">
- Start Now
+         Start Now
            </button>
         </BannerLeft>
         <div  style={{ padding:'5px',margin:'0'}} className="height">
@@ -176,8 +176,6 @@ letter-spacing: 1px;
      
   }
   .btnbanner{
-   
-
    padding: .5rem;
    outline: none;
    position: relative;
@@ -199,7 +197,6 @@ letter-spacing: 1px;
     transition: all .35s ease 0s;
     background-color: #11a683;
     margin: auto;
-   
     font-size: 1.1rem;
     line-height: .875;
   }
