@@ -7,7 +7,7 @@ function Footer() {
         <div style={{}} >
           <h5 className='head1' >About Medical Projects</h5>
           <div  style={{height:'2px',width:'8rem',backgroundColor:'green',marginBottom:'1rem'}}   ></div>
-       <p  className='parag' style={{color: "#575757" , textAlign:'justify',lineHeight:'1.5rem'}}>
+       <p  className='parag' style={{color: "#575757" , textAlign:'justify',lineHeight:'1.3rem'}}>
           Medical Projects is the leading Number 1 Medical Solutions in th near future
 With a product portfolio of over 25 different innovative solutions that fit every Hospital Need for pure healthy and safe Medical  Services, Project has been stablished  in 2022
 Our site is also proud to be extending its trusted products across 6 Export countries throughout North Africa, GCC and the Far East.
