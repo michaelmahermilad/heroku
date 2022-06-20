@@ -156,9 +156,12 @@ function Design() {
         mobile={false}
         title={"We Have Steps To Follow"}
       />
+      <Divider height="2rem" />
       <Swippereffect />
       <Divider height="5rem" />
       <Title title="Latest Statistics" color={"#11a683"} mobile={false} />
+      <Divider height="3rem" />
+
       <div className="countsdown">
         <CountDown
           end={300000}
@@ -186,12 +189,16 @@ function Design() {
         mobile={false}
         title={"Discover Latest Technology"}
       />
+            <Divider height="3rem" />
+
       <BannerGrid style={{ zIndex: "555" }} />
       <Divider height="5rem" />
       <Title color={"#11a683"} mobile={false} title={"Top Actions"} />
+      <Divider height="3rem" />
       <VerticalTabs />
       <Divider height="5rem" />
       <Title color={"#11a683"} mobile={false} title={"Social Links"} />
+      <Divider height="3rem" />
       <Flex />
       <Footer />
  

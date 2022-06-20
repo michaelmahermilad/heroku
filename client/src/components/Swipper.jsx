@@ -23,7 +23,7 @@ export const Swipper = () => {
 
   return (
     <>
-      <Heading
+      {/*<Heading
         style={{
           backgroundColor: "var(--main2)",
           borderRadius: "25px",
@@ -37,7 +37,7 @@ export const Swipper = () => {
         }}
       >
         Their Smile Matters
-      </Heading>
+      </Heading>*/}
       <Swiper
         style={{
           width: "87%",

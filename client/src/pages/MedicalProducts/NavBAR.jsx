@@ -42,10 +42,9 @@ function NavBAR() {
     <Container>
   
    
-    <figure onMouseMove={(e)=>handleMouseMove(e)} onMouseLeave={(e)=>handle(e)} style={zoom}>
-            <Image className='img' src={src}     /> 
+            <Image   src={src}     /> 
 
-        </figure>
+       
 
       
          <SearchBar>
@@ -71,6 +70,9 @@ function NavBAR() {
 
 export default NavBAR
 const Container =styled.div`
+a{
+  text-decoration: none;
+}
 figure {
   width:fit-content;
   background-repeat: no-repeat;
@@ -105,7 +107,10 @@ border-bottom: 1px solid #e5e5e5;
 `
 const Image=styled.img`
     
-
+width:17rem;
+@media(max-width:700px){
+  width:70vw;
+}
 
 `
 const SearchBar=styled.div`

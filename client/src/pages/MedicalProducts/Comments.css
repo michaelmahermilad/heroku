@@ -170,6 +170,9 @@
   .comments{
     margin-left: 3rem;
   }
+  .comment_message{
+    font-size:.89rem;
+  }
   .comments  {
    
     transform: scale(90%) 
@@ -224,10 +227,11 @@
      
       }
       .no_comment_found {
-        font-size: .8rem;
+        font-size: 12px;
         text-align: left;
         margin-left: 80px;
       }
+
       
       .comment_card {
         display: flex;
@@ -246,7 +250,7 @@
         height: 40px;
         object-fit: cover;
         border-radius: 50%;
-        margin : .8rem;
+        margin : 10px;
       }
       
       .fig_caption {
@@ -274,7 +278,7 @@
       .comment_text {
         margin-left: 60px;
       margin-top: 10px;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 400;
         
       }
@@ -284,6 +288,9 @@
 
         padding: 0px 6px 6px 0px;
         display: flex;
+      }
+      .comment_message{
+        font-size: 12px;
       }
       
       .comment_options button {

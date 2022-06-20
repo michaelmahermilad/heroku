@@ -9,7 +9,7 @@ function IconCards() {
   return (
     <>
         <div   >
-          <Heading style={{width:'100%',textAlign:'center', margin:'auto',color:'var(--main)' }}>Researchs Fields</Heading>
+          {/*<Heading style={{width:'100%',textAlign:'center', margin:'auto',color:'var(--main)' }}>Researchs Fields</Heading>*/}
           <Container>
               {ArrayofSections.map((i,index)=>{
                   return (

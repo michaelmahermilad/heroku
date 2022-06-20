@@ -9,20 +9,34 @@ import styled from "styled-components";
  import AnimaGasp from "./AnimaGasp";
 import SupportEngine from "../chat/SupportEngine";
 import Sendmail from "../components/Sendmail";
+import Title from "../components/Title";
 
 function Home({ openModal }) {
   return (
     <div>
       <MyBanner openModal={openModal} />
-      <Divider height="5rem"/>
+      <Divider height="6rem" />
+      <Title
+        color={"brown"}
+        mobile={false}
+        title={"Researchs Field"}
+      />
+       
+
       <IconCards/>
-      <Divider height="5rem"/>
+    
+      
+            <Divider height="6rem" />
       <SimpleDrawer />
-      <Divider height="5rem"/>
-      <Swipper/>
+      <Title
+        color={"brown"}
+        mobile={false}
+        title={"Their Smile Matters"}
+      />
+       <Swipper/>
       <Divider height="5rem"/>
       <Articles/>
-      <Divider height="5rem"/>
+     
       <AnimaGasp/>
       <Divider height="5rem"/>
       <Sendmail/>
