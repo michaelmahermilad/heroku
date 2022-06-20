@@ -131,7 +131,7 @@ export const Swipper = () => {
                 borderLeft: isActive ? "9px solid var(--main2)" : "",
               }}
             >
-              <Link to="R">
+              <Link to="medproducts">
                 {" "}
                 <img alt=''  src={Capture8} style={{ display: "block" }} />
               </Link>
