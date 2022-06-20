@@ -7,9 +7,9 @@ function Subs() {
       <div className="ToContain">
         <div className="firstDiv">
           <h2 className="MainTitle">Keep in the know</h2>
-          <div className="secondtitle">
+          <p className="secondtitle">
             Subscribe to keep up-to-date with everything .
-          </div>
+          </p>
           <div className="SearchContainer">
             <input
               type="email"
