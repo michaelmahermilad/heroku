@@ -47,7 +47,7 @@ function MedicalProducts() {
      
     </div>
     <Divider height={"2rem"} />
-<div style={{width:'94vw',margin:'auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))'}}>
+<div className='grid' style={{width:'94vw',margin:'auto',display:'grid'}}>
 {
   [...Array(8)].map(()=>(
      <ProductCard  />

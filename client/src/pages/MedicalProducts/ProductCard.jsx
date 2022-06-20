@@ -14,7 +14,7 @@ function a(value){
     <div  style={{ margin:'auto',marginBottom:'2rem'}}   class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src={h} alt="Avatar" style={{width:'190px', borderRadius: '12px',  height:'200px'}}/>
+      <img src={h} alt="Avatar" style={{width:'100%', borderRadius: '12px',  height:'200px'}}/>
     </div>
     <div class="flip-card-back">
       <h5   style={{color:'whitesmoke'}}>Hydraulic Surgical Operating Room Table
