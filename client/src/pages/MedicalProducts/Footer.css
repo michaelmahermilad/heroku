@@ -3,7 +3,21 @@
     text-align:center;
     font-size:11px;
     padding-bottom:.2rem;
-}@media (max-width:700px){
+}
+.parag{
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.6rem;
+}
+.head1{
+    font-size: 17px;
+}
+.footerGrid a {
+   text-decoration: none;
+
+}
+
+@media (max-width:700px){
     .head1{
 font-size: 14px;
     }
@@ -15,5 +29,7 @@ font-size: 14px;
     }
     .parag{
         font-size: 12px;
+        line-height: 15px;
+
     }
 }

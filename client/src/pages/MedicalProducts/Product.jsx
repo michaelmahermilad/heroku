@@ -78,9 +78,8 @@ function decrement(e) {
       </ProductImage>
       <Info>
 
-        <Link to='/'><p>Hydraulic Surgical Operating Room Table  </p>
+    <h1 className="heading1">Hydraulic Surgical Operating Room Table  </h1>
 
-        </Link>
 
         <div>
         <div class="btn_wrap">
@@ -178,16 +177,28 @@ function decrement(e) {
 export default Product;
 const Container = styled.div`
   display: flex;
-  padding: 3rem 3rem;
+  padding: 2.5rem 3rem;
   width: 100%;
+  a{
+    text-decoration: none;
+  }
   height: fit-content;
   @media (max-width: 800px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 0;
   }
 `;
 const Info = styled.div`
-padding: 2rem 3rem;
+padding: 2.5rem 2rem;
+ .heading1{
+  line-height: 3rem;
+    margin-bottom: 1rem;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    color: #035215;
+    font-weight: 400;
+ }
+
 
 .qty{
   margin-top: 2rem;
@@ -258,8 +269,8 @@ padding: 2rem 3rem;
 
 }
 .price{
-  font-size: 50px;
-    font-weight: 600!important;
+  font-size: 2.5rem;
+    font-weight: 400!important;
     margin:1rem 0;
     padding: 2rem  0;
     border-top: 1px solid  #EEEEED ;
@@ -406,6 +417,7 @@ position: absolute;
 const ProductImage = styled.div`
   flex: 50%;
   display: flex;
+  margin-top: 3rem;
 `;
 const Div1 = styled.div`
   display: flex;
