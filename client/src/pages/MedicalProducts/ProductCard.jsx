@@ -3,6 +3,7 @@ import   React from 'react';
 import { Rate } from 'antd';
 import h from './images/h.PNG'
 import './Product.css'
+import 'antd/dist/antd.css';
 function ProductCard(  ) {
 const [rating,setRating]=useState();
 console.log(rating);

@@ -210,8 +210,7 @@ const NAME = styled.h6`
   width: 200px;
   font-weight: 900;
   margin-left: calc(50% - 100px);
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+ 
   text-align: center;
   font-size: small;
 `;

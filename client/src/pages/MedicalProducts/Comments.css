@@ -22,11 +22,7 @@
      
    
   }
-  .comments_section>* {
-   line-height: .4rem;
-     
    
-  }
   .figure1 {
     display: flex;
     flex-direction: row;
@@ -213,11 +209,8 @@
          
        
       }
-      .comments_section>* {
-       line-height: 8px;
-         
-       
-      }
+      
+      
       .figure1 {
         display: flex;
         flex-direction: row;
@@ -303,7 +296,8 @@
         border-radius: 10px;
         cursor: pointer;
         border:1px solid rgba(196, 145, 145, 0); 
-line-height: 13px;
+
+        
 
 
 

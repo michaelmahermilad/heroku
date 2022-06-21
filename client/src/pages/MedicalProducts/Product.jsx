@@ -345,8 +345,7 @@ p{
     width: 210px;
     height: 52px;
     border-radius: 80px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
+     font-size: 16px;
     text-align: center;
     line-height: 50px;
     letter-spacing: 2px;

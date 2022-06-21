@@ -28,7 +28,7 @@ function Home({ openModal }) {
       <Articles />
 
       <AnimaGasp />
-      <Divider height="5rem" />
+    
       <Sendmail />
       <Quote> </Quote>
       <SupportEngine />
@@ -51,8 +51,7 @@ const Quote = styled.div`
   line-height: 3rem;
   text-align: center;
   margin: auto;
-  font-family: Cursive;
-
+ 
   @media (max-width: 700px) {
     font-size: 1rem;
     width: 80%;

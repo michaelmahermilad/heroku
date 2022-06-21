@@ -11,6 +11,7 @@ import ml2 from "../images/ml2.png";
 import image6 from "../images/image6.png";
 import Frame from "../images/Frame.svg";
 import "../pages/ResearchFiled.css";
+import 'antd/dist/antd.css';
 function ResearchField() {
   useEffect(() => {
     window.scrollTo(0, 0);

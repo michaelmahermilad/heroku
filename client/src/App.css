@@ -1,4 +1,4 @@
-@import '~antd/dist/antd.css';
+ 
 
 
 body{
@@ -11,37 +11,23 @@ body{
  z-index:10;
  background-position:20%  90%;
  background-attachment: fixed;
+ 
+
+
+ 
+ 
+
  }
  
-p,a,span{
-  font-size: 15px;
-  line-height: 1.5rem;  text-decoration: none;
-
-  
-}
-h1,h2{
-  font-size: 28px;
-  line-height: 2.2rem;
-}
-h3,h4{
-  font-size: 23px;
-  line-height: 1.7rem;
-}
-h5,h6{
-  font-size: 16px;
-  line-height: 1.5rem;
-}
  
 *{ 
- 
-  margin-left: 0;
-  line-height: 1.1rem;
-  margin:0;
+  
+   margin:0;
   box-sizing: border-box;
   padding: 0;
   scroll-behavior: smooth;
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
- }
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
 
 .flexcolumn{
   flex-direction: row;
@@ -51,7 +37,7 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   --main: rgb(131, 17, 17)	;
   --main2:rgb(250, 187, 187) ;
   --chatwidth:90%;
-  --fonttitle:1.5rem;
+ 
   
 }
 .grid{
@@ -61,13 +47,9 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   .grid{
     grid-template-columns:repeat(auto-fit,minmax(90vw,1fr));
   }
-  :root{
-    --fonttitle:1.2rem;
-  }
+ 
 }
-p {
-  margin-bottom: 0px;
-}
+ 
 
   .header_middle .div1{
     position:absolute;
@@ -337,10 +319,7 @@ height: 90vh;
 
 
 
-  /* {
-    font-family: Avenir !important;
-  }*/
-  
+ 
   .ce-my-message-bubble {
     background-color: #7a39e0 !important;
   }
@@ -469,34 +448,9 @@ height: 90vh;
   .footerGrid:first-child{
     margin-right: 0;
   }
-  *{ 
-   
-    margin-left: 0;
-    line-height: 1.1rem;
-    margin:0;
-    box-sizing: border-box;
-    padding: 0;
-    scroll-behavior: smooth;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
-   }
-  p,a,span{
-    font-size: 12px;
-    line-height: 1.1rem;  text-decoration: none;
-  
-    
-  }
-  h1,h2{
-    font-size: 17px;
-    line-height: 1.6rem;
-  }
-  h3,h4{
-    font-size: 15px;
-    line-height: 1.5rem;
-  }
-  h5,h6{
-    font-size: 13px;
-    line-height: 1.3rem;
-  }
+ 
+
+
    
 
 
