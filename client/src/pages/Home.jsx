@@ -6,7 +6,7 @@ import SimpleDrawer from "../components/SimpleDrawer";
 import IconCards from "../components/IconCards/IconCards";
 import { Swipper } from "../components/Swipper";
 import styled from "styled-components";
- import AnimaGasp from "./AnimaGasp";
+import AnimaGasp from "./AnimaGasp";
 import SupportEngine from "../chat/SupportEngine";
 import Sendmail from "../components/Sendmail";
 import Title from "../components/Title";
@@ -16,32 +16,22 @@ function Home({ openModal }) {
     <div>
       <MyBanner openModal={openModal} />
       <Divider height="6rem" />
-      <Title
-        color={"brown"}
-        mobile={false}
-        title={"Researchs Field"}
-      />
-       
+      <Title color={"brown"} mobile={false} title={"Researchs Field"} />
 
-      <IconCards/>
-    
-      
-            <Divider height="6rem" />
+      <IconCards />
+
+      <Divider height="6rem" />
       <SimpleDrawer />
-      <Title
-        color={"brown"}
-        mobile={false}
-        title={"Their Smile Matters"}
-      />
-       <Swipper/>
-      <Divider height="5rem"/>
-      <Articles/>
-     
-      <AnimaGasp/>
-      <Divider height="5rem"/>
-      <Sendmail/>
+      <Title color={"brown"} mobile={false} title={"Their Smile Matters"} />
+      <Swipper />
+      <Divider height="5rem" />
+      <Articles />
+
+      <AnimaGasp />
+      <Divider height="5rem" />
+      <Sendmail />
       <Quote> </Quote>
-      <SupportEngine/>
+      <SupportEngine />
     </div>
   );
 }

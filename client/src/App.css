@@ -12,10 +12,29 @@ body{
  background-position:20%  90%;
  background-attachment: fixed;
  }
- a{
-  text-decoration: none;
+ 
+p,a,span{
+  font-size: 15px;
+  line-height: 1.5rem;  text-decoration: none;
+
+  
 }
-*{
+h1,h2{
+  font-size: 28px;
+  line-height: 2.2rem;
+}
+h3,h4{
+  font-size: 23px;
+  line-height: 1.7rem;
+}
+h5,h6{
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+ 
+*{ 
+ 
+  margin-left: 0;
   line-height: 1.1rem;
   margin:0;
   box-sizing: border-box;
@@ -450,5 +469,39 @@ height: 90vh;
   .footerGrid:first-child{
     margin-right: 0;
   }
+  *{ 
+   
+    margin-left: 0;
+    line-height: 1.1rem;
+    margin:0;
+    box-sizing: border-box;
+    padding: 0;
+    scroll-behavior: smooth;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
+   }
+  p,a,span{
+    font-size: 12px;
+    line-height: 1.1rem;  text-decoration: none;
+  
+    
+  }
+  h1,h2{
+    font-size: 17px;
+    line-height: 1.6rem;
+  }
+  h3,h4{
+    font-size: 15px;
+    line-height: 1.5rem;
+  }
+  h5,h6{
+    font-size: 13px;
+    line-height: 1.3rem;
+  }
+   
+
+
+
+
+
 
 }

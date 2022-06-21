@@ -65,7 +65,7 @@ function ResearchField() {
             marginBottom: "1.5rem",
             width: "auto",
             color: "var(--main2)",
-            fontsize: "30px",
+            fontsize: "34px",
           }}
           className="title"
         >
