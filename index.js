@@ -41,7 +41,7 @@ io.on("connect", (socket) => {
   });
 });
 {
-  /*app.use(express.static(path.resolve(__dirname, "./client/build")));*/
+  app.use(express.static(path.resolve(__dirname, "./client/build")));
 }
 app.get("/", (req, res) => {
   res.send("api is running");
@@ -52,7 +52,6 @@ const {ApolloServer, gql} =require( 'apollo-server');
 const Email = require("./Models/Email");
 const typeDefs = gql`
   type Emails {
-  
     email: String
   }
   type Query{
