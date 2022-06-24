@@ -96,8 +96,7 @@ backdrop-filter: brightness(.7);
   line-height: 1;
 }
 .fa .date span:first-child {
-  font-family: "Source Code Pro", sans-serif;
-  font-size: 20px;
+   font-size: 20px;
   font-weight: 900;
 }
 .fa .date span:last-child {
@@ -114,8 +113,7 @@ backdrop-filter: brightness(.7);
 .fa figcaption   span {
  
 
-  font-family: "Source Code Pro", sans-serif;
-  color:white;
+   color:white;
   font-size:16px;
   line-height: 1.35;  
   background-color: rgba(15, 162, 241, 0.7);
