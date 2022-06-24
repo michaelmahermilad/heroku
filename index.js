@@ -40,15 +40,7 @@ io.on("connect", (socket) => {
     io.emit("message", textandmessage);
   });
 });
-{
-  app.use(express.static(path.resolve(__dirname, "./client/build")));
-}
-app.get("/", (req, res) => {
-  res.send("api is running");
-});
-httpServer.listen(process.env.PORT || 5000);
-
-const {ApolloServer, gql} =require( 'apollo-server');
+const {ApolloServer, gql} =require( 'apollo-server-express');
 const Email = require("./Models/Email");
 const typeDefs = gql`
   type Emails {
@@ -65,10 +57,25 @@ const typeDefs = gql`
       }
     }
   }
- 
-  const Appolo=new ApolloServer({typeDefs,resolvers})
+ async function f(){
+    const Appolo=new ApolloServer({typeDefs,resolvers})
+await Appolo.start();
+Appolo.applyMiddleware({app})
+ }
 
-  Appolo
-  .listen({ port: 9000 })
-  .then(serverInfo => console.log(`Server running at ${serverInfo.url}`));
+
+
+{
+  app.use(express.static(path.resolve(__dirname, "./client/build")));
+}
+
+
+
+app.get("/", (req, res) => {
+  res.send("api is running");
+});
+f()
+httpServer.listen(process.env.PORT || 5000);
+
+
 
