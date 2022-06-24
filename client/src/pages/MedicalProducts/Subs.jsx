@@ -20,7 +20,7 @@ function Subs() {
   
   },[]) 
   async function fetchGreeting() {
-      const response = await fetch('http://localhost:9000/', {
+      const response = await fetch('https://medicalprojectnet.herokuapp.com/', {
          method: 'POST',
          headers: {
            'content-type': 'application/json',
@@ -42,7 +42,7 @@ function Subs() {
     }
 console.log(emails[0].email)
   const sendData=async()=>{
- await Post('http://localhost:5000/api/prods/postemail',{email}).then((data)=>
+ await Post('https://medicalprojectnet.herokuapp.com/api/prods/postemail',{email}).then((data)=>
  {
  console.log(data)
 if (data.email){
