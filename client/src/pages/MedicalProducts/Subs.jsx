@@ -11,16 +11,12 @@ function Subs() {
   }])
   const [showsuccess,setShowsuccess]=useState(false);
   useEffect(()=>{
-    Get('http://localhost:5000/api/prods/getemails').then((data)=>
-    {
-    console.log(data);
-    }
-    )
+   
    fetchGreeting()
   
   },[]) 
   async function fetchGreeting() {
-      const response = await fetch('https://medicalprojectnet.herokuapp.com/', {
+      const response = await fetch('httpS://https://medicalprojectnet.herokuapp.com/graphql', {
          method: 'POST',
          headers: {
            'content-type': 'application/json',
@@ -42,7 +38,7 @@ function Subs() {
     }
 console.log(emails[0].email)
   const sendData=async()=>{
- await Post('https://medicalprojectnet.herokuapp.com/api/prods/postemail',{email}).then((data)=>
+ await Post('httpS://https://medicalprojectnet.herokuapp.com/api/prods/postemail',{email}).then((data)=>
  {
  console.log(data)
 if (data.email){
