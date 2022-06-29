@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.core.css";
-import "react-quill/dist/quill.snow.css";
+
 import "../Article/article.css";
 import styled from "styled-components";
  import COVID from "../../images/COVID.png";
@@ -312,7 +310,7 @@ import MAGDY from "../../images/MAGDY.png";
             devices that I recorded voice over for for like videos when I was
             working at Mophie the battery case company.
           </p> 
-          <ReactQuill
+        {/*  <ReactQuill
             theme="snow"
             onChange={handleChange}
             formats={formats}
@@ -323,7 +321,7 @@ import MAGDY from "../../images/MAGDY.png";
         
           <div onClick={handleArticle}>
             <button className="btn">Attach Article</button>
-          </div>  
+          </div> */} 
         </div>
 
         <div style={{ width: "92%", marginRight:'auto',marginLeft:'auto' }}>
