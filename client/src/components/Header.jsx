@@ -119,7 +119,7 @@ const Logo = styled.img`
   height: 36px;
   margin-left: 2rem;
   display: block;
-  @media (max-width: 900px) {
+  @media (max-width: 950px) {
     height: 30px;
     margin-left: 0.3rem;
   }
@@ -227,7 +227,7 @@ const Links = styled.div`
   min-height: 100%;
   text-align: center;
   align-items: center;
-  @media (max-width: 900px) {
+  @media (max-width: 950px) {
     display: none;
   }
 `;
@@ -249,10 +249,10 @@ const Main = styled.div`
   z-index: 30;
   background-color: white;
   width: 100%;
-  @media (max-width: 900px) {
+  @media (max-width: 950px) {
     grid-template-columns: initial;
   }
-  @media (min-width: 900px) {
+  @media (min-width: 950px) {
     .u {
       display: none;
     }
@@ -261,7 +261,7 @@ const Main = styled.div`
 const Btns = styled.div`
   display: flex;
   gap: 10px;
-  @media (max-width: 900px) {
+  @media (max-width: 950px) {
     display: none;
   }
 `;

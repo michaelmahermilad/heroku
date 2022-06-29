@@ -80,7 +80,7 @@ const BannerLeft = styled.div`
 
     color: var(--main);
     font-size: 1.5rem;
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
       width: 90%;
     }
     @media (max-width: 800px) {

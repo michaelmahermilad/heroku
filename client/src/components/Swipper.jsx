@@ -19,7 +19,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 export const Swipper = () => {
   const issmall = useMediaQuery({ query: "(max-width: 400px)" });
-  const issmall2 = useMediaQuery({ query: "(max-width: 900px)" });
+  const issmall2 = useMediaQuery({ query: "(max-width: 950px)" });
 
   return (
     <>

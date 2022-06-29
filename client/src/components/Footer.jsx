@@ -107,7 +107,7 @@ padding-bottom: 1rem;
 
 `;
 
-const FlexSocial = styled.div`
+ export const FlexSocial = styled.div`
   display: flex;
   flex: 40%;
 padding: 2rem;

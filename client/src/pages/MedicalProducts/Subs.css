@@ -3,31 +3,33 @@
  
     height: fit-content;
     margin: auto;
-    border-radius: 30px;
-    background-image: linear-gradient(150deg,#a600ff,#6200ff);
-    display: grid;
+     display: grid;
     overflow: hidden;
-      grid-template-columns: 73% 27%;
+      grid-template-columns: 70% 27%;
     border-radius: 30px;
     background-image: linear-gradient(100deg,rgb(31, 164, 124),#158f6ca9);
 
 
-
+align-items: center;
 }
 .firstDiv {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding:0rem 0;
+    justify-content: space-between;
+  
+
+    padding: 0rem 0;
+    
     align-items: flex-start;
-    margin-left: 4rem;
+    margin-left: 5rem;
 }
 .MainTitle {
-    font-size: 44px;
+    font-size: 47px;
     color:white;
+    font-weight: 900;
 }
 .secondtitle {
-    font-size: 24px;
+    font-size: 21px;
     color:white;
     margin-top: .4rem;
 }

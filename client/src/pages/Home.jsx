@@ -11,10 +11,10 @@ import SupportEngine from "../chat/SupportEngine";
 import Sendmail from "../components/Sendmail";
 import Title from "../components/Title";
 
-function Home({ openModal }) {
+function Home( ) {
   return (
     <div>
-      <MyBanner openModal={openModal} />
+      <MyBanner   />
       <Divider height="6rem" />
       <Title color={"brown"} mobile={false} title={"Researchs Field"} />
 
@@ -31,7 +31,7 @@ function Home({ openModal }) {
     
       <Sendmail />
       <Quote> </Quote>
-      <SupportEngine />
+     <SupportEngine/>
     </div>
   );
 }

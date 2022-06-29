@@ -83,7 +83,7 @@ color:white;
 border-radius: 4px;
 background-color:#008578 ;
 }
-@media (max-width:900px){
+@media (max-width:950px){
     .mainContainer{
         max-height:190px;
         

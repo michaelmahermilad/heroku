@@ -4,11 +4,86 @@ const Email = require("../Models/Email.js");
 const { checkSchema } = require("express-validator");
 
 const { Validate, myown1 } = require("../MiddleWares/Validator.js");
+const { Mongoose } = require("mongoose");
 
 const ProductRoute = express.Router();
 ProductRoute.get("/postall", (req, res) => {
   const a = Prod.insertMany(
     [
+      {   name: "Blood Pressure Monitors Product",
+      images: [
+        "https://www.pharmananda.com/upload/img/fe52e32d9d037c0.jpg",
+        "https://www.pharmananda.com/upload/img/67e5f54ad43ce38.jpg",
+        " https://www.pharmananda.com/upload/img/b3bd88a1f317d41.jpg"
+      ],
+      description: {
+        string1:
+          "Speed and accuracy lorem ipsum aren’t just a prediction, they’re a promise. Understanding patient response to both progression of their medical condition as well as various treatment options is vital to developing the best care plan.",
+        string2:
+          "Monitoring patient vital signs, such as heart rate and temperature, help manage your patients' health. Cardinal Health offers complete tympanic, oral/axillary and rectal thermometers, as well as all of the necessary components and accessories to help clinicians provide better patient care through fast and accurate temperature measurement.",
+      },
+      price: 130.55,
+      countInStock: 4,
+      rating: 4,
+      numReviews: 2,
+      reviews: [],
+    }, 
+   {   name: "Nebulizer Product",
+      images: [
+        "https://www.pharmananda.com/upload/img/63e27cc73c3c90a.png",
+        "https://www.pharmananda.com/upload/img/3a85eea2b6f6df9.jpg"
+      ],
+      description: {
+        string1:
+          "Speed and accuracy lorem ipsum aren’t just a prediction, they’re a promise. Understanding patient response to both progression of their medical condition as well as various treatment options is vital to developing the best care plan.",
+        string2:
+          "Monitoring patient vital signs, such as heart rate and temperature, help manage your patients' health. Cardinal Health offers complete tympanic, oral/axillary and rectal thermometers, as well as all of the necessary components and accessories to help clinicians provide better patient care through fast and accurate temperature measurement.",
+      },
+      price: 130.55,
+      countInStock: 4,
+      rating: 5,
+      numReviews: 2,
+      reviews: [],
+    },
+      
+      
+      {
+        name: "Diabetes Devices Product",
+        images: [
+          "https://www.pharmananda.com/upload/img/2803eb181daa38b.jpg",
+          "https://www.pharmananda.com/upload/img/a7ab956bac306df.jpg"
+        ],
+        description: {
+          string1:
+            "Speed and accuracy lorem ipsum aren’t just a prediction, they’re a promise. Understanding patient response to both progression of their medical condition as well as various treatment options is vital to developing the best care plan.",
+          string2:
+            "Monitoring patient vital signs, such as heart rate and temperature, help manage your patients' health. Cardinal Health offers complete tympanic, oral/axillary and rectal thermometers, as well as all of the necessary components and accessories to help clinicians provide better patient care through fast and accurate temperature measurement.",
+        },
+        price: 130.55,
+        countInStock: 4,
+        rating: 4,
+        numReviews: 2,
+        reviews: [],
+      },
+
+      {
+        name: "ELECTROSURGICAL GENERATORS ",
+        images: [
+          "http://www.utahmed.com/images/products/base/finesse-plus-big.jpg",
+        ],
+        description: {
+          string1:
+            "Speed and accuracy lorem ipsum aren’t just a prediction, they’re a promise. Understanding patient response to both progression of their medical condition as well as various treatment options is vital to developing the best care plan.",
+          string2:
+            "Monitoring patient vital signs, such as heart rate and temperature, help manage your patients' health. Cardinal Health offers complete tympanic, oral/axillary and rectal thermometers, as well as all of the necessary components and accessories to help clinicians provide better patient care through fast and accurate temperature measurement.",
+        },
+        price: 130.55,
+        countInStock: 4,
+        rating: 4,
+        numReviews: 2,
+        reviews: [],
+      },
+
       {
         name: "Cardinal Health Medical Thermometers ",
         images: [
@@ -117,21 +192,64 @@ const email='4d'
   }
 );
 
-ProductRoute.get(
-  "/getemails",
-  async (req, res) => {
-    const EMAILS = await Email.find({});
-    if (EMAILS) {
-      res.status(201).json(EMAILS);
-      console.log("EmailS"); 
-    } else {
-      res.status(400).json({ err: "ERROR GETTING EMAILS" });
-    }
+ProductRoute.get("/getemails", async (req, res) => {
+  const EMAILS = await Email.find({});
+  if (EMAILS) {
+    res.status(201).json(EMAILS);
+    console.log("EmailS");
+  } else {
+    res.status(400).json({ err: "ERROR GETTING EMAILS" });
   }
+});
+
+ProductRoute.get(
+  "/all",
+  async (req, res) => {
+    const keyword = req.query.keyword
+    ? {
+        name: {
+          $regex: req.query.keyword,
+          $options: "i",
+        },
+      }
+    : {};
+
+
+    let a
+    if (req.query?.keyword === "" ) {
+      a = await Prod.find({});
+     
+    } else {
+      try {
+        console.log(req.query.keyword);
+        a = await Prod.aggregate([
+          {
+            $search: {
+              index: "searchName",
+              autocomplete: {
+                query: `${req.query.keyword}`,
+                path: "name",
+              },
+            },
+          },
+        
+        ]);
+      } catch (err) {
+        return res.status(500).json({ msg: err.message });
+      }
+    }
+    const b = await Prod.find({});
+    res.json({products:a,productss:b});
+  }
+ 
+   
 );
 
 
-
-
+ProductRoute.get("/", async (req, res) => {
+  const product = await Prod.findById(req.query.id);
+  if (product) res.status(200).json(product);
+  else res.status(400).json({ err: "no product by this id" });
+});
 
 module.exports = ProductRoute;

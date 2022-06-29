@@ -219,7 +219,7 @@ justify-content: center;
 justify-items: center;
 row-gap: 2rem;
 grid-template-columns: 15.5% 15.5% 15.5%  15.5% 15.5% 15.5% ;
-@media(max-width:900px){
+@media(max-width:950px){
     grid-template-columns: 33.3% 33.3%  33.3%;
 
 }

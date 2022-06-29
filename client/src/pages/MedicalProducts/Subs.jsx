@@ -74,7 +74,7 @@ function Subs() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            {emails[0].email}
+ 
             <button
               disabled={showsuccess ? true : false}
               className="sub"

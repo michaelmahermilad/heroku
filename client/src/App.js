@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
  import Auth from "./pages/Auth";
 import AuthLogin from "./pages/AuthLogin";
-import Modal from "react-modal";
+
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import C from "../src/images/C.png";
 import SupportAdmin from "./chat/SupportAdmin";
@@ -17,19 +17,8 @@ import B from "./pages/B";
 import Sidebar from "./pages/Sidebar";
 import Design from "./components/Design";
 import MedicalProducts from "./pages/MedicalProducts/MedicalProducts";
- const theme = createTheme();
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    height: "20rem",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  },
-};
-Modal.setAppElement(document.getElementById("root"));
+  const theme = createTheme();
+
 
 function App(props) {
  
@@ -58,32 +47,19 @@ function App(props) {
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <div {...props} className="App">
-          <Modal
-            style={modalStyles}
-            isOpen={modalIsOpen}
-            onAfterOpen={afterOpenModal}
-            onRequestClose={closeModal}
-            className="Modal"
-            overlayClassName="Overlay"
-            contentLabel="Example Modal"
-          >
-            <h2    style={{fontSize:'3rem',position:'absolute',top:'4rem',left:'9rem',color:'white'}}   ref={(_subtitle) => (subtitle = _subtitle)}> </h2>
-             <button onClick={closeModal}  style={{ borderRadius:'25px', position:'absolute' }}      >Sign up</button>
-            <img alt=''  style={{ objectPosition:'top', width:'100%' ,margin:'auto'}} src={C}  className="imagemodal"/>
-           
-          </Modal>
-
+     
           <Routes>
-            
             <Route element={<B />}>
               <Route path="/field" element={<ALL />} />{" "}
               <Route path="/R" element={<Sidebar />} />
               <Route path="/DESIGN" element={<Design/>}/>
-              <Route path="/MedProducts" element={<MedicalProducts/>}/> 
-            </Route>
+              <Route path="/medproducts" element={<MedicalProducts/>}/>
+              <Route path="/medproducts/:name" element={<MedicalProducts/>}/>
+
+             </Route>
             <Route element={<A />}>
               
-              <Route path="/" element={<Home openModal={openModal} />} />
+              <Route path="/" element={<Home   />} />
               <Route path="/login" element={<AuthLogin />} />
               <Route path="/signup" element={<Auth />} />
               <Route path="/main" element={<SupportAdmin />} />

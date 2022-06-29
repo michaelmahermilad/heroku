@@ -212,7 +212,7 @@ height: 90vh;
  .Modal button:hover{
    color:var(--main);
  }
-@media(max-width:900px){
+@media(max-width:950px){
 
 
    .imagemodal{
@@ -357,8 +357,8 @@ height: 90vh;
   }
   .chathover{
     
-    background-color: rgb(125, 27, 27);
-     border:5px solid rgb(231, 136, 136);
+    background-color: rgb(207, 200, 200);
+     border:5px solid rgb(255, 255, 255);
   }
   .chathover:hover{
     border:7px solid rgb(240, 182, 182);
@@ -369,16 +369,16 @@ height: 90vh;
  
 
  *::-webkit-scrollbar {
-    width: .5rem;
+    width: .9rem;
   }
    
  *::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(107, 13, 13, 0.3);
+    box-shadow: inset 0 0 6px rgb(223, 219, 219);
   }
    
   *::-webkit-scrollbar-thumb {
-    background-color: var(--main);
-    border-radius: 12px;
+    background-color: #e1e1e1;
+    border-radius: 4px;
     outline: none;
   }
   .buttonfooter{

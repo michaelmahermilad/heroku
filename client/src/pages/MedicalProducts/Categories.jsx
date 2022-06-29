@@ -10,16 +10,16 @@ function Categories() {
         <Link to=""></Link>
         <p>Categories</p>
         <HoverDiv className="div">
-          <Link to="">
+          <Link  to="">
             <p>Products</p>
           </Link>
-          <Link to="">
+          <Link   to="">
             <p>Specials</p>
           </Link>
-          <Link to="">
+          <Link    to="">
             <p>FAQS</p>
           </Link>
-          <div className="divaa">
+          <div    className="divaa">
             <p>ALL Products</p>
           </div>
         </HoverDiv>
@@ -49,16 +49,16 @@ function Categories() {
             icon={faHome}
           />
         </Link>
-        <Link to="">
+        <Link className="disappear"  to="">
           <p>Products</p>
         </Link>
-        <Link to="">
+        <Link  className="disappear" to="">
           <p>Specials</p>
         </Link>
-        <Link to="">
+        <Link  className="disappear" to="">
           <p>FAQS</p>
         </Link>
-        <Link to="">
+        <Link className="disappear"  to="">
           <p>Contact us</p>
         </Link>
       </Div2>
@@ -74,7 +74,7 @@ function Categories() {
           }}
           icon={faPhone}
         />
-        <p>Call us: +0911237878</p>
+        <p  className="disappear"    >Call us: +0911237878</p>
       </Div3>
     </Container>
   );
@@ -87,6 +87,13 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   height: 4rem;
+  @media (max-width:950px){
+    .disappear{
+  display:none;
+}
+  }
+
+
 `;
 const Div1 = styled.div`
   position: relative;
@@ -101,7 +108,10 @@ const Div1 = styled.div`
   justify-content: space-around;
   margin-right: 2rem;
   p {
-    height: 0rem;
+    height: 4rem;
+    line-height: 4rem;
+  padding: 0;
+  margin: 0;
     color: white;
   }
   :hover {
@@ -111,6 +121,7 @@ const Div1 = styled.div`
        top: 4rem;
     }
   }
+
 `;
 const HoverDiv = styled.div`
   border: 1px solid #e5e5e5;
@@ -118,33 +129,40 @@ const HoverDiv = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 4.7rem;
+  top: 4rem;
   opacity: 0;
   z-index: 9;
   background-color: #ffffff;
-  padding-top: 1rem;
+  left: 0;
   width: 12rem;
   transition: all .2s linear;
   .divaa {
     display: flex;
     align-items: center;
-    height: 2.4rem;
+    height: 2rem;
     width: 12rem;
     background-color: #1fa47c;
 
-    padding: 1rem;
      
     p {
-      padding: 0.5rem 1rem;
-      height: 0rem;
+      padding: 0rem 1rem;
+      
+      margin:0;
+    height: 0rem;
+    line-height: 0;
       :hover {
       color: #ffffff;
     }
     }
   }
+  a{
+      text-decoration: none;
+  }
   p {
-    padding: 0.5rem 1.9rem;
-    height: 0rem;
+    padding: 0rem 1rem;
+    height: 2rem;
+    line-height: 2rem;
+
     color: black;
     :hover {
       color: #1fa47c;
@@ -157,8 +175,19 @@ const Div2 = styled.div`
   width: 20rem;
   justify-content: space-between;
   align-items: center;
+  a{
+    text-decoration: none;
+  }
   p {
-    height: 0rem;
+    height: 4rem;
+    margin:0;
+    padding: 0;
+    line-height: 4rem;
+    color:green;
+ 
+     :hover{
+color:gray;
+    }
   }
 `;
 const Div3 = styled.div`
@@ -167,7 +196,11 @@ const Div3 = styled.div`
   display: flex;
   align-items: center;
   p {
-    height: 0rem;
+    height: 4rem;
+    margin:0;
+    padding: 0;
+    line-height: 4rem;
+    color:green;
   }
   position: absolute;
   right: 3rem;

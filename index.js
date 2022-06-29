@@ -55,9 +55,7 @@ async function startApolloServer(typeDefs, resolvers) {
     });
   });
   {
-  
   app.use(express.static(path.resolve(__dirname, "./client/build")));
-
   }
   // Use this after the variable declaration
   app.get("/", (req, res) => {
@@ -71,16 +69,13 @@ async function startApolloServer(typeDefs, resolvers) {
     cache: "bounded",
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
   });
-
   // More required logic for integrating with Express
   await server.start();
   server.applyMiddleware({
     app,
   });
-
   // Modified server startup
   await new Promise((resolve) => httpServer.listen({port:process.env.PORT||5000 }, resolve));
   console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
 }
-
 startApolloServer(typeDefs, resolvers);

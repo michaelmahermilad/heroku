@@ -86,7 +86,7 @@ letter-spacing: 1px;
      
      margin: 0;
     font-size: 1.575rem;
-    @media (max-width:900px){
+    @media (max-width:950px){
       width:90%;
 margin-top:0;
     }

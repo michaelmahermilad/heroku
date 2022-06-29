@@ -20,7 +20,20 @@
   .flip-card:hover .flip-card-inner {
     transform: rotateY(175deg);
   }
-  
+  .flip-card-back h5{
+
+    font-size: 16px;
+  }
+  .flip-card-back h6{
+
+    font-size: 14px;
+  }
+  .flip-card-back span{
+
+    font-size: 14px;
+  }
+
+
   .flip-card-front, .flip-card-back {
     border-radius: 12px;
     position: absolute;

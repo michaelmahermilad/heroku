@@ -4,7 +4,7 @@ import { Button } from "./Header";
 import LOGOO from "../images/LOGOO.svg";
 import Main from "../images/Main.svg";
 import gsap from "gsap";
- function MyBanner(props) {
+ function MyBanner() {
   useEffect(()=>{
     var tl = gsap.timeline({
         repeat: 100, 
@@ -35,7 +35,7 @@ import gsap from "gsap";
             width={"17rem"}
             height={"2.5rem"}
             style={{ marginTop: "2rem" }}
-            onClick={props.openModal}
+           
           >
             Join The Community Now
 
@@ -117,7 +117,7 @@ clip-path: circle(46.0% at 50% 49%);
     padding-bottom: 0rem;
     color: var(--main);
     font-size: 1.6em;
-    @media (max-width:900px){
+    @media (max-width:950px){
       width:90%;
 margin-top:0;
     }
