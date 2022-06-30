@@ -6,7 +6,7 @@ import { Link, Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const AutoSearch = ({ funct, keyE,keya, pro, set }) => {
+const AutoSearch = ({ funct, keyE, keya, pro, set }) => {
   let navigate = useNavigate();
   const linkRefs = [];
   const keys = {
@@ -24,7 +24,7 @@ const AutoSearch = ({ funct, keyE,keya, pro, set }) => {
             search: `?id=${linkRefs[focusIndex]._id}`,
           });
 
-       window.location.reload()
+          window.location.reload();
           updateDisplayResults(true);
           updateFocusIndex(-1);
         }
@@ -70,11 +70,15 @@ const AutoSearch = ({ funct, keyE,keya, pro, set }) => {
       updateSearchTerm("");
       updateFilteredResults([]);
       setShow(false);
-      funct(e,"");
+      funct(e, "");
     } else {
       updateSearchTerm(e.target.value);
-
-      funct(e,e.target.value);
+     
+      funct(e, e.target.value);
+   updateFilteredResults([]);
+         setShow(true)
+         
+     
     }
   };
   const hideAutoSuggest = (e) => {
@@ -94,20 +98,31 @@ const AutoSearch = ({ funct, keyE,keya, pro, set }) => {
   };
   const showAutoSuggest = (e) => updateDisplayResults(false);
   useEffect(() => {
-    updateFilteredResults([]);
+  
+ 
+
+       
     const getSearchResult = async () => {
       const searchResultsResponse = await productList.products.products;
       console.log(searchResultsResponse);
-
-      updateFilteredResults(searchResultsResponse.slice(0, 4));
-    };
-
+if(searchResultsResponse.length>5){
+     updateFilteredResults(searchResultsResponse.slice(0, 4));
+}else{
+  updateFilteredResults(searchResultsResponse );
+}
+   
+ 
+     
+    }
+  
+    
+if(searchTerm.length>0)
     getSearchResult();
 
-    if (searchTerm.length > 0) {
-      setShow(true);
-    }
-  }, [funct]);
+ return ()=>updateFilteredResults([])
+
+    
+  }, [productList]);
   useEffect(() => {
     updateFilteredResults([]);
     setShow(false);
@@ -123,20 +138,31 @@ const AutoSearch = ({ funct, keyE,keya, pro, set }) => {
         onBlur={hideAutoSuggest}
         onKeyPress={(e) => keyE(e)}
       />
-
-      <FontAwesomeIcon
-        onClick={(e)=>{funct(e,searchTerm,true) ;keya(e)}}
+      <div
         style={{
-          cursor: "pointer",
-          fontSize: "1rem",
-          marginLeft: "9px",
-          marginRight:'9px',
-          lineHeight:'100%',
-          color: "#198b69",
-         
+          width: "2.4rem",
+          height: "100%",
+          float: "right",
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
         }}
-        icon={faSearch}
-      />
+      >
+        <FontAwesomeIcon
+          onClick={(e) => {
+            funct(e, searchTerm, true);
+            keya(e);
+          }}
+          style={{
+            cursor: "pointer",
+            fontSize: "1rem",
+            lineHeight: "2rem",
+            color: "#198b69",
+          }}
+          icon={faSearch}
+        />
+      </div>
+
       <ul
         style={{
           display: `${show ? "block" : "none"}`,

@@ -213,7 +213,7 @@ const Image = styled.img`
 `;
   export const Input = styled.input`
   height: 100%;
-  width: 87%;
+  width: calc(100% - 2.4rem);
   z-index: 999;
   background-color: inherit;
   border-radius: 5px;
@@ -221,7 +221,7 @@ const Image = styled.img`
   padding-left: 1rem;
   border: none;
   @media (max-width: 800px) {
- width:85%;
+    width: calc(100% - 2.4rem);
   }
 `;
 const ShoppingCart = styled.div`
