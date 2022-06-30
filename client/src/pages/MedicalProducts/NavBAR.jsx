@@ -165,6 +165,8 @@ const Image = styled.img`
   position: absolute;
   transition: all .2s linear;
  
+ 
+ 
   ul{
     padding-left: 0;
      display:none;
@@ -202,7 +204,7 @@ const Image = styled.img`
 `;
   export const Input = styled.input`
   height: 100%;
-  width: 88%;
+  width: 87%;
   z-index: 999;
   background-color: inherit;
   border-radius: 5px;
@@ -210,6 +212,7 @@ const Image = styled.img`
   padding-left: 1rem;
   border: none;
   @media (max-width: 800px) {
+ width:85%;
   }
 `;
 const ShoppingCart = styled.div`

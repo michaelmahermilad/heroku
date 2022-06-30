@@ -86,7 +86,9 @@ background-color:#21d48d ;    width: 84%;
         display: none;
     } 
     .inpt{
-        width: 84%;font-size: 13px;
+        width: 84%;
+        font-size: 13px;
+
     }
     .inpt::placeholder{
        font-size: 13px;
@@ -99,13 +101,14 @@ background-color:#21d48d ;    width: 84%;
         font-size: 13px;
     }
     .MainTitle{
-        font-size: 25px;
+        font-size: 24px;
+        font-weight: 800;
         text-align: center;
     }
     .secondtitle{
         font-size: 12px;
         text-align: center;
-        line-height: 10px;
+        line-height: 14px;
     }
     .firstDiv{
         align-items: center;

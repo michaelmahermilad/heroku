@@ -55,10 +55,10 @@ async function startApolloServer(typeDefs, resolvers) {
     });
   });
   {
-  app.use(express.static(path.resolve(__dirname, "./client/build")));
+    app.use(express.static(path.resolve(__dirname, "./client/build")));
   }
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './client/build/index.html'));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
   });
   // Use this after the variable declaration
   app.get("/", (req, res) => {
@@ -78,7 +78,9 @@ async function startApolloServer(typeDefs, resolvers) {
     app,
   });
   // Modified server startup
-  await new Promise((resolve) => httpServer.listen({port:process.env.PORT||5000 }, resolve));
+  await new Promise((resolve) =>
+    httpServer.listen({ port: process.env.PORT || 5000 }, resolve)
+  );
   console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
 }
 startApolloServer(typeDefs, resolvers);

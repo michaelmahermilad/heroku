@@ -130,7 +130,10 @@ const AutoSearch = ({ funct, keyE, pro, set }) => {
           cursor: "pointer",
           fontSize: "1rem",
           marginLeft: "9px",
+          marginRight:'9px',
+          lineHeight:'100%',
           color: "#198b69",
+         
         }}
         icon={faSearch}
       />

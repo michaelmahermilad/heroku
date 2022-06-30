@@ -121,7 +121,10 @@ const Div1 = styled.div`
        top: 4rem;
     }
   }
-
+  @media screen and (max-width:950px){
+margin-left    :9px ;
+margin-right: 1rem;
+  }
 `;
 const HoverDiv = styled.div`
   border: 1px solid #e5e5e5;
@@ -209,4 +212,8 @@ const Div3 = styled.div`
   }
   padding-left: 2rem;
   border-left: 1px solid #e5e5e5;
+  @media screen and (max-width:950px){
+    border-left: none;
+    right:1rem;
+  }
 `;

@@ -69,7 +69,7 @@ ProductRoute.get("/postall", (req, res) => {
       {
         name: "ELECTROSURGICAL GENERATORS ",
         images: [
-          "http://www.utahmed.com/images/products/base/finesse-plus-big.jpg",
+          "https://www.medtronic.com/content/dam/covidien/library/global/en/product/electrosurgical-hardware/valleylab-ls10-generator.jpg",
         ],
         description: {
           string1:
