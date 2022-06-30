@@ -24,7 +24,7 @@ const AutoSearch = ({ funct, keyE, pro, set }) => {
             search: `?id=${linkRefs[focusIndex]._id}`,
           });
 
-           window.location.reload(false);
+       window.location.reload()
           updateDisplayResults(true);
           updateFocusIndex(-1);
         }

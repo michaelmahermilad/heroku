@@ -53,8 +53,8 @@ function App(props) {
               <Route path="/field" element={<ALL />} />{" "}
               <Route path="/R" element={<Sidebar />} />
               <Route path="/DESIGN" element={<Design/>}/>
-              <Route path="/medproducts" element={<MedicalProducts/>}/>
-              <Route path="/medproducts/:name" element={<MedicalProducts/>}/>
+              <Route path="/medproducts" element={<MedicalProducts  key={Date.now()} />}/>
+              <Route path="/medproducts/:name" element={<MedicalProducts  key={Date.now()}  />}/>
 
              </Route>
             <Route element={<A />}>
