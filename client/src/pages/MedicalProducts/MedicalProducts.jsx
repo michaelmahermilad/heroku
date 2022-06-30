@@ -44,6 +44,7 @@ function MedicalProducts() {
   }, []);
   const [keyword,setKeyword]=useState("");
   function funct(k){
+ 
      setKeyword(k)
 
          

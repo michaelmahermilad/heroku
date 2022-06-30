@@ -35,10 +35,11 @@ function NavBAR({ funct ,pro,setR }) {
   };
  
   const key = (e) => {
-   
+   if(e.key=="Enter")
+   {
       funct(e.target.value);
       setR('start')
-
+   }
     
   };
 

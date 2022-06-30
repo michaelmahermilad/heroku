@@ -125,7 +125,7 @@ const AutoSearch = ({ funct, keyE, pro, set }) => {
       />
 
       <FontAwesomeIcon
-        onClick={(e) => funct(searchTerm)}
+        onClick={(e) =>{ keyE(e) ; funct(searchTerm)}}
         style={{
           cursor: "pointer",
           fontSize: "1rem",
