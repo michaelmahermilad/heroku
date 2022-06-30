@@ -6,7 +6,7 @@ import { Link, Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const AutoSearch = ({ funct, keyE, pro, set }) => {
+const AutoSearch = ({ funct, keyE,keya, pro, set }) => {
   let navigate = useNavigate();
   const linkRefs = [];
   const keys = {
@@ -70,11 +70,11 @@ const AutoSearch = ({ funct, keyE, pro, set }) => {
       updateSearchTerm("");
       updateFilteredResults([]);
       setShow(false);
-      funct("");
+      funct(e,"");
     } else {
       updateSearchTerm(e.target.value);
 
-      funct(e.target.value);
+      funct(e,e.target.value);
     }
   };
   const hideAutoSuggest = (e) => {
@@ -107,7 +107,7 @@ const AutoSearch = ({ funct, keyE, pro, set }) => {
     if (searchTerm.length > 0) {
       setShow(true);
     }
-  }, [pro, funct]);
+  }, [funct]);
   useEffect(() => {
     updateFilteredResults([]);
     setShow(false);
@@ -125,7 +125,7 @@ const AutoSearch = ({ funct, keyE, pro, set }) => {
       />
 
       <FontAwesomeIcon
-        onClick={(e) =>{ keyE(e) ; funct(searchTerm)}}
+        onClick={(e)=>{funct(e,searchTerm,true) ;keya(e)}}
         style={{
           cursor: "pointer",
           fontSize: "1rem",

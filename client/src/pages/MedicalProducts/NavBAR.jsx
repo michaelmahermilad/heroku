@@ -37,11 +37,19 @@ function NavBAR({ funct ,pro,setR }) {
   const key = (e) => {
    if(e.key=="Enter")
    {
-      funct(e.target.value);
+      funct(e,e.target.value);
       setR('start')
    }
     
   };
+  const keye = (e) => {
+ 
+    {
+     
+       setR('start')
+    }
+     
+   };
 
   return (
     <>
@@ -86,7 +94,7 @@ function NavBAR({ funct ,pro,setR }) {
    
       <Container>
         <Image src={src} />
-<AutoSearch    keyE={key}  funct={funct}/>
+<AutoSearch keya={keye}    keyE={key}  funct={funct}/>
        
         <ShoppingCart>
           <FontAwesomeIcon

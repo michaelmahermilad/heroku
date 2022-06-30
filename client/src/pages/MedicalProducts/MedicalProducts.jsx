@@ -43,12 +43,19 @@ function MedicalProducts() {
     };
   }, []);
   const [keyword,setKeyword]=useState("");
-  function funct(k){
- 
-     setKeyword(k)
+  function funct(e,k,y){
 
+
+
+
+
+     setKeyword(k)
+     if(e.key=="Enter" ||y==true)
+     {
+      myRe.current.scrollIntoView();
+     }
          
-myRe.current.scrollIntoView();
+
    
   }
 
