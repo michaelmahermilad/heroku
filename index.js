@@ -33,7 +33,7 @@ async function startApolloServer(typeDefs, resolvers) {
   const app = express();
   const httpServer = createServer(app);
   const corsOptions = {
-    AccessControlAllowOrigin: "http://localhost:3000",
+    AccessControlAllowOrigin: "https://medicalprojectnet.herokuapp.com",
     origin: "*",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     preflightContinue: false,

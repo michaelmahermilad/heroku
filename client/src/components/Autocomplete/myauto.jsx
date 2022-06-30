@@ -19,12 +19,12 @@ const AutoSearch = ({ funct, keyE, pro, set }) => {
     switch (e.keyCode) {
       case keys.ENTER:
         if (focusIndex !== -1) {
-          navigate(
-            `/medproducts/${linkRefs[focusIndex].name.split(" ")[0]}?id=${
-              linkRefs[focusIndex]._id
-            } `
-          );
-          window.location.reload();
+          navigate({
+            pathname: `/medproducts/${linkRefs[focusIndex].name.split(" ")[0]}`,
+            search: `?id=${linkRefs[focusIndex]._id}`,
+          });
+
+           window.location.reload(false);
           updateDisplayResults(true);
           updateFocusIndex(-1);
         }
@@ -75,7 +75,6 @@ const AutoSearch = ({ funct, keyE, pro, set }) => {
       updateSearchTerm(e.target.value);
 
       funct(e.target.value);
-     
     }
   };
   const hideAutoSuggest = (e) => {
@@ -84,20 +83,17 @@ const AutoSearch = ({ funct, keyE, pro, set }) => {
     if (e.relatedTarget && e.relatedTarget.className === "autosuggest-link") {
       return;
     }
-setShow(false)
+    setShow(false);
     updateDisplayResults(true);
     updateFocusIndex(-1);
   };
 
-   
-  
   const reload = () => {
     set(false);
     updateFilteredResults([]);
   };
   const showAutoSuggest = (e) => updateDisplayResults(false);
   useEffect(() => {
-  
     updateFilteredResults([]);
     const getSearchResult = async () => {
       const searchResultsResponse = await productList.products.products;
@@ -107,7 +103,7 @@ setShow(false)
     };
 
     getSearchResult();
- 
+
     if (searchTerm.length > 0) {
       setShow(true);
     }
@@ -117,82 +113,79 @@ setShow(false)
     setShow(false);
   }, []);
   return (
-   
-      <SearchBar  style={{zIndex:'9999'}}>
-        <Input
-          type="text"
-          placeholder="Search .."
-          onChange={updateSearch}
-          onKeyDown={handleNavigation}
-          onFocus={showAutoSuggest}
-          onBlur={hideAutoSuggest}
-          
-          onKeyPress={(e) => keyE(e)}
-        />
+    <SearchBar style={{ zIndex: "9999" }}>
+      <Input
+        type="text"
+        placeholder="Search .."
+        onChange={updateSearch}
+        onKeyDown={handleNavigation}
+        onFocus={showAutoSuggest}
+        onBlur={hideAutoSuggest}
+        onKeyPress={(e) => keyE(e)}
+      />
 
-        <FontAwesomeIcon
-          onClick={(e) => funct(searchTerm)}
-          style={{
-            cursor: "pointer",
-            fontSize: "1rem",
-            marginLeft: "9px",
-            color: "#198b69",
-          }}
-          icon={faSearch}
-        />
-        <ul
-          style={{
-            display: `${show ? "block" : "none"}`,
-            listStyle: "none",
-            border: "1px solid  #e4e4e4",
-            backgroundColor: "white",
-            borderRadius: "7px",
-          }}
-          className="search-suggestions"
-        >
-          {!displayResults && searchTerm && (
-            <li
-              style={{ listStyle: "none",  padding: "0px 8px"}}
-              key="-1"
-              className={focusIndex === -1 ? "active" : null}
-            >{`Search for ${searchTerm}`}</li>
-          )}
-          {!displayResults &&
-            filteredResults.map((m, index) => {
-              linkRefs[index] = m;
-              return (
-                <li
-                  style={{
-                    listStyle: "none",
-                    listStyle: "none",
-                    color: "black",
-                    fontWeight: "500", padding: "0px 8px"
-                  }}
-                  key={index}  
-                  className={focusIndex === index ? "active" : null}
+      <FontAwesomeIcon
+        onClick={(e) => funct(searchTerm)}
+        style={{
+          cursor: "pointer",
+          fontSize: "1rem",
+          marginLeft: "9px",
+          color: "#198b69",
+        }}
+        icon={faSearch}
+      />
+      <ul
+        style={{
+          display: `${show ? "block" : "none"}`,
+          listStyle: "none",
+          border: "1px solid  #e4e4e4",
+          backgroundColor: "white",
+          borderRadius: "7px",
+        }}
+        className="search-suggestions"
+      >
+        {!displayResults && searchTerm && (
+          <li
+            style={{ listStyle: "none", padding: "0px 8px" }}
+            key="-1"
+            className={focusIndex === -1 ? "active" : null}
+          >{`Search for ${searchTerm}`}</li>
+        )}
+        {!displayResults &&
+          filteredResults.map((m, index) => {
+            linkRefs[index] = m;
+            return (
+              <li
+                style={{
+                  listStyle: "none",
+                  listStyle: "none",
+                  color: "black",
+                  fontWeight: "500",
+                  padding: "0px 8px",
+                }}
+                key={index}
+                className={focusIndex === index ? "active" : null}
+              >
+                <Link
+                  className="autosuggest-link"
+                  onClick={reload}
+                  to={`/medproducts/${m.name.split(" ")[0]}?id=${m._id}`}
                 >
-                  <Link     className="autosuggest-link"
-                    onClick={reload}
-                    to={`/medproducts/${m.name.split(" ")[0]}?id=${m._id}`}
+                  <p
+                    style={{
+                      padding: "4px 0px",
+                      display: "block",
+                      color: "black",
+                    }}
                   >
-                    <a
-                      style={{
-                        padding: "4px 0px",
-                        display: "block",
-                        color: "black",
-                      }}
-                    
-                    >
-                      {m.name}
-                    </a>
-                  </Link>
-                </li>
-              );
-            })}
-        </ul>
-      </SearchBar>
-
-   
+                    {m.name}
+                  </p>
+                </Link>
+              </li>
+            );
+          })}
+      </ul>
+    </SearchBar>
   );
 };
 
