@@ -17,6 +17,7 @@ import { faWeightHanging } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
 import { Rate } from "antd";
 function Product({ product }) {
+ 
   const [qty, setQty] = useState(1);
   const [rating, setRating] = useState(product.product.rating);
   console.log(rating);

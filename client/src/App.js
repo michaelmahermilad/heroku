@@ -1,6 +1,6 @@
-import React  from "react";
+import React, { useEffect }  from "react";
  import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./pages/Home";
  import Auth from "./pages/Auth";
 import AuthLogin from "./pages/AuthLogin";
@@ -15,13 +15,17 @@ import ALL from "./pages/ALL/ALL";
 import A from "./pages/A";
 import B from "./pages/B";
 import Sidebar from "./pages/Sidebar";
-import Design from "./components/Design";
+import Design from "./components/Design";  
+
 import MedicalProducts from "./pages/MedicalProducts/MedicalProducts";
   const theme = createTheme();
 
 
 function App(props) {
  
+useEffect(()=>{
+  window.scrollTo(0,0)
+},[])
 
   let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -43,6 +47,8 @@ function App(props) {
   function closeModal() {
     setIsOpen(false);
   }
+
+
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>

@@ -9,13 +9,15 @@ import AutoCompleteSearch from "../../components/Autocomplete/AutoComplete";
 import AutoSearch from "../../components/Autocomplete/myauto";
 import { setRef } from "@mui/material";
 import { FlexSocial } from "../../components/Footer";
- import {
+import {
   faFacebook,
   faYoutube,
   faTwitter,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-function NavBAR({ funct ,pro,setR }) {
+function NavBAR({ funct, pro, setR }) {
+
+
   const src = Com;
   const [zoom, setZoom] = useState({
     backgroundImage: `url(${src})`,
@@ -33,69 +35,72 @@ function NavBAR({ funct ,pro,setR }) {
       backgroundPosition: "0% 0%",
     });
   };
- 
-  const key = (e) => {
-   if(e.key=="Enter")
-   {
-      funct(e,e.target.value);
-      setR('start')
-   }
-    
+
+  const key = (e,focus) => {
+    if (e.key == "Enter") {
+      funct(e, e.target.value,false,focus);
+      setR("start");
+    }
   };
   const keye = (e) => {
- 
-    {
-     
-       setR('start')
-    }
-     
-   };
+    setR("start");
+  };
 
   return (
     <>
- 
- 
-            <div style={{ display: "flex" ,backgroundColor:"#1FA47C", width:'100vw',display:'flex',height:'1.5rem',alignItems:'center',justifyContent:'center', margin:'0px  auto 4px auto'}}>
-              <FontAwesomeIcon
-                style={{
-                  fontSize: "1rem",
-                  cursor: "pointer",
-                  color: "#ffffff",
-                  marginRight:'1rem'
-                }}
-                icon={faFacebook}
-              />
-              <FontAwesomeIcon
-                style={{
-                  fontSize: "1rem",
-                  cursor: "pointer",
-                  color: "#ffffff", marginRight:'1rem'
-                }}
-                icon={faLinkedin}
-              />
-              <FontAwesomeIcon
-                style={{
-                  fontSize: "1rem",
-                  cursor: "pointer",
-                  color: " #ffffff", marginRight:'1rem'
-                }}
-                icon={faTwitter}
-              />
-              <FontAwesomeIcon
-                style={{ fontSize: "1rem", color: "white", cursor: "pointer" ,marginRight:'1rem' }}
-                icon={faYoutube}
-              />
-            </div>   
- 
-        
- 
-         
-     
-   
+      <div
+        style={{
+          display: "flex",
+          backgroundColor: "#1FA47C",
+          width: "100vw",
+          display: "flex",
+          height: "1.5rem",
+          alignItems: "center",
+          justifyContent: "center",
+          margin: "0px  auto 4px auto",
+        }}
+      >
+        <FontAwesomeIcon
+          style={{
+            fontSize: "1rem",
+            cursor: "pointer",
+            color: "#ffffff",
+            marginRight: "1rem",
+          }}
+          icon={faFacebook}
+        />
+        <FontAwesomeIcon
+          style={{
+            fontSize: "1rem",
+            cursor: "pointer",
+            color: "#ffffff",
+            marginRight: "1rem",
+          }}
+          icon={faLinkedin}
+        />
+        <FontAwesomeIcon
+          style={{
+            fontSize: "1rem",
+            cursor: "pointer",
+            color: " #ffffff",
+            marginRight: "1rem",
+          }}
+          icon={faTwitter}
+        />
+        <FontAwesomeIcon
+          style={{
+            fontSize: "1rem",
+            color: "white",
+            cursor: "pointer",
+            marginRight: "1rem",
+          }}
+          icon={faYoutube}
+        />
+      </div>
       <Container>
         <Image src={src} />
-<AutoSearch keya={keye}    keyE={key}  funct={funct}/>
-       
+        <AutoSearch keya={keye} keyE={key} funct={funct} />
+
         <ShoppingCart>
           <FontAwesomeIcon
             style={{
@@ -165,40 +170,34 @@ const Image = styled.img`
     width: 80vw;
   }
 `;
- export const SearchBar = styled.div`
+export const SearchBar = styled.div`
   width: 20rem;
   height: 2.6rem;
   background-color: #776c6c14;
   border-radius: 8px;
   left: calc(100% - 50%);
   position: absolute;
-  transition: all .2s linear;
- 
- 
- 
-  ul{
+  transition: all 0.2s linear;
+
+  ul {
     padding-left: 0;
-     display:none;
-    margin-top: .1rem;
-   z-index: -99;
-
-    
-
+    display: none;
+    margin-top: 0.1rem;
+    z-index: -99;
   }
 
-  .active{
+  .active {
     background-color: #e4e4e4;
   }
-  :hover{
-    ul{
+  :hover {
+    ul {
       display: block;
     }
   }
-  
-  ul :not(:last-child) {
-  border-bottom: 1px solid #e1e1e1;
-  padding: 2px 0px;
 
+  ul :not(:last-child) {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 2px 0px;
   }
 
   @media (max-width: 950px) {
@@ -208,10 +207,9 @@ const Image = styled.img`
     margin: auto;
     z-index: 999999;
     margin-bottom: 2rem;
-
   }
 `;
-  export const Input = styled.input`
+export const Input = styled.input`
   height: 100%;
   width: calc(100% - 2.4rem);
   z-index: 999;
@@ -239,12 +237,12 @@ const ShoppingCart = styled.div`
 const Price = styled.div`
   display: flex;
   align-items: center;
- 
+
   p {
     font-weight: 700;
-    height: .7rem;
+    height: 0.7rem;
 
-    color:black;
+    color: black;
   }
   > * {
     margin-left: 1rem;

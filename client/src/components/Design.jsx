@@ -25,7 +25,7 @@ function Design() {
   const [start, setStart] = useState(false);
   const ref = useRef();
 
-
+ 
 
 
   function isInViewport() {

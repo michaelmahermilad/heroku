@@ -22,12 +22,7 @@ export default function Header() {
       setLastScrollY(window.scrollY);
     }
   };
-useEffect(()=>{
-  window.scrollTo(0, 0);
-
-
-
-},[])
+ 
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", controlNavbar);

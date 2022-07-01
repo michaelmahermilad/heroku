@@ -1,12 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState, useEffect, useRef } from "react";
-import { faL, faSearch } from "@fortawesome/free-solid-svg-icons";
+import React, { useState, useEffect } from "react";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Input, SearchBar } from "../../pages/MedicalProducts/NavBAR";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const AutoSearch = ({ funct, keyE, keya, pro, set }) => {
+const AutoSearch = ({ funct, keyE, keya, set }) => {
+
+  const [searchTerm, updateSearchTerm] = useState("");
+  const [filteredResults, updateFilteredResults] = useState(null);
+  const [hideResults, updateHideResults] = useState(false);
+  const [focusIndex, updateFocusIndex] = useState(-1);
+  const [show, setShow] = useState(false);
+  const productList = useSelector((state) => state.productList);
   let navigate = useNavigate();
   const linkRefs = [];
   const keys = {
@@ -25,8 +32,8 @@ const AutoSearch = ({ funct, keyE, keya, pro, set }) => {
           });
 
           window.location.reload();
-          updateDisplayResults(true);
-          updateFocusIndex(-1);
+          updateHideResults(true);
+         
         }
 
       case keys.UP:
@@ -42,91 +49,53 @@ const AutoSearch = ({ funct, keyE, keya, pro, set }) => {
     }
   };
 
-  const SearchResults = () => {
-    return (
-      <ul className="search-results">
-        {searchResults.map((m, index) => ({
-          /*
-                 <li key={index}>
-                        <div>{m.title}</div>
-                    </li>
-                */
-        }))}
-      </ul>
-    );
-  };
-
-  const [searchTerm, updateSearchTerm] = useState("");
-  const [searchResults, updateSearchResults] = useState([]);
-  const [filteredResults, updateFilteredResults] = useState([]);
-  const [displayResults, updateDisplayResults] = useState(false);
-  const [focusIndex, updateFocusIndex] = useState(-1);
-  const [show, setShow] = useState(false);
-  const productList = useSelector((state) => state.productList);
+ 
 
   const updateSearch = (e) => {
     e.preventDefault();
     if (e.target.value.length === 0) {
       updateSearchTerm("");
       updateFilteredResults([]);
-      setShow(false);
       funct(e, "");
+      setShow(false);
+       
     } else {
       updateSearchTerm(e.target.value);
-     
-      funct(e, e.target.value);
-   updateFilteredResults([]);
-         setShow(true)
-         
-     
+      funct(e, e.target.value,false,focusIndex);
+    
+    updateFocusIndex(-1)
     }
   };
   const hideAutoSuggest = (e) => {
     e.preventDefault();
-
     if (e.relatedTarget && e.relatedTarget.className === "autosuggest-link") {
       return;
     }
     setShow(false);
-    updateDisplayResults(true);
-    updateFocusIndex(-1);
+   
   };
 
-  const reload = () => {
-    set(false);
-    updateFilteredResults([]);
-  };
-  const showAutoSuggest = (e) => updateDisplayResults(false);
+  const showAutoSuggest = (e) => updateHideResults(false);
   useEffect(() => {
-  
- 
-
-       
     const getSearchResult = async () => {
       const searchResultsResponse = await productList.products.products;
-      console.log(searchResultsResponse);
-if(searchResultsResponse.length>5){
-     updateFilteredResults(searchResultsResponse.slice(0, 4));
-}else{
-  updateFilteredResults(searchResultsResponse );
-}
-   
+
+      if ( searchResultsResponse?.length>4) {
+        updateFilteredResults(searchResultsResponse.slice(0, 4));
+        console.log(filteredResults)
+      } else {
+        updateFilteredResults(searchResultsResponse);
+        console.log(filteredResults)
+      }
+    };
+getSearchResult();
  
-     
-    }
-  
-    
 if(searchTerm.length>0)
-    getSearchResult();
+  setShow(true)
 
- return ()=>updateFilteredResults([])
+  },[productList]);
 
-    
-  }, [productList]);
-  useEffect(() => {
-    updateFilteredResults([]);
-    setShow(false);
-  }, []);
+
   return (
     <SearchBar style={{ zIndex: "9999" }}>
       <Input
@@ -136,7 +105,7 @@ if(searchTerm.length>0)
         onKeyDown={handleNavigation}
         onFocus={showAutoSuggest}
         onBlur={hideAutoSuggest}
-        onKeyPress={(e) => keyE(e)}
+        onKeyPress={(e) => keyE(e,focusIndex)}
       />
       <div
         style={{
@@ -150,7 +119,7 @@ if(searchTerm.length>0)
       >
         <FontAwesomeIcon
           onClick={(e) => {
-            funct(e, searchTerm, true);
+            funct(e, searchTerm, true,focusIndex);
             keya(e);
           }}
           style={{
@@ -173,16 +142,16 @@ if(searchTerm.length>0)
         }}
         className="search-suggestions"
       >
-        {!displayResults && searchTerm && (
+        {!hideResults &&  (
           <li
             style={{ listStyle: "none", padding: "0px 8px" }}
             key="-1"
             className={focusIndex === -1 ? "active" : null}
           >{`Search for ${searchTerm}`}</li>
         )}
-        {!displayResults &&
-          filteredResults.map((m, index) => {
-            linkRefs[index] = m;
+        {!hideResults &&
+          filteredResults?.map((result, index) => {
+            linkRefs[index] = result;
             return (
               <li
                 style={{
@@ -197,8 +166,10 @@ if(searchTerm.length>0)
               >
                 <Link
                   className="autosuggest-link"
-                  onClick={reload}
-                  to={`/medproducts/${m.name.split(" ")[0]}?id=${m._id}`}
+                  onClick={()=>set(false)}
+                  to={`/medproducts/${result.name.split(" ")[0]}?id=${
+                    result._id
+                  }`}
                 >
                   <p
                     style={{
@@ -207,7 +178,7 @@ if(searchTerm.length>0)
                       color: "black",
                     }}
                   >
-                    {m.name}
+                    {result.name}
                   </p>
                 </Link>
               </li>
