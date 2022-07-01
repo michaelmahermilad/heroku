@@ -23,9 +23,6 @@ import MedicalProducts from "./pages/MedicalProducts/MedicalProducts";
 
 function App(props) {
  
-useEffect(()=>{
-  window.scrollTo(0,0)
-},[])
 
   let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);

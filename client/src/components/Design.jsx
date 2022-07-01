@@ -25,7 +25,12 @@ function Design() {
   const [start, setStart] = useState(false);
   const ref = useRef();
 
- 
+  useEffect(()=>{ 
+    window.scrollTo(0,0)
+    window.history.scrollRestoration = 'manual'
+  
+  },[])
+  
 
 
   function isInViewport() {

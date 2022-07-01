@@ -13,9 +13,14 @@ import Frame from "../images/Frame.svg";
 import "../pages/ResearchFiled.css";
 import 'antd/dist/antd.css';
 function ResearchField() {
+  useEffect(()=>{ 
+    window.scrollTo(0,0)
+    window.history.scrollRestoration = 'manual'
+  
+  },[])
+  
   useEffect(() => {
-    window.scrollTo(0, 0);
-
+ 
     var tl = gsap.timeline({
       repeat: 100,
       repeatDelay: 50,

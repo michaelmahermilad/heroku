@@ -43,11 +43,12 @@ function MedicalProducts() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [r, setR] = useState("");
-  useEffect(()=>{
+  useEffect(()=>{ 
     window.scrollTo(0,0)
     window.history.scrollRestoration = 'manual'
-
+  
   },[])
+  
 
   useEffect(() => {
 

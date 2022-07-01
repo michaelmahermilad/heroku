@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Articles from "../components/Articles";
 import MyBanner from "../components/MyBanner";
 
@@ -12,6 +12,12 @@ import Sendmail from "../components/Sendmail";
 import Title from "../components/Title";
 
 function Home( ) {
+  useEffect(()=>{ 
+    window.scrollTo(0,0)
+    window.history.scrollRestoration = 'manual'
+  
+  },[])
+  
   return (
     <div>
       <MyBanner   />

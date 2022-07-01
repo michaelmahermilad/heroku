@@ -30,7 +30,7 @@ const AutoSearch = ({ funct, keyE, keya, set }) => {
             pathname: `/medproducts/${linkRefs[focusIndex].name.split(" ")[0]}`,
             search: `?id=${linkRefs[focusIndex]._id}`,
           });
-
+         
           window.location.reload();
           updateHideResults(true);
          
@@ -61,9 +61,10 @@ const AutoSearch = ({ funct, keyE, keya, set }) => {
        
     } else {
       updateSearchTerm(e.target.value);
+      console.log(focusIndex)
       funct(e, e.target.value,false,focusIndex);
     
-    updateFocusIndex(-1)
+     
     }
   };
   const hideAutoSuggest = (e) => {
