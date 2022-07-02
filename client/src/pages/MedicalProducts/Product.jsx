@@ -5,7 +5,7 @@ import h from "./images/h.PNG";
 import h1 from "./images/h1.PNG";
 import ReactPlayer from "react-player";
 import bed from "./bed.mp4";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -16,6 +16,8 @@ import {
 import { faWeightHanging } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
 import { Rate } from "antd";
+import { addToCart, open } from "../../Redux/Actions/CartAction";
+import { useDispatch } from "react-redux";
 function Product({ product }) {
  
   const [qty, setQty] = useState(1);
@@ -33,7 +35,10 @@ function Product({ product }) {
     setQty(qty > 0 ? qty - 1 : 0);
   }
   const [src, setSrc] = useState();
+  const dispatch=useDispatch()
   const [image, setImage] = useState();
+  const [searchParams, setSearchParams] = useSearchParams();
+
   useEffect(() => {
     setSrc(product?.product?.images);
   }, [product?.product?.images]);
@@ -56,6 +61,17 @@ function Product({ product }) {
       backgroundPosition: "0% 0%",
     });
   };
+  function function3(e){   
+    if (searchParams.get("id") !== undefined)
+  {
+
+      dispatch(addToCart( searchParams.get("id"),qty))
+console.log('done')
+ }
+
+
+  }
+
   useEffect(()=>{
     product?.product?.images?.map((i,k)=>{
       if(k==0){
@@ -63,7 +79,7 @@ function Product({ product }) {
       }
  
     })
-   
+ 
   },[product?.product?.image])
   return (
     <Container>
@@ -198,6 +214,8 @@ function Product({ product }) {
             </div>
           </div>
           <FontAwesomeIcon
+
+          onClick={(e)=>{function3(e)  ;dispatch(open(true))}  }
             style={{
               marginLeft: "2rem",
               backgroundColor: "#1FA47C",

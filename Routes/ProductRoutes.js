@@ -234,6 +234,13 @@ ProductRoute.get(
           },
         
         ]);
+        a=await Prod.find({... {name: 
+          {
+            $regex: req.query.keyword,
+            $options: "i",
+          }}
+        
+        })
       } catch (err) {
         return res.status(500).json({ msg: err.message });
       }

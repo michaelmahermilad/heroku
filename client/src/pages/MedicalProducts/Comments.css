@@ -103,7 +103,7 @@
   display: block;
   padding: 0rem 0.3rem;
   font-size: .9rem;
-  color: green;
+  color: rgb(31, 164, 124);
   border: none;
   border-radius: 7px;
   cursor: pointer;
@@ -149,7 +149,7 @@
   display: block;
   padding: 0rem 0.3rem;
   font-size: 0.8rem;
-  color: green;
+  color: rgb(31, 164, 124);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -180,7 +180,7 @@
   padding: 0.2rem 0.5rem;
   font-size: 0.9rem;
   margin-top: 0.4rem;
-  color: green;
+  color: rgb(31, 164, 124);
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -275,7 +275,7 @@
     padding: 2px 5px;
     font-size: 13px;
     margin-top: 4px;
-    color: green;
+    color: rgb(31, 164, 124);
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -321,7 +321,7 @@
     display: block;
     padding: 2px 5px;
     font-size: 13px;
-    color: green;
+    color: rgb(31, 164, 124);
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -349,7 +349,7 @@
     padding: 2px 5px;
     font-size: 12px;
     margin-top: 4px;
-    color: green;
+    color: rgb(31, 164, 124);
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -374,7 +374,7 @@
   display: block;
   padding: 0rem 4px;
   font-size: .7rem;
-  color: green;
+  color: rgb(31, 164, 124);
   border: none;
   border-radius: 8px;
   cursor: pointer;

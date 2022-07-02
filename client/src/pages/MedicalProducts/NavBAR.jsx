@@ -15,9 +15,11 @@ import {
   faTwitter,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { useDispatch, useSelector } from "react-redux";
+import { open } from "../../Redux/Actions/CartAction";
 function NavBAR({ funct, pro, setR }) {
 
-
+const {totalAmount}=useSelector((state)=>state.cart)
   const src = Com;
   const [zoom, setZoom] = useState({
     backgroundImage: `url(${src})`,
@@ -29,6 +31,7 @@ function NavBAR({ funct, pro, setR }) {
     const y = ((e.pageY - top) / height) * 100;
     setZoom({ ...zoom, backgroundPosition: `${x}% ${y}%` });
   };
+  const dispatch=useDispatch();
   const handle = (e) => {
     setZoom({
       backgroundImage: `url(${src})`,
@@ -101,7 +104,7 @@ function NavBAR({ funct, pro, setR }) {
         <Image src={src} />
         <AutoSearch keya={keye} keyE={key} funct={funct} />
 
-        <ShoppingCart>
+        <ShoppingCart   onClick={(e)=>dispatch(open(true))}>
           <FontAwesomeIcon
             style={{
               backgroundColor: "#1FA47C",
@@ -115,10 +118,10 @@ function NavBAR({ funct, pro, setR }) {
           />
 
           <Price>
-            <p>LE.190B</p>
+            <p>{totalAmount} $</p>
 
             <FontAwesomeIcon
-              style={{ cursor: "pointer", fontSize: ".8rem", color: "green" }}
+              style={{ cursor: "pointer", fontSize: ".8rem", color: "rgb(31, 164, 124)" }}
               icon={faAngleDown}
             />
           </Price>

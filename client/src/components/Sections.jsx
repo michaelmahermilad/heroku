@@ -27,7 +27,7 @@ function Sections() {
 
 <p>{i.text}</p>
 <div className='plus'>
-  <button className='btnGreen'>
+  <button className='btnrgb(31, 164, 124)'>
     Read More
   </button>
 <FontAwesomeIcon style={{ color:'#ffffff', backgroundColor:'#11a683',padding:'8px',borderRadius:'50%'}} icon={faPlus}/>
@@ -98,7 +98,7 @@ transition: all .2s linear;
     position:relative;
     overflow: hidden;
     width: 8REM;
-    .btnGreen{
+    .btnrgb(31, 164, 124){
       width:fit-content;
       height: 2.5rem;
       background-color:#11a683;
@@ -137,7 +137,7 @@ transition: all .2s linear;
     transform: skew(0, -0.001turn);  
     box-shadow:.4px 5px 30px #11a68367;
     
-    .plus .btnGreen{
+    .plus .btnrgb(31, 164, 124){
       top:0;
       right:calc(50% - 4rem);
       transition: all .2s linear;

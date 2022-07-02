@@ -186,7 +186,7 @@ const Div2 = styled.div`
     margin:0;
     padding: 0;
     line-height: 4rem;
-    color:green;
+    color:rgb(31, 164, 124);
  
      :hover{
 color:gray;
@@ -203,7 +203,7 @@ const Div3 = styled.div`
     margin:0;
     padding: 0;
     line-height: 4rem;
-    color:green;
+    color:rgb(31, 164, 124);
   }
   position: absolute;
   right: 3rem;

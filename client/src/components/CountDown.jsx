@@ -22,7 +22,7 @@ const Timer = ({end,mount,start,a,something} ) => {
     });
 
     return (<>
-{ /*<CircularProgress sx={{color:'blue',backgroundColor:'green'}} value={((count*100)/end)} color='green.400'>
+{ /*<CircularProgress sx={{color:'blue',backgroundColor:'rgb(31, 164, 124)'}} value={((count*100)/end)} color='rgb(31, 164, 124).400'>
   <CircularProgressLabel>+ {((count*100)/end).toFixed(0)} %</CircularProgressLabel>
 </CircularProgress>
  

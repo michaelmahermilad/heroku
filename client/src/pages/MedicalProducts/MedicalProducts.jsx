@@ -10,11 +10,12 @@ import Product from "./Product";
 import ProductCard from "./ProductCard";
 import Subs from "./Subs";
 import { useDispatch, useSelector } from "react-redux";
+import Cart from '../../Cart'
 import {
   listProduct,
   listProductDetails,
 } from "../../Redux/Actions/ProductAction";
-import { useLocation, useParams, useSearchParams } from "react-router-dom";
+import {useParams, useSearchParams } from "react-router-dom";
 import { useState } from "react";
 import { useRef } from "react";
 import {
@@ -181,7 +182,7 @@ function MedicalProducts() {
       <Divider height={"3rem"} />
       <Subs />
       <Divider height={"3rem"} />
-      <Footer />
+      <Footer /><Cart T={8}/>
     </div>
   );
 }

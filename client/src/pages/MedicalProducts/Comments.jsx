@@ -41,7 +41,7 @@ function Comments() {
           allowHalf
           style={{
            
-            color: "green",
+            color: "rgb(31, 164, 124)",
            
            
             fontSize: "1rem",
