@@ -67,6 +67,7 @@ function Product({ product }) {
 
       dispatch(addToCart( searchParams.get("id"),qty))
 console.log('done')
+dispatch(open(true))
  }
 
 
@@ -215,7 +216,7 @@ console.log('done')
           </div>
           <FontAwesomeIcon
 
-          onClick={(e)=>{function3(e)  ;dispatch(open(true))}  }
+          onClick={(e)=>function3(e)   }
             style={{
               marginLeft: "2rem",
               backgroundColor: "#1FA47C",

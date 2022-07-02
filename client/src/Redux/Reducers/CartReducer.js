@@ -39,7 +39,7 @@ console.log(existingCartItemIndex)
      updatedItems?.length<=1?updatedItems?.[0].all:
      
      updatedItems.reduce((sum, number)=> {
-     return  (sum + Number(number.all)).toFixed(1);
+     return  (sum + Number(number.all).toFixed(1));
       
     },0);
       return {
