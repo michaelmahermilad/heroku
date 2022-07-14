@@ -29,7 +29,7 @@ import {
       };
   
       const { data } = await axios.post(
-        `https://medicalprojectnet.herokuapp.com/api/users/login`,
+        `http://localhost:5000/api/users/login`,
        data1,
         config
       );
@@ -68,7 +68,7 @@ import {
       };
   
       const { data } = await axios.post(
-        `https://medicalprojectnet.herokuapp.com/api/users`,
+        `http://localhost:5000/api/users`,
         data1,
         config
       );
@@ -97,7 +97,7 @@ import {
       };
   
       const { data } = await axios.post(
-        `https://medicalprojectnet.herokuapp.com/api/users/social`,
+        `http://localhost:5000/api/users/social`,
         data1,
         config
       );
