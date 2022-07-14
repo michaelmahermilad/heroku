@@ -8,6 +8,9 @@ import ru from 'javascript-time-ago/locale/ru.json'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import store from "./Redux/store";
 import { Provider } from "react-redux";
+
+
+
 TimeAgo.addDefaultLocale(en)
 TimeAgo.addLocale(ru)
 

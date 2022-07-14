@@ -1,15 +1,33 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import { faBars, faHome, faPhone } from "@fortawesome/free-solid-svg-icons";
+import React, { useEffect, useRef, useState } from "react";
+import { faBars, faClose, faHome, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 function Categories() {
+  const [show,setShow]=useState(false)
+  const ref = useRef(null);
+
+ 
+  useEffect(() => {
+    function handleClickOutSide(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setShow(false);
+    
+       
+      }
+    }
+    document.addEventListener("mouseup", handleClickOutSide);
+
+  
+  }, [ref]);
+
+
   return (
     <Container>
-      <Div1>
-        <Link to=""></Link>
-        <p>Categories</p>
-        <HoverDiv className="div">
+      <Div1  ref={ref}>
+       
+        <p   onClick={(e)=>setShow(!show)}  >Categories</p>
+        <HoverDiv   show={show}>
           <Link  to="">
             <p>Products</p>
           </Link>
@@ -23,17 +41,35 @@ function Categories() {
             <p>ALL Products</p>
           </div>
         </HoverDiv>
-        <FontAwesomeIcon
+        {!show?(
+  <FontAwesomeIcon   onClick={(e)=>setShow(!show)}
           style={{
             backgroundColor: "#1FA47C",
             padding: ".6rem",
             borderRadius: "4px",
             color: "white",
             cursor: "pointer",
-            fontSize: "1rem",
+            fontSize: "1.3rem",
           }}
           icon={faBars}
         />
+
+
+        ):(
+          <FontAwesomeIcon   onClick={(e)=>setShow(!show)}
+          style={{
+            backgroundColor: "#1FA47C",
+            padding: ".6rem",
+            borderRadius: "4px",
+            color: "white",
+            cursor: "pointer",
+            fontSize: "1.3rem",
+          }}
+          icon={faClose}
+        />
+
+        )}
+      
       </Div1>
       <Div2>
         <Link to="">
@@ -95,7 +131,7 @@ const Container = styled.div`
 
 
 `;
-const Div1 = styled.div`
+const Div1 = styled.div` 
   position: relative;
   display: flex;
   align-items: center;
@@ -104,36 +140,38 @@ const Div1 = styled.div`
   background-color: #1fa47c;
   margin-left: 2rem;
   border-top-left-radius: 6px;
-  padding: 1rem;
+  padding: 0rem;
   justify-content: space-around;
   margin-right: 2rem;
   p {
+    padding: 2rem;
     height: 4rem;
     line-height: 4rem;
   padding: 0;
   margin: 0;
     color: white;
-  }
-  :hover {
+
   
-    .div {
-        opacity:1;
-       top: 4rem;
-    }
   }
+
+    transition: opacity .3s linear;
+      
+     
   @media screen and (max-width:950px){
 margin-left    :9px ;
 margin-right: 1rem;
   }
 `;
-const HoverDiv = styled.div`
+const HoverDiv = styled.div` 
+ opacity:${(props)=>props.show?'1':'0'};
+ display:${(props)=>props.show?'flex':'none'};
   border: 1px solid #e5e5e5;
-  height: fit-content;
-  display: flex;
+ 
+ 
   flex-direction: column;
   position: absolute;
   top: 4rem;
-  opacity: 0;
+
   z-index: 9;
   background-color: #ffffff;
   left: 0;

@@ -14,9 +14,8 @@ export const CartReducer = (state ={ items: [],open:true, shippingAddress: {} },
           state.totalAmount - (state.items.filter((item) =>item.product == action.payload))[0].all
       };
     case "Add_SUCCESS":
-    
-
-      const existingCartItemIndex = state.items.findIndex(
+    try{
+ const existingCartItemIndex = state.items.findIndex(
         (item) => item.product === action.payload.product
       );
 console.log(existingCartItemIndex)
@@ -35,18 +34,29 @@ console.log(existingCartItemIndex)
       } else {
         updatedItems = state.items.concat(action.payload);
       }
-      const totalAmount =
-     updatedItems?.length<=1?updatedItems?.[0].all:
-     
-     updatedItems.reduce((sum, number)=> {
-     return  (sum + Number(number.all).toFixed(1));
-      
-    },0);
-      return {
+     let totalAmount=
+        (updatedItems?.length==0 || updatedItems==null )?0:(updatedItems?.length==1)?updatedItems?.[0].all:
+     updatedItems.reduce((sum, obj)=> {
+     return  sum + Number(obj.all);
+    },0)
+          return {
         ...state,
         items: updatedItems,
         totalAmount
       };
+    }catch{
+      return {
+        ...state,
+        items: [],
+        totalAmount:0
+      };
+    }
+
+     
+      
+    
+    
+    
     case "Clear_SUCCESS":
       return {
         ...state,

@@ -29,7 +29,7 @@ const StyledModalOverlay = styled.div`
     position: absolute;
     content:'Thank You For Choosing Us.';
     top:-2px;
-    z-index: 999999;
+    z-index: 999;
     right:calc(50% - 6rem);
     width:12rem;
     margin:0;
@@ -56,7 +56,7 @@ const StyledModalOverlay = styled.div`
   border: 6px solid #0b6c2a4d;
 
   overflow-x: hidden;
-  z-index: 999999;
+  z-index: 999;
   background-color: #ffffff;
   border-radius: 22px;
   box-shadow: rgba(50, 93, 60, 0.2) 0px 50px 100px -20px,

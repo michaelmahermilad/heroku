@@ -98,7 +98,7 @@ if(searchTerm.length>0)
 
 
   return (
-    <SearchBar style={{ zIndex: "9999" }}>
+    <SearchBar style={{ zIndex: "999" }}>
       <Input
         type="text"
         placeholder="Search .."

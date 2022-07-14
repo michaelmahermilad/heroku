@@ -11,12 +11,23 @@ import { SyncOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { open,clear } from "./Redux/Actions/CartAction";
 // Icons
-
+import FormComponent from '../src/component/FormComponent'
 const Cart = () => {
   const { items, totalAmount } = useSelector((state) => state?.cart);
-  
+  const [total,setTotal]=useState(0)
   const dispatch = useDispatch();
+useEffect(()=>{
+  const a=Number(totalAmount).toFixed(1) 
+setTotal(((a)))
 
+},[totalAmount])
+const [first,setFirst]=useState(true)
+useEffect(()=>{
+setFirst(true);
+},[])
+useEffect(()=>{
+  setFirst(true);
+  },[items])
   return (
     <Modal>
       <Title>
@@ -45,7 +56,7 @@ const Cart = () => {
         />
       </CloseIconStyle>
       <StyledLine />
-      <Content>
+      {first?( <Content>
         <ul style={{ margin: "0", padding: "0" }}>
           {items?.map((i) => (
             <CartItem my={i.product}>
@@ -69,17 +80,19 @@ const Cart = () => {
             icon={<SyncOutlined spin />}
             color="processing"
           >
-            Total:{totalAmount}${" "}
+            Total:{total?total:0 }${" "}
           </Tag>
         </Total>
 
-        <StyledButton   onClick={(e)=>dispatch(clear())}>Checkout</StyledButton>
+        <StyledButton style={{cursor:`${total?(total==0)?"not-allowed":'pointer':'not-allowed'}`}}  disabled={total?(total==0)?true:false:true} onClick={(e)=>setFirst(false)}>Checkout</StyledButton>
         {false && (
           <Empty>
             <h4>No Products</h4>
           </Empty>
         )}
-      </Content>
+      </Content>):(
+        <FormComponent/>
+      )}
     </Modal>
   );
 };

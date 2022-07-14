@@ -13,7 +13,7 @@ function Subs() {
   }, []);
   async function fetchGreeting() {
     const response = await fetch(
-      "https://medicalprojectnet.herokuapp.com/graphql",
+      "http://localhost:5000/graphql",
       {
         method: "POST",
         headers: {
@@ -34,10 +34,10 @@ function Subs() {
     console.log(responseBody);
     setEmails(responseBody.data.get);
   }
-  console.log(emails[0].email);
+
   const sendData = async () => {
     await Post(
-      "https://medicalprojectnet.herokuapp.com/api/prods/postemail",
+      "http://localhost:5000/api/prods/postemail",
       { email }
     ).then((data) => {
       console.log(data);

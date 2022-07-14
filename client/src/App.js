@@ -18,6 +18,13 @@ import Sidebar from "./pages/Sidebar";
 import Design from "./components/Design";  
 
 import MedicalProducts from "./pages/MedicalProducts/MedicalProducts";
+import MyProducts from "./pages/MedicalProducts/MyProducts";
+import FormComponent from './component/FormComponent'
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+ 
   const theme = createTheme();
 
 
@@ -47,6 +54,9 @@ function App(props) {
 
 
   return (
+<LocalizationProvider dateAdapter={AdapterDateFns}>
+    
+  
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <div {...props} className="App">
@@ -56,8 +66,9 @@ function App(props) {
               <Route path="/field" element={<ALL />} />{" "}
               <Route path="/R" element={<Sidebar />} />
               <Route path="/DESIGN" element={<Design/>}/>
-              <Route path="/medproducts" element={<MedicalProducts  key={Date.now()} />}/>
+              <Route path="/medproducts" element={<MyProducts  key={Date.now()} />}/>
               <Route path="/medproducts/:name" element={<MedicalProducts  key={Date.now()}  />}/>
+              <Route path="/medproducts/checkout" element={<FormComponent/>}/>
 
              </Route>
             <Route element={<A />}>
@@ -73,7 +84,7 @@ function App(props) {
           </Routes>
         </div>
       </ThemeProvider>
-    </BrowserRouter>
+    </BrowserRouter>  </LocalizationProvider>
   );
 }
 

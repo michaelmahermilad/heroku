@@ -6,6 +6,11 @@ import h1 from "./images/h1.PNG";
 import ReactPlayer from "react-player";
 import bed from "./bed.mp4";
 import { Link, useSearchParams } from "react-router-dom";
+import {
+  EmailShareButton,
+  FacebookShareButton,
+
+} from "react-share";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -142,11 +147,13 @@ dispatch(open(true))
             <span className="span">Share</span>
 
             <div class="container">
-              <Link className="link" to="/">
-                <span>
-                  <FontAwesomeIcon className="i" icon={faFacebook} />{" "}
-                </span>
-              </Link>
+              
+                <FacebookShareButton quote="medical" url="https://medicalprojectnet.herokuapp.com/"  hashtag="#product">
+                    <span>
+                    <FontAwesomeIcon className="i" icon={faFacebook} />
+                   </span>
+                </FacebookShareButton>
+          
               <Link className="link" to="/">
                 <span>
                   <FontAwesomeIcon className="i" icon={faLinkedin} />

@@ -5,6 +5,7 @@ const { checkSchema } = require("express-validator");
 
 const { Validate, myown1 } = require("../MiddleWares/Validator.js");
 const { Mongoose } = require("mongoose");
+const { errorHandler } = require("../Middlewares/Error.js");
 
 const ProductRoute = express.Router();
 ProductRoute.get("/postall", (req, res) => {
@@ -217,8 +218,15 @@ ProductRoute.get(
 
     let a
     if (req.query?.keyword === "" ) {
-      a = await Prod.find({});
-     
+      try {
+    a = await Prod.find({});
+      
+      res.json({products:a,productss:a});
+      } catch (err) {
+        errorHandler(err,req,res )
+      }
+      
+    
     } else {
       try {
         console.log(req.query.keyword);
@@ -241,12 +249,13 @@ ProductRoute.get(
           }}
         
         })
+         const b = await Prod.find({});
+    res.json({products:a,productss:b});
       } catch (err) {
-        return res.status(500).json({ msg: err.message });
+        errorHandler(err,req,res );
       }
     }
-    const b = await Prod.find({});
-    res.json({products:a,productss:b});
+   
   }
  
    
@@ -254,9 +263,19 @@ ProductRoute.get(
 
 
 ProductRoute.get("/", async (req, res) => {
-  const product = await Prod.findById(req.query.id);
-  if (product) res.status(200).json(product);
-  else res.status(400).json({ err: "no product by this id" });
+  
+  Prod.findById(req.query.id)
+  .then(product => {
+      if(product) {
+          res.json(product)
+      } else {
+          res.status(404).json({message: 'Product not found' })
+      }
+  })
+  .catch(err => errorHandler(err,req,res))  
+
+
+
 });
 
 module.exports = ProductRoute;

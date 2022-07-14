@@ -11,7 +11,7 @@ export const addToCart = (id, amount) => async (dispatch, getState) => {
       image: data.image,
       price: data.price,
       rating:data.rating,
-      countInStock: data.countInStock,
+      countInStock: data.countInStock-data.amount,
       amount,
       all: (Number(amount) * Number(data.price)).toFixed(1),
       images:data.images
@@ -32,6 +32,7 @@ export const removefromcart = (id) => (dispatch, getState) => {
   localStorage.setItem("T", JSON.stringify(getState().cart.totalAmount));
 
   localStorage.setItem("cartItems", JSON.stringify(getState().cart.items));
+
 };
 
 // SAVE SHIPPING ADDRESS
@@ -67,6 +68,7 @@ export const open = (a) => (dispatch) => {
     type: "Clear_SUCCESS",
     
    });
+   
    localStorage.setItem("cartItems", []);
    localStorage.setItem("T", 0);
 

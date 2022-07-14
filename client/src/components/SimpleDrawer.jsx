@@ -10,8 +10,8 @@ import MailIcon from "@mui/icons-material/Mail";
 import ListIcon from "@mui/icons-material/List";
 import {
   faBook,
-  faLungsVirus,
-  faHeartbeat,
+  
+  
   faBuildingLock,
 } from "@fortawesome/free-solid-svg-icons";
 

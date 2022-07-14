@@ -1,3 +1,4 @@
+
 const { ApolloServer, gql } = require("apollo-server-express");
 const Email = require("./Models/Email");
 const { ApolloServerPluginDrainHttpServer } = require("apollo-server-core");
@@ -7,11 +8,22 @@ const { Server } = require("socket.io");
 const cors = require("cors");
 const path = require("path");
 const bodyParser = require("body-parser");
+const cookieParser = require('cookie-parser');
+  
+
 const { body } = require("express-validator");
 require("dotenv").config();
 const { json } = require("express");
+
 const ProductRoute = require("./Routes/ProductRoutes.js");
+const { errorHandler, notFound } =require("./Middlewares/Error.js");
+
 const connectDatabase = require("./config/MongoDb.js");
+const FormRoute = require("./Routes/FormRoutes");
+const userRouter = require("./Routes/UserRoutes");
+const { protect } = require("./Middlewares/AuthMiddleware");
+
+
 const typeDefs = gql`
   type Emails {
     email: String
@@ -33,15 +45,19 @@ async function startApolloServer(typeDefs, resolvers) {
   const app = express();
   const httpServer = createServer(app);
   const corsOptions = {
-    AccessControlAllowOrigin: "https://medicalprojectnet.herokuapp.com",
+    AccessControlAllowOrigin: "http://localhost:3000",
     origin: "*",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     preflightContinue: false,
     optionsSuccessStatus: 204,
   };
+  app.use(cookieParser());
   app.use(cors(corsOptions));
   app.use(express.json());
   app.use("/api/prods", ProductRoute);
+  app.use("/api/form", FormRoute);
+  app.use("/api/users", userRouter);
+
   app.use(express.static("public"));
   const io = new Server(httpServer, {
     cors: {
@@ -54,14 +70,17 @@ async function startApolloServer(typeDefs, resolvers) {
       io.emit("message", textandmessage);
     });
   });
+  app.use(notFound);
+  app.use(errorHandler);
 
-
-  {
+   {
     app.use(express.static(path.resolve(__dirname, "./client/build")));
   }
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
   });
+
+ 
 
 
   // Use this after the variable declaration
