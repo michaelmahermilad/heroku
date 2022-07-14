@@ -13,7 +13,7 @@ import {
   Paper,  InputLabel,
   TextField,
 } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+
 
 import { styles } from "../common/styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -41,29 +41,7 @@ import { borderRadius } from "@mui/system";
 import { faCalendarTimes } from "@fortawesome/free-regular-svg-icons";
 import { useState } from "react";
 
-const useStyles = makeStyles(() => ({
-  root: {
-    "& .MuiInputBase-root": {
-  
-    }},
-  textField: {
-    width: "100%",
- marginLeft:'9px',
- border:'none',
- padding: "0px",
- height: '2rem',
-    paddingBottom: 0,
-    marginTop: 0,
-    fontWeight: 500
-  },
-  input: {
-    color: "white",
-    backgroundColor:'red',
-    height: "2rem",
 
-
-  }
-}));
 const WhiteBorderTextField = styled(TextField)`
 
   & label.Mui-focused {
@@ -142,7 +120,7 @@ const ref3=useRef()
     setValue2(value); 
  
   })
-  const classes = useStyles();
+
 const {errors}=state
   return (
     <Paper style={styles.steps}>
@@ -447,8 +425,19 @@ const {errors}=state
           inputFormat="MM/dd/yyyy"
           renderInput={(params) => (
             <WhiteBorderTextField
-      
-            className={classes.textField}
+      sx={{
+        width: "100%",
+        marginLeft:'9px',
+        border:'none',
+        padding: "0px",
+        height: '2rem',
+           paddingBottom: 0,
+           marginTop: 0,
+           fontWeight: 500
+
+
+      }}
+         
               {...params}
             />
           )}
