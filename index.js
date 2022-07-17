@@ -15,12 +15,12 @@ require("dotenv").config();
 const { json } = require("express");
 
 const ProductRoute = require("./Routes/ProductRoutes.js");
-const { errorHandler, notFound } = require("./Middlewares/Error.js");
+const { errorHandler, notFound } = require("./MiddleWares/Error.js");
 
 const connectDatabase = require("./config/MongoDb.js");
 const FormRoute = require("./Routes/FormRoutes");
 const userRouter = require("./Routes/UserRoutes");
-const { protect } = require("./Middlewares/AuthMiddleware");
+ 
 
 const typeDefs = gql`
   type Emails {
