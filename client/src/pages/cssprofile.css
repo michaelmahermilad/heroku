@@ -126,11 +126,14 @@ filter: contrast(1.4);
         border-radius: 50%;
         position: absolute;
         top: -50px;
-        padding: 5px;
+        padding: 0px;
         left:calc(20% - 36px);
         border: 5px solid#00806c;
       }
-      
+      .mylabel{
+        width: 7rem;
+       
+      }
       .content{
         padding: 70px 20px 20px;
         display: flex;

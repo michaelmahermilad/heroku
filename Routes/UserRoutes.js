@@ -4,37 +4,56 @@ const bcrypt = require("bcryptjs");
 var nodemailerTransport = require("nodemailer-mailgun-transport");
 const { protect, admin } = require("../Middlewares/AuthMiddleware.js");
 const { errorHandler } = require("../Middlewares/Error.js");
+const Formidable = require("formidable");
+
+const cloudinary = require("cloudinary");
 const {
   generateToken,
   generateRefreshToken,
 } = require("../utils/generateToken.js");
-
+cloudinary.config({
+  cloud_name: "medicalproject",
+  api_key: "476736736776691",
+  api_secret: "6TiV5eTnGSF8OnPIkyOn7ikyA3E",
+});
 const User = require("./../Models/UserModel.js");
 const userRouter = express.Router();
-// LOGIN
+userRouter.get("/profile", async (req, res) => {
+  try{
+  const user = await User.findById(req.user._id);
+
+  if (user) {
+    res.json(user);
+  } else {
+    res.status(404);
+    throw new Error("User not found");
+  }
+} catch (err) {
+  errorHandler(err, req, res);
+}
+});
+
 userRouter.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
 
-        if (user && (await user.matchPassword(password))) {
-          console.log(generateRefreshToken(user._id));
-          const token = generateToken(user._id);
-          res.cookie("/refreshToken", generateRefreshToken(user._id));
-          res.status(200).json({
-            id: user._id,
-            email: user.email,
-            token: token,
-            lastName: user.lastName,
-            firstName: user.firstName,
-            refreshToken: generateRefreshToken(user._id),
-          });
-        } else {
-          res.status(401);
-          throw new Error("Invalid Email or Password");
-        }
-     
-  
+    if (user && (await user.matchPassword(password))) {
+      console.log(generateRefreshToken(user._id));
+      const token = generateToken(user._id);
+      res.cookie("/refreshToken", generateRefreshToken(user._id));
+      res.status(200).json({
+        _id: user._id,
+        email: user.email,
+        token: token,
+        lastName: user.lastName,
+        firstName: user.firstName,
+        refreshToken: generateRefreshToken(user._id),
+      });
+    } else {
+      res.status(401);
+      throw new Error("Invalid Email or Password");
+    }
   } catch (err) {
     errorHandler(err, req, res);
   }
@@ -43,27 +62,22 @@ userRouter.post("/social", async (req, res) => {
   try {
     const { email, password, lastName, firstName, type } = req.body;
     const userExists = await User.findOne({ email });
-    if(userExists){
-        const token = generateToken(userExists._id)
-        res.status(201).json({
-          _id: userExists._id,
-          email: userExists.email,
-          lastName: lastName,
-          firstName: firstName,
-          token,
-        });
-      }
-    
-      
-    
-   
-     else {
+    if (userExists) {
+      const token = generateToken(userExists._id);
+      res.status(201).json({
+        _id: userExists._id,
+        email: userExists.email,
+        lastName: lastName,
+        firstName: firstName,
+        token,
+      });
+    } else {
       const salt = await bcrypt.genSalt(10);
-        const apassword = await bcrypt.hash("123456789", salt);
+      const apassword = await bcrypt.hash("123456789", salt);
       const user = await User.create({
-        repeat:apassword,
+        repeat: apassword,
         email,
-        password:apassword,
+        password: apassword,
         lastName,
         firstName,
         type,
@@ -89,12 +103,11 @@ userRouter.post("/", async (req, res) => {
     const { repeat, email, password, lastName, firstName, type } = req.body;
     const userExists = await User.findOne({ email });
     if (userExists) {
-      
       if (userExists.type == "social") {
         const salt = await bcrypt.genSalt(10);
         const apassword = await bcrypt.hash(password, salt);
         const modified = await User.findByIdAndUpdate(userExists._id, {
-          $set: {password:apassword,type: "user" },
+          $set: { password: apassword, type: "user" },
         });
         if (modified) {
           const token = generateToken(modified._id);
@@ -104,7 +117,7 @@ userRouter.post("/", async (req, res) => {
             lastName: modified.lastName,
             firstName: modified.firstName,
             token,
-            type
+            type,
           });
         }
       } else {
@@ -244,17 +257,11 @@ style="font-family:Poppins,Arial,Helvetica,sans-serif;font-size:15px;color:#9d9d
   }
 });
 // PROFILE
-userRouter.get("/profile", protect, async (req, res) => {
-  const user = await User.findById(req.user._id);
+userRouter.get("/profile/:id", async (req, res) => {
+  const user = await User.findById(req.params.id);
 
   if (user) {
-    res.json({
-      _id: user._id,
-      name: user.name,
-      email: user.email,
-      isAdmin: user.isAdmin,
-      createdAt: user.createdAt,
-    });
+    res.json(user);
   } else {
     res.status(404);
     throw new Error("User not found");
@@ -262,28 +269,76 @@ userRouter.get("/profile", protect, async (req, res) => {
 });
 
 // UPDATE PROFILE
-userRouter.put("/profile", protect, async (req, res) => {
-  const user = await User.findById(req.user._id);
-
+userRouter.put("/profile", async (req, res) => {
+  
+      try{   
+  const user = await User.findById(req.body._id);
+  let updated;
   if (user) {
-    user.name = req.body.name || user.name;
-    user.email = req.body.email || user.email;
-    if (req.body.password) {
-      user.password = req.body.password;
+    if (req.body.photo) {
+      await cloudinary.v2.uploader.upload(
+        `./images/${req.body.photo}`,
+        { public_id: `${req.body.photo}` },
+        async function (error, result) {
+          if (result) {
+            console.log(result.url);
+            let updated;
+            updated = {
+              _id: req.body._id,
+              firstName: req.body.firstName || user.firstName,
+              lastName: req.body.lastName || user.lastName,
+              country: req.body.country || user.country,
+              region: req.body.region || user.region,
+              phone: req.body.phone || user.phone,
+              address: req.body.address || user.address,
+              photo: result.url,
+              msgs:( req?.body?.msgs?.length>3)?([...(user?.msgs),req.body.msgs]):(user.msgs),            };
+            const update = await User.findByIdAndUpdate(req.body._id, updated);
+            res.json(update);
+          }
+        }
+      );
+    } else {
+      updated = {
+        _id: req.body._id,
+        $push: { msgs: req.body.msgs },
+        firstName: req.body.firstName || user.firstName,
+        lastName: req.body.lastName || user.lastName,
+        country: req.body.country || user.country,
+        region: req.body.region || user.region,
+        $set:{phone:req.body.phone},
+        address: req.body.address || user.address,
+      };
+      if (req.body.password) {
+        const salt = await bcrypt.genSalt(10);
+        const apassword = await bcrypt.hash(req.body.password, salt);
+        updated = { ...updated, password: apassword };
+      }
+ 
+      const update = await User.findByIdAndUpdate(req.body._id, updated,
+        {
+          runValidators: true,
+        });
+ 
+      
+ 
+
+       
+ 
+ 
+
+  
     }
-    const updatedUser = await user.save();
-    res.json({
-      _id: updatedUser._id,
-      name: updatedUser.name,
-      email: updatedUser.email,
-      isAdmin: updatedUser.isAdmin,
-      createdAt: updatedUser.createdAt,
-      token: generateToken(updatedUser._id),
-    });
   } else {
     res.status(404);
     throw new Error("User not found");
   }
+
+
+          }catch (err  ) {
+            console.log(err)
+  errorHandler(err, req, res);
+}
 });
 
 // GET ALL USER ADMIN

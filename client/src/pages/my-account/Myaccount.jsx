@@ -15,6 +15,7 @@ import {  faUsd } from "@fortawesome/free-solid-svg-icons";
 import {  FAB,GAP,auth} from "../../firebase.js";
 import Myprofile from "../Mypro";
 function Myaccount() {  
+  const [r,setR]=useState(true)
   const facebook1=(e)=>{
     e.preventDefault()
   try{
@@ -56,8 +57,7 @@ dispatch(social({
 }
 
 
-
-    
+ 
 
      
      
@@ -65,7 +65,7 @@ dispatch(social({
    
 
  
-  
+ 
 
 
    const google1=(e)=>{
@@ -510,7 +510,7 @@ dispatch(social({
 
 
              </div>
-             <Myprofile/>
+             <Myprofile setR={setR}/>
              <div
                 style={{
                   width: "100%",

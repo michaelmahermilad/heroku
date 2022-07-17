@@ -130,7 +130,7 @@ import {
         },
       };
   
-      const { data } = await axios.get(`/api/users/${id}`, config);
+      const { data } = await axios.get(`/api/users/profile/${id}`);
       dispatch({ type: USER_DETAILS_SUCCESS, payload: data });
     } catch (error) {
       const message =
@@ -156,18 +156,24 @@ import {
         userLogin: { userInfo },
       } = getState();
   
-      const config = {
+     const config = {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${userInfo.token}`,
         },
       };
   
-      const { data } = await axios.put(`/api/users/profile`, user, config);
-      dispatch({ type: USER_UPDATE_PROFILE_SUCCESS, payload: data });
+      const { data } = await axios.put(`http://localhost:5000/api/users/profile`, user);
+     try{
+         dispatch({ type: USER_UPDATE_PROFILE_SUCCESS, payload: data });
       dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
   
       localStorage.setItem("userInfo", JSON.stringify(data));
+      }catch(err){
+        
+      }
+     
+     
     } catch (error) {
       const message =
         error.response && error.response.data.message

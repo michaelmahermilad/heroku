@@ -62,14 +62,14 @@ import {
   };
   
   // UPDATE PROFILE
-  export const userUpdateProfileReducer = (state = {}, action) => {
+  export const userUpdateProfileReducer = (state = {sucess:false}, action) => {
     switch (action.type) {
       case USER_UPDATE_PROFILE_REQUEST:
-        return { loading: true };
+        return { loading: true,success:false };
       case USER_UPDATE_PROFILE_SUCCESS:
         return { loading: false, success: true, userInfo: action.payload };
       case USER_UPDATE_PROFILE_FAIL:
-        return { loading: false, error: action.payload };
+        return { loading: false,sucess:false, error: action.payload };
       default:
         return state;
     }
