@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "http://localhost:5000",
+  "proxy": "https://medicalprojectnet.herokuapp.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -37,7 +37,6 @@
     "javascript-time-ago": "^2.5.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
-    "react-country-region-selector": "^3.4.0",
     "react-dom": "^18.2.0",
     "react-google-recaptcha": "^2.1.0",
     "react-hook-form": "^7.33.0",

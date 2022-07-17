@@ -2,7 +2,6 @@ import React from 'react';
 
 
 
-import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
 
 
 
@@ -153,7 +152,8 @@ export const renderInputField = ({ name, label, type,icon, f, state, onChange })
           <IconButton edge="end">
         {icon}
           </IconButton>
-          <div style={{display:'flex',width:'100%'}}>
+    {/*
+       <div style={{display:'flex',width:'100%'}}>
         <CountryDropdown
 
 name={"country"}     
@@ -189,6 +189,9 @@ onChange={(val,e) => {selectRegion(val);  onChange(e)} } />
          
           
       </div>
+    
+    
+    */}   
         </div>
 
         <FormHelperText style={{color:'#783737'}}>{errors["region"] ?<p  style={{color:'#d32f2f'}} > من فضلك ادخل البلد و المحافظة</p>: ""}</FormHelperText>
