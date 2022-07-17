@@ -2,8 +2,8 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const bcrypt = require("bcryptjs");
 var nodemailerTransport = require("nodemailer-mailgun-transport");
-const { protect, admin } = require("../Middlewares/AuthMiddleware.js");
-const { errorHandler } = require("../Middlewares/Error.js");
+const { protect, admin } = require("../MiddleWares/AuthMiddleware.js");
+const { errorHandler } = require("../MiddleWares/Error.js");
 const Formidable = require("formidable");
 
 const cloudinary = require("cloudinary");

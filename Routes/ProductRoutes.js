@@ -5,7 +5,7 @@ const { checkSchema } = require("express-validator");
 
 const { Validate, myown1 } = require("../MiddleWares/Validator.js");
 const { Mongoose } = require("mongoose");
-const { errorHandler } = require("../Middlewares/Error.js");
+const { errorHandler } = require("../MiddleWares/Error.js");
 
 const ProductRoute = express.Router();
 ProductRoute.get("/postall", (req, res) => {
