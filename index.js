@@ -20,8 +20,7 @@ const { errorHandler, notFound } = require("./MiddleWares/Error.js");
 const connectDatabase = require("./config/MongoDb.js");
 const FormRoute = require("./Routes/FormRoutes");
 const userRouter = require("./Routes/UserRoutes");
- 
-
+ const a=0;
 const typeDefs = gql`
   type Emails {
     email: String
