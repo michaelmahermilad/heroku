@@ -5,7 +5,7 @@ const { checkSchema } = require("express-validator");
 
 const { Validate, myown1,formOrder } = require("../MiddleWares/Validator.js");
 const { Mongoose } = require("mongoose");
-const { errorHandler } = require("../Middlewares/Error.js");
+const { errorHandler } = require("../MiddleWares/Error.js");
 
 const FormRoute = express.Router();
 FormRoute.post(
