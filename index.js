@@ -72,8 +72,7 @@ async function startApolloServer(typeDefs, resolvers) {
   app.use("/api/form", FormRoute);
   app.use("/api/users", userRouter);
 
-  app.use(express.static("public"));
-
+ 
   const io = new Server(httpServer, {
     cors: {
       origin: "*",
