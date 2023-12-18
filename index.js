@@ -88,13 +88,7 @@ async function startApolloServer(typeDefs, resolvers) {
   app.use(notFound);
   app.use(errorHandler);
 
-
-    app.use(express.static(path.resolve(__dirname, "./client/build")));
-
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
-  });
-
+ 
   // Use this after the variable declaration
   app.get("/", (req, res) => {
     res.send("api is running");
